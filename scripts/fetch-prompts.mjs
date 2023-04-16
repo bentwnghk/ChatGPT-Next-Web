@@ -8,6 +8,8 @@ const RAW_CN_URL = "PlexPt/awesome-chatgpt-prompts-zh/main/prompts-zh-TW.json";
 const CN_URL = MIRRORF_FILE_URL + RAW_CN_URL;
 const RAW_EN_URL = "f/awesome-chatgpt-prompts/main/prompts.csv";
 const EN_URL = MIRRORF_FILE_URL + RAW_EN_URL;
+const RAW_NG_URL = "bentwnghk/chatgpt-web/feat-add-speech/docs/prompts-from-mr-ng.json";
+const NG_URL = MIRRORF_FILE_URL + RAW_NG_URL;
 const FILE = "./public/prompts.json";
 
 async function fetchCN() {
@@ -30,19 +32,30 @@ async function fetchEN() {
       .slice(1)
       .map((v) => v.split('","').map((v) => v.replace('"', "")));
   } catch (error) {
-    console.error("[Fetch] failed to fetch cn prompts", error);
+    console.error("[Fetch] failed to fetch en prompts", error);
+    return [];
+  }
+}
+
+async function fetchNG() {
+  console.log("[Fetch] fetching ng prompts...");
+  try {
+    const raw = await (await fetch(NG_URL)).json();
+    return raw.map((v) => [v.key, v.value]);
+  } catch (error) {
+    console.error("[Fetch] failed to fetch ng prompts", error);
     return [];
   }
 }
 
 async function main() {
-  Promise.all([fetchCN(), fetchEN()])
-    .then(([cn, en]) => {
-      fs.writeFile(FILE, JSON.stringify({ cn, en }));
+  Promise.all([fetchCN(), fetchEN(), fetchNG()])
+    .then(([cn, en, ng]) => {
+      fs.writeFile(FILE, JSON.stringify({ cn, en, ng }));
     })
     .catch((e) => {
       console.error("[Fetch] failed to fetch prompts");
-      fs.writeFile(FILE, JSON.stringify({ cn: [], en: [] }));
+      fs.writeFile(FILE, JSON.stringify({ cn: [], en: [], ng: [] }));
     })
     .finally(() => {
       console.log("[Fetch] saved to " + FILE);
