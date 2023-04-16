@@ -54,10 +54,10 @@ export function getLang(): Lang {
 
   const lang = getLanguage();
 
-  if (lang.includes("zh") || lang.includes("cn")) {
-    return "cn";
-  } else if (lang.includes("tw")) {
+  if (lang.includes("zh") || lang.includes("tw")) {
     return "tw";
+  } else if (lang.includes("cn")) {
+    return "cn";
   } else if (lang.includes("es")) {
     return "es";
   } else if (lang.includes("it")) {
