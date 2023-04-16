@@ -165,7 +165,7 @@ const tw: LocaleType = {
   Context: {
     Toast: (x: any) => `已設置 ${x} 條前置上下文`,
     Edit: "前置上下文和歷史記憶",
-    Add: "新增壹條",
+    Add: "新增一條",
   },
 };
 
