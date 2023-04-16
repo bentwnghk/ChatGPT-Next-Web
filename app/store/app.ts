@@ -137,7 +137,7 @@ const DEFAULT_CONFIG: ChatConfig = {
   compressMessageLengthThreshold: 1000,
   sendBotMessages: true as boolean,
   submitKey: SubmitKey.CtrlEnter as SubmitKey,
-  avatar: "1f603",
+  avatar: "1f1ed-1f1f0",
   fontSize: 14,
   theme: Theme.Auto as Theme,
   tightBorder: false,
