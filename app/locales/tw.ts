@@ -121,7 +121,7 @@ const tw: LocaleType = {
     },
     Token: {
       Title: "API Key",
-      SubTitle: "使用自己的 Key 可規避授權訪問限制",
+      SubTitle: "使用自己的Key可規避授權訪問限制",
       Placeholder: "OpenAI API Key",
     },
     Usage: {
@@ -135,17 +135,17 @@ const tw: LocaleType = {
     },
     AccessCode: {
       Title: "授權碼",
-      SubTitle: "現在是未授權訪問狀態",
+      SubTitle: "已開啟授權訪問限制",
       Placeholder: "請輸入授權碼",
     },
     Model: "模型 (model)",
     Temperature: {
       Title: "隨機性 (temperature)",
-      SubTitle: "值越大，回復越隨機",
+      SubTitle: "值越大，回覆越隨機",
     },
     MaxTokens: {
-      Title: "單次回復限制 (max_tokens)",
-      SubTitle: "單次交互所用的最大 Token 數",
+      Title: "單次回覆限制 (max_tokens)",
+      SubTitle: "單次對話回覆所用的最大Token數",
     },
     PresencePenlty: {
       Title: "話題新穎度 (presence_penalty)",
