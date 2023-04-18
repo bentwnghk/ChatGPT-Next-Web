@@ -121,7 +121,7 @@ const tw: LocaleType = {
     },
     Token: {
       Title: "API Key",
-      SubTitle: "使用自己的Key可規避授權訪問限制",
+      SubTitle: "使用自己的 Key 可規避授權訪問限制",
       Placeholder: "OpenAI API Key",
     },
     Usage: {
@@ -131,7 +131,7 @@ const tw: LocaleType = {
       },
       IsChecking: "正在檢查…",
       Check: "重新檢查",
-      NoAccess: "輸入API Key查看餘額",
+      NoAccess: "輸入 API Key 查看餘額",
     },
     AccessCode: {
       Title: "授權碼",
@@ -145,7 +145,7 @@ const tw: LocaleType = {
     },
     MaxTokens: {
       Title: "單次回覆限制 (max_tokens)",
-      SubTitle: "單次對話回覆所用的最大Token數",
+      SubTitle: "單次對話回覆所用的最大 Token 數",
     },
     PresencePenlty: {
       Title: "話題新穎度 (presence_penalty)",
