@@ -90,7 +90,7 @@ const tw: LocaleType = {
       CheckUpdate: "檢查更新",
       IsChecking: "正在檢查更新...",
       FoundUpdate: (x: string) => `發現新版本：${x}`,
-      GoToUpdate: "可以更新",
+      GoToUpdate: "有更新",
     },
     SendKey: "發送鍵",
     Theme: "主題",
