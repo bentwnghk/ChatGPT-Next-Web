@@ -17,7 +17,7 @@ import {
   MIN_SIDEBAR_WIDTH,
   NARROW_SIDEBAR_WIDTH,
   Path,
-  REPO_URL,
+  HOME_URL,
 } from "../constant";
 
 import { HashRouter as Router, Link, useNavigate } from "react-router-dom";
