@@ -29,7 +29,7 @@ import { Avatar } from "./chat";
 import Locale, { AllLangs, changeLang, getLang } from "../locales";
 import { copyToClipboard, getEmojiUrl } from "../utils";
 import Link from "next/link";
-import { Path, UPDATE_URL } from "../constant";
+import { Path, HOME_URL } from "../constant";
 import { Prompt, SearchService, usePromptStore } from "../store/prompt";
 import { ErrorBoundary } from "./error";
 import { InputRange } from "./input-range";
@@ -339,7 +339,7 @@ export function Settings() {
             {checkingUpdate ? (
               <div />
             ) : hasNewVersion ? (
-              <Link href="" target="_blank" className="link">
+              <Link href="{HOME_URL}" target="_blank" className="link">
                 {Locale.Settings.Update.GoToUpdate}
               </Link>
             ) : (
