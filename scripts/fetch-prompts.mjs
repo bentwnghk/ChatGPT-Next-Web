@@ -12,10 +12,20 @@ const RAW_NG_URL = "bentwnghk/chatgpt-web/feat-add-speech/docs/prompts-from-mr-n
 const NG_URL = MIRRORF_FILE_URL + RAW_NG_URL;
 const FILE = "./public/prompts.json";
 
+const timeoutPromise = (timeout) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject(new Error('Request timeout'));
+    }, timeout);
+  });
+};
+
 async function fetchCN() {
   console.log("[Fetch] fetching cn prompts...");
   try {
-    const raw = await (await fetch(CN_URL)).json();
+    // const raw = await (await fetch(CN_URL)).json();
+    const response = await Promise.race([fetch(CN_URL), timeoutPromise(5000)]);
+    const raw = await response.json();
     return raw.map((v) => [v.act, v.prompt]);
   } catch (error) {
     console.error("[Fetch] failed to fetch cn prompts", error);
@@ -26,7 +36,9 @@ async function fetchCN() {
 async function fetchEN() {
   console.log("[Fetch] fetching en prompts...");
   try {
-    const raw = await (await fetch(EN_URL)).text();
+    // const raw = await (await fetch(EN_URL)).text();
+    const response = await Promise.race([fetch(EN_URL), timeoutPromise(5000)]);
+    const raw = await response.text();
     return raw
       .split("\n")
       .slice(1)
@@ -40,7 +52,9 @@ async function fetchEN() {
 async function fetchNG() {
   console.log("[Fetch] fetching ng prompts...");
   try {
-    const raw = await (await fetch(NG_URL)).json();
+    // const raw = await (await fetch(NG_URL)).json();
+    const response = await Promise.race([fetch(NG_URL), timeoutPromise(5000)]);
+    const raw = await response.json();
     return raw.map((v) => [v.key, v.value]);
   } catch (error) {
     console.error("[Fetch] failed to fetch ng prompts", error);
