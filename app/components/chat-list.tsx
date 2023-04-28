@@ -61,7 +61,7 @@ export function ChatItem(props: {
                   {Locale.ChatItem.ChatItemCount(props.count)}
                 </div>
                 <div className={styles["chat-item-date"]}>
-                  {new Date(props.time).toLocaleString('zh-HK')}
+                  {props.time}
                 </div>
               </div>
             </>
@@ -116,7 +116,7 @@ export function ChatList(props: { narrow?: boolean }) {
             {sessions.map((item, i) => (
               <ChatItem
                 title={item.topic}
-                time={new Date(item.lastUpdate).toLocaleString('zh-HK')}
+                time={item.lastUpdate}
                 count={item.messages.length}
                 key={item.id}
                 id={item.id}
