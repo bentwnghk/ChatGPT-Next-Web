@@ -22,7 +22,7 @@ export function ChatItem(props: {
   onDelete?: () => void;
   title: string;
   count: number;
-  time: number;
+  time: string;
   selected: boolean;
   id: number;
   index: number;
