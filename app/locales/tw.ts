@@ -64,11 +64,11 @@ const tw: LocaleType = {
       ResetAll: "重設所有設定",
       Close: "關閉",
       ConfirmResetAll: "您確定要重設所有設定嗎？",
-      ConfirmClearAll: "您確定要清除所有数据嗎？",
+      ConfirmClearAll: "您確定要清除所有數據嗎？",
     },
     Lang: {
       Name: "Language",
-      All: "所有语言",
+      All: "所有語言",
       Options: {
         cn: "简体中文",
         en: "English",
@@ -98,11 +98,11 @@ const tw: LocaleType = {
     TightBorder: "緊湊邊框",
     SendPreviewBubble: {
       Title: "預覽氣泡",
-      SubTitle: "在预览气泡中预览 Markdown 内容",
+      SubTitle: "在預覽氣泡中預覽 Markdown 内容",
     },
     Mask: {
-      Title: "面具启动页",
-      SubTitle: "新建聊天时，展示面具启动页",
+      Title: "面具啟動頁",
+      SubTitle: "新建聊天時，展示面具啟動頁",
     },
     Prompt: {
       Disable: {
@@ -186,38 +186,38 @@ const tw: LocaleType = {
   Mask: {
     Name: "面具",
     Page: {
-      Title: "预设角色面具",
-      SubTitle: (count: number) => `${count} 个预设角色定义`,
+      Title: "預設角色面具",
+      SubTitle: (count: number) => `${count} 個預設角色定義`,
       Search: "搜索角色面具",
       Create: "新建",
     },
     Item: {
-      Info: (count: number) => `包含 ${count} 条预设对话`,
-      Chat: "对话",
+      Info: (count: number) => `包含 ${count} 條預設對話`,
+      Chat: "對話",
       View: "查看",
-      Edit: "编辑",
-      Delete: "删除",
-      DeleteConfirm: "确认删除？",
+      Edit: "編輯",
+      Delete: "刪除",
+      DeleteConfirm: "確認刪除？",
     },
     EditModal: {
       Title: (readonly: boolean) =>
-        `编辑预设面具 ${readonly ? "（只读）" : ""}`,
-      Download: "下载预设",
-      Clone: "克隆预设",
+        `編輯預設面具 ${readonly ? "（只讀）" : ""}`,
+      Download: "下載預設",
+      Clone: "複製預設",
     },
     Config: {
-      Avatar: "角色头像",
-      Name: "角色名称",
+      Avatar: "角色頭像",
+      Name: "角色名稱",
     },
   },
   NewChat: {
     Return: "返回",
-    Skip: "跳过",
-    Title: "挑选一个面具",
-    SubTitle: "现在开始，与面具背后的灵魂思维碰撞",
+    Skip: "跳過",
+    Title: "挑選一個面具",
+    SubTitle: "現在開始，與面具背後的靈魂思維碰撞",
     More: "搜索更多",
     NotShow: "不再展示",
-    ConfirmNoShow: "确认禁用？禁用后可以随时在设置中重新启用。",
+    ConfirmNoShow: "確認禁用？禁用後可以隨時在設置中重新啟用。",
   },
 };
 
