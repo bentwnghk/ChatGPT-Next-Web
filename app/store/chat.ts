@@ -49,7 +49,7 @@ export interface ChatSession {
   memoryPrompt: string;
   messages: Message[];
   stat: ChatStat;
-  lastUpdate: string;
+  lastUpdate: number;
   lastSummarizeIndex: number;
 
   mask: Mask;
