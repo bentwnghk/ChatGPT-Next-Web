@@ -23,16 +23,16 @@ const tw: LocaleType = {
     Rename: "重命名對話",
     Typing: "正在輸入…",
     Input: (submitKey: string) => {
-      var inputHints = `輸入訊息後，按下 ${submitKey} 鍵即可發送`;
+      var inputHints = `輸入訊息後，按下 ${submitKey} 鍵發送`;
       if (submitKey === String(SubmitKey.Enter)) {
-        inputHints += "，Shift + Enter 鍵換行";
+        inputHints += "；按下 Shift + Enter 鍵換行";
       }
-      return inputHints;
+      return inputHints + "；按下 / 鍵觸發提示詞";
     },
     Send: "發送",
     Config: {
-      Reset: "重置默认",
-      SaveAs: "另存为面具",
+      Reset: "重置默認",
+      SaveAs: "另存為面具",
     },
   },
   Export: {
@@ -107,7 +107,7 @@ const tw: LocaleType = {
     Prompt: {
       Disable: {
         Title: "停用提示詞自動補齊",
-        SubTitle: "在輸入框開頭輸入 / 即可觸發自動補齊",
+        SubTitle: "在輸入框開頭輸入 / 即可觸發提示詞",
       },
       List: "自定義提示詞列表",
       ListCount: (builtin: number, custom: number) =>
