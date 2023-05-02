@@ -119,7 +119,7 @@ const tw: LocaleType = {
         Search: "搜尋提示詞",
       },
       EditModal: {
-        Title: "编辑提示词",
+        Title: "編輯提示詞",
       },
     },
     HistoryCount: {
@@ -223,11 +223,11 @@ const tw: LocaleType = {
     ConfirmNoShow: "確認禁用？禁用後可以隨時在設置中重新啟用。",
   },
   UI: {
-    Confirm: "确认",
+    Confirm: "確認",
     Cancel: "取消",
-    Close: "关闭",
+    Close: "關閉",
     Create: "新建",
-    Edit: "编辑",
+    Edit: "編輯",
   },
 };
 
