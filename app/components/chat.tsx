@@ -388,7 +388,8 @@ export function Chat() {
   const onPromptSelect = (prompt: Prompt) => {
     setPromptHints([]);
     inputRef.current?.focus();
-    setTimeout(() => setUserInput(prompt.content), 50);
+    setUserInput(prompt.content);
+    inputRef.current?.focus();
   };
 
   // auto grow input
