@@ -389,7 +389,6 @@ export function Chat() {
     setPromptHints([]);
     inputRef.current?.focus();
     setTimeout(() => setUserInput(prompt.content), 1000);
-    inputRef.current?.focus();
   };
 
   // auto grow input
