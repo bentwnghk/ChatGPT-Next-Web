@@ -2,8 +2,8 @@ import { BuiltinMask } from "./typing";
 
 export const EN_MASKS: BuiltinMask[] = [
   {
-    avatar: "270d-fe0f",
-    name: "Proofreader",
+    avatar: "1f4da",
+    name: "校對高手",
     context: [
       {
         role: "user",
@@ -31,8 +31,8 @@ export const EN_MASKS: BuiltinMask[] = [
     builtin: true,
   },
   {
-    avatar: "270d-fe0f",
-    name: "Grammar checker",
+    avatar: "1f4d5",
+    name: "語法檢查器",
     context: [
       {
         role: "user",
@@ -61,7 +61,7 @@ export const EN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "270d-fe0f",
-    name: "Basic writing improvement",
+    name: "寫作改進",
     context: [
       {
         role: "user",
@@ -89,8 +89,8 @@ export const EN_MASKS: BuiltinMask[] = [
     builtin: true,
   },
   {
-    avatar: "270d-fe0f",
-    name: "Advanced writing improvement",
+    avatar: "1f9d1-200d-1f3eb",
+    name: "英專寫手",
     context: [
       {
         role: "user",
