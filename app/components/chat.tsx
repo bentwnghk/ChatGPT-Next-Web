@@ -705,7 +705,7 @@ export function Chat() {
       !latestMessage.isError &&
       !latestMessage.streaming
     ) {
-      const voices = session.speechSynthesis.getVoices();
+      const voices = speechSynthesis.getVoices();
       const microsoftVoice = voices.find(
         (voice: { lang: string; name: string | string[]; }) =>
           voice.lang === "en-US" && voice.name.includes("Microsoft Aria")
