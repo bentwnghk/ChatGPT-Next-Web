@@ -785,7 +785,7 @@ export function Chat() {
 
   const speak = async (text: string, voiceName: string) => {
     if ("speechSynthesis" in window) {
-      const maxWordsPerChunk = 20; // Adjust this value based on your testing
+      const maxWordsPerChunk = 40; // Adjust this value based on your testing
       const maxCharsPerChunk = 40; // Adjust this value based on your testing
       const textChunks: string[] = [];
 
