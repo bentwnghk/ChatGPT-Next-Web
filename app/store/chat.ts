@@ -236,7 +236,7 @@ export const useChatStore = create<ChatStore>()(
         const session = sessions[index];
         if (!session.ttsConfig || session.ttsConfig.voice === "") {
           session.ttsConfig = {
-            voice: window.speechSynthesis.getVoices().find(voice => voice.name === "Microsoft Aria") ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
+            voice: "Samantha",
             lang: "en-US",
           };
         }
@@ -407,7 +407,7 @@ export const useChatStore = create<ChatStore>()(
       resetTTSConfig() {
         get().updateCurrentSession((session) => {
           session.ttsConfig = {
-            voice: window.speechSynthesis.getVoices().find(voice => voice.name === "Microsoft Aria") ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
+            voice: "Samantha",
             lang: "en-US",
           };
         });
