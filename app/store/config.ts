@@ -27,15 +27,15 @@ export const DEFAULT_CONFIG = {
 
   disablePromptHint: false,
 
-  dontShowMaskSplashScreen: false, // dont show splash screen when create chat
+  dontShowMaskSplashScreen: true, // dont show splash screen when create chat
 
   modelConfig: {
     model: "gpt-3.5-turbo" as ModelType,
     temperature: 0.8,
-    max_tokens: 2000,
+    max_tokens: 3000,
     presence_penalty: 0,
     sendMemory: true,
-    historyMessageCount: 4,
+    historyMessageCount: 6,
     compressMessageLengthThreshold: 2000,
   },
 };
@@ -137,9 +137,9 @@ export const useAppConfig = create<ChatConfigStore>()(
 
         const state = persistedState as ChatConfig;
         state.modelConfig.sendMemory = true;
-        state.modelConfig.historyMessageCount = 4;
+        state.modelConfig.historyMessageCount = 6;
         state.modelConfig.compressMessageLengthThreshold = 2000;
-        state.dontShowMaskSplashScreen = false;
+        state.dontShowMaskSplashScreen = true;
 
         return state;
       },
