@@ -2,7 +2,7 @@ name: build_docker
 
 on:
   push:
-    branches: [main]
+    branches: [add_tts]
   release:
     types: [created] # 表示在创建新的 Release 时触发
   workflow_dispatch:
@@ -37,5 +37,5 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/chatgpt-next-web:${{ env.RELEASE_DATE }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/chatgpt-next-web:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/chatgpt-next-web-tts:${{ env.RELEASE_DATE }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/chatgpt-next-web-tts:latest
