@@ -706,7 +706,7 @@ export function Chat() {
       !latestMessage.streaming
     ) {
       const ttsConfig = session.ttsConfig || {
-        voice: window.speechSynthesis.getVoices().find(voice => voice.name === "Microsoft Aria Online (Natural) - English (United States)") ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
+        voice: speechSynthesis.getVoices().find(voice => voice.name === "Microsoft Aria Online (Natural) - English (United States)") ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
         lang: "en-US",
       };
       soundOn &&
