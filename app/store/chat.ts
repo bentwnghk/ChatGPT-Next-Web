@@ -83,7 +83,7 @@ function createEmptySession(): ChatSession {
     lastSummarizeIndex: 0,
     mask: createEmptyMask(),
     ttsConfig: {
-      voice: window.speechSynthesis.getVoices().find(voice => voice.name === "Microsoft Aria") ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
+      voice: "Samantha",
       lang: "en-US",
     },
   };
