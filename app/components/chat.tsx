@@ -67,6 +67,7 @@ import {
   DEFAULT_MASK_ID,
   useMaskStore,
 } from "../store/mask";
+import { useLocation } from "react-router-dom";
 
 const Markdown = dynamic(async () => (await import("./markdown")).Markdown, {
   loading: () => <LoadingIcon />,
