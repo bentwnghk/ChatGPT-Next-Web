@@ -83,7 +83,7 @@ function createEmptySession(): ChatSession {
     lastSummarizeIndex: 0,
     mask: createEmptyMask(),
     ttsConfig: {
-      voice: "Google US English",
+      voice: "Microsoft Aria Online (Natural) - English (United States)",
       lang: "en-US",
     },
   };
@@ -236,7 +236,7 @@ export const useChatStore = create<ChatStore>()(
         const session = sessions[index];
         if (!session.ttsConfig || session.ttsConfig.voice === "") {
           session.ttsConfig = {
-            voice: "Google US English",
+            voice: "Microsoft Aria Online (Natural) - English (United States)",
             lang: "en-US",
           };
         }
@@ -407,7 +407,7 @@ export const useChatStore = create<ChatStore>()(
       resetTTSConfig() {
         get().updateCurrentSession((session) => {
           session.ttsConfig = {
-            voice: "Google US English",
+            voice: "Microsoft Aria Online (Natural) - English (United States)",
             lang: "en-US",
           };
         });

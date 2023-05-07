@@ -706,7 +706,7 @@ export function Chat() {
       !latestMessage.streaming
     ) {
       const ttsConfig = session.ttsConfig || {
-        voice: "Google US English",
+        voice: "Microsoft Aria Online (Natural) - English (United States)",
         lang: "en-US",
       };
       soundOn &&
@@ -799,7 +799,7 @@ export function Chat() {
           }
         });
       } else {
-        const sentences = text.split(/(?:[.!?]+|[,;:]|[\r\n]+)/);
+        const sentences = text.split(/(?:[.!?]+|[;:]|[\r\n]+)/);
 
         sentences.forEach((sentence: string) => {
           const words = sentence.split(/\s+/);
