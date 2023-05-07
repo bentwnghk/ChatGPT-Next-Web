@@ -69,6 +69,11 @@ export const BOT_HELLO: Message = createMessage({
 });
 
 function createEmptySession(): ChatSession {
+  const voices = speechSynthesis.getVoices();
+  const microsoftVoice = voices.find(
+    (voice: { lang: string; name: string | string[]; }) =>
+      voice.lang === "en-US" && voice.name.includes("Microsoft Aria")
+  );
   return {
     id: Date.now() + Math.random(),
     topic: DEFAULT_TOPIC,
@@ -82,8 +87,6 @@ function createEmptySession(): ChatSession {
     lastUpdate: Date.now(),
     lastSummarizeIndex: 0,
     mask: createEmptyMask(),
-    const availableVoices = window.speechSynthesis.getVoices();
-    const microsoftVoice = availableVoices.find((voice) => voice.name === "Microsoft Aria Online (Natural) - English (United States)");
     ttsConfig: {
       voice: microsoftVoice ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
       lang: "en-US",
@@ -236,8 +239,11 @@ export const useChatStore = create<ChatStore>()(
         }
 
         const session = sessions[index];
-        const availableVoices = window.speechSynthesis.getVoices();
-        const microsoftVoice = availableVoices.find((voice) => voice.name === "Microsoft Aria Online (Natural) - English (United States)");
+        const voices = session.speechSynthesis.getVoices();
+        const microsoftVoice = voices.find(
+          (voice: { lang: string; name: string | string[]; }) =>
+            voice.lang === "en-US" && voice.name.includes("Microsoft Aria")
+        );
         if (!session.ttsConfig || session.ttsConfig.voice === "") {
           session.ttsConfig = {
             voice: microsoftVoice ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
@@ -410,8 +416,11 @@ export const useChatStore = create<ChatStore>()(
 
       resetTTSConfig() {
         get().updateCurrentSession((session) => {
-          const availableVoices = window.speechSynthesis.getVoices();
-          const microsoftVoice = availableVoices.find((voice) => voice.name === "Microsoft Aria Online (Natural) - English (United States)");
+          const voices = session.speechSynthesis.getVoices();
+          const microsoftVoice = voices.find(
+            (voice: { lang: string; name: string | string[]; }) =>
+              voice.lang === "en-US" && voice.name.includes("Microsoft Aria")
+          );
           session.ttsConfig = {
             voice: microsoftVoice ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
             lang: "en-US",

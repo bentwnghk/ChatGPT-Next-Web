@@ -705,8 +705,11 @@ export function Chat() {
       !latestMessage.isError &&
       !latestMessage.streaming
     ) {
-      const availableVoices = window.speechSynthesis.getVoices();
-      const microsoftVoice = availableVoices.find((voice) => voice.name === "Microsoft Aria Online (Natural) - English (United States)");
+      const voices = session.speechSynthesis.getVoices();
+      const microsoftVoice = voices.find(
+        (voice: { lang: string; name: string | string[]; }) =>
+          voice.lang === "en-US" && voice.name.includes("Microsoft Aria")
+      );
       const ttsConfig = session.ttsConfig || {
         voice: microsoftVoice ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
         lang: "en-US",
