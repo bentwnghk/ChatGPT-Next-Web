@@ -5,7 +5,7 @@ const es: LocaleType = {
   WIP: "En construcción...",
   Error: {
     Unauthorized:
-      "Acceso no autorizado, por favor ingrese el código de acceso en la página de configuración.",
+      "Acceso no autorizado, por favor ingrese el código de acceso en la [página de configuración](/#/settings).",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} mensajes`,
@@ -20,6 +20,7 @@ const es: LocaleType = {
       Stop: "Detener",
       Retry: "Reintentar",
       Delete: "Delete",
+      Speak: "Hablar",
     },
     Rename: "Renombrar chat",
     Typing: "Escribiendo...",
@@ -166,6 +167,7 @@ const es: LocaleType = {
       SubTitle:
         "Un valor mayor aumenta la probabilidad de hablar sobre nuevos temas",
     },
+    Voice: "Voz",
   },
   Store: {
     DefaultTopic: "Nueva conversación",
@@ -190,6 +192,9 @@ const es: LocaleType = {
     Toast: (x: any) => `With ${x} contextual prompts`,
     Edit: "Contextual and Memory Prompts",
     Add: "Add One",
+  },
+  Voice: {
+    Edit: "Preferencia de voz",
   },
   Plugin: {
     Name: "Plugin",

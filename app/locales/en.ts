@@ -5,7 +5,7 @@ const en: LocaleType = {
   WIP: "Coming Soon...",
   Error: {
     Unauthorized:
-      "Unauthorized access, please enter access code in settings page.",
+      "Unauthorized access, please enter access code in [settings page](/#/settings).",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} messages`,
@@ -20,6 +20,7 @@ const en: LocaleType = {
       Stop: "Stop",
       Retry: "Retry",
       Delete: "Delete",
+      Speak: "Speak",
     },
     Rename: "Rename Chat",
     Typing: "Typing…",
@@ -166,6 +167,7 @@ const en: LocaleType = {
       SubTitle:
         "A larger value increases the likelihood to talk about new topics",
     },
+    Voice: "Voice",
   },
   Store: {
     DefaultTopic: "New Conversation",
@@ -189,6 +191,9 @@ const en: LocaleType = {
     Toast: (x: any) => `With ${x} contextual prompts`,
     Edit: "Contextual and Memory Prompts",
     Add: "Add a Prompt",
+  },
+  Voice: {
+    Edit: "Voice Preference",
   },
   Plugin: {
     Name: "Plugin",

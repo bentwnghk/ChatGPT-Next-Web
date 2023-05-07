@@ -79,6 +79,10 @@ export const ALL_MODELS = [
 ] as const;
 
 export type ModelType = (typeof ALL_MODELS)[number]["name"];
+export type VoiceConfig = {
+  voice: string;
+  lang: string;
+};
 
 export function limitNumber(
   x: number,

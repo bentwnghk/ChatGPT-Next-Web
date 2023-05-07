@@ -19,6 +19,7 @@ const cn = {
       Stop: "停止",
       Retry: "重试",
       Delete: "删除",
+      Speak: "AI语音",
     },
     Rename: "重命名对话",
     Typing: "正在输入…",
@@ -164,6 +165,7 @@ const cn = {
       Title: "话题新鲜度 (presence_penalty)",
       SubTitle: "值越大，越有可能扩展到新话题",
     },
+    Voice: "语音类型",
   },
   Store: {
     DefaultTopic: "新的聊天",
@@ -186,6 +188,9 @@ const cn = {
     Toast: (x: any) => `已设置 ${x} 条前置上下文`,
     Edit: "当前对话设置",
     Add: "新增预设对话",
+  },
+  Voice: {
+    Edit: "语音设置",
   },
   Plugin: {
     Name: "插件",
