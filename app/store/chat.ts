@@ -82,8 +82,10 @@ function createEmptySession(): ChatSession {
     lastUpdate: Date.now(),
     lastSummarizeIndex: 0,
     mask: createEmptyMask(),
+    const availableVoices = window.speechSynthesis.getVoices();
+    const microsoftVoice = availableVoices.find((voice) => voice.name === "Microsoft Aria Online (Natural) - English (United States)");
     ttsConfig: {
-      voice: "Microsoft Aria Online (Natural) - English (United States)",
+      voice: microsoftVoice ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
       lang: "en-US",
     },
   };
@@ -234,9 +236,11 @@ export const useChatStore = create<ChatStore>()(
         }
 
         const session = sessions[index];
+        const availableVoices = window.speechSynthesis.getVoices();
+        const microsoftVoice = availableVoices.find((voice) => voice.name === "Microsoft Aria Online (Natural) - English (United States)");
         if (!session.ttsConfig || session.ttsConfig.voice === "") {
           session.ttsConfig = {
-            voice: "Microsoft Aria Online (Natural) - English (United States)",
+            voice: microsoftVoice ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
             lang: "en-US",
           };
         }
@@ -406,8 +410,10 @@ export const useChatStore = create<ChatStore>()(
 
       resetTTSConfig() {
         get().updateCurrentSession((session) => {
+          const availableVoices = window.speechSynthesis.getVoices();
+          const microsoftVoice = availableVoices.find((voice) => voice.name === "Microsoft Aria Online (Natural) - English (United States)");
           session.ttsConfig = {
-            voice: "Microsoft Aria Online (Natural) - English (United States)",
+            voice: microsoftVoice ? "Microsoft Aria Online (Natural) - English (United States)" : "Samantha",
             lang: "en-US",
           };
         });
