@@ -713,7 +713,7 @@ export function Chat() {
       soundOn &&
         speak(messages[messages.length - 1].content, session.ttsConfig?.voice);
     }
-  }, [
+  , [
     isLoading,
     session.messages[session.messages.length - 1]?.content,
     session.messages[session.messages.length - 1]?.streaming,
