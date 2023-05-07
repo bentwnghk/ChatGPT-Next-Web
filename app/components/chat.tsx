@@ -835,7 +835,7 @@ export function Chat() {
             filteredTextChunks[index],
           );
           utterance.voice = selectedVoice;
-          utterance.rate = 0.9; // Lower rate for a more natural sound
+          utterance.rate = 1; // Lower rate for a more natural sound
           utterance.pitch = 1; // Default pitch
           utterance.volume = 1; // Default volume
 
