@@ -4,8 +4,7 @@ import type { LocaleType } from "./index";
 const vi: LocaleType = {
   WIP: "Coming Soon...",
   Error: {
-    Unauthorized:
-      "Truy cập chưa xác thực, vui lòng nhập mã truy cập trong trang cài đặt.",
+    Unauthorized: "Truy cập chưa xác thực, vui lòng nhập mã truy cập trong trang cài đặt.",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} tin nhắn`,
@@ -20,6 +19,7 @@ const vi: LocaleType = {
       Stop: "Dừng",
       Retry: "Thử lại",
       Delete: "Xóa",
+      Speak: "Nói chuyện",
     },
     Rename: "Đổi tên",
     Typing: "Đang nhập…",
@@ -49,8 +49,7 @@ const vi: LocaleType = {
     Send: "Gửi tin nhắn trong quá khứ",
     Copy: "Sao chép tin nhắn trong quá khứ",
     Reset: "Đặt lại phiên",
-    ResetConfirm:
-      "Đặt lại sẽ xóa toàn bộ lịch sử trò chuyện hiện tại và bộ nhớ. Bạn có chắc chắn muốn đặt lại không?",
+    ResetConfirm: "Đặt lại sẽ xóa toàn bộ lịch sử trò chuyện hiện tại và bộ nhớ. Bạn có chắc chắn muốn đặt lại không?",
   },
   Home: {
     NewChat: "Cuộc trò chuyện mới",
@@ -69,7 +68,7 @@ const vi: LocaleType = {
       ConfirmClearAll: "Bạn chắc chắn muốn thiết lập lại tất cả dữ liệu?",
     },
     Lang: {
-      Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`
+      Name: "Language",
       All: "Tất cả ngôn ngữ",
       Options: {
         cn: "简体中文",
@@ -113,8 +112,7 @@ const vi: LocaleType = {
         SubTitle: "Nhập / để kích hoạt chức năng tự động hoàn thành",
       },
       List: "Danh sách mẫu gợi ý",
-      ListCount: (builtin: number, custom: number) =>
-        `${builtin} có sẵn, ${custom} do người dùng xác định`,
+      ListCount: (builtin: number, custom: number) => `${builtin} có sẵn, ${custom} do người dùng xác định`,
       Edit: "Chỉnh sửa",
       Modal: {
         Title: "Danh sách mẫu gợi ý",
@@ -165,29 +163,29 @@ const vi: LocaleType = {
       Title: "Chủ đề mới (presence_penalty)",
       SubTitle: "Giá trị càng lớn tăng khả năng mở rộng sang các chủ đề mới",
     },
+    Voice: "Tiếng nói",
   },
   Store: {
     DefaultTopic: "Cuộc trò chuyện mới",
     BotHello: "Xin chào! Mình có thể giúp gì cho bạn?",
     Error: "Có lỗi xảy ra, vui lòng thử lại sau.",
     Prompt: {
-      History: (content: string) =>
-        "Tóm tắt ngắn gọn cuộc trò chuyện giữa người dùng và AI: " + content,
-      Topic:
-        "Sử dụng 4 đến 5 từ tóm tắt cuộc trò chuyện này mà không có phần mở đầu, dấu chấm câu, dấu ngoặc kép, dấu chấm, ký hiệu hoặc văn bản bổ sung nào. Loại bỏ các dấu ngoặc kép kèm theo.",
-      Summarize:
-        "Tóm tắt cuộc trò chuyện này một cách ngắn gọn trong 200 từ hoặc ít hơn để sử dụng làm gợi ý cho ngữ cảnh tiếp theo.",
+      History: (content: string) => "Tóm tắt ngắn gọn cuộc trò chuyện giữa người dùng và AI: " + content,
+      Topic: "Sử dụng 4 đến 5 từ tóm tắt cuộc trò chuyện này mà không có phần mở đầu, dấu chấm câu, dấu ngoặc kép, dấu chấm, ký hiệu hoặc văn bản bổ sung nào. Loại bỏ các dấu ngoặc kép kèm theo.",
+      Summarize: "Tóm tắt cuộc trò chuyện này một cách ngắn gọn trong 200 từ hoặc ít hơn để sử dụng làm gợi ý cho ngữ cảnh tiếp theo.",
     },
   },
   Copy: {
     Success: "Sao chép vào bộ nhớ tạm",
-    Failed:
-      "Sao chép không thành công, vui lòng cấp quyền truy cập vào bộ nhớ tạm",
+    Failed: "Sao chép không thành công, vui lòng cấp quyền truy cập vào bộ nhớ tạm",
   },
   Context: {
     Toast: (x: any) => `Sử dụng ${x} tin nhắn chứa ngữ cảnh`,
     Edit: "Thiết lập ngữ cảnh và bộ nhớ",
     Add: "Thêm tin nhắn",
+  },
+  Voice: {
+    Edit: "Tùy chọn âm thanh",
   },
   Plugin: {
     Name: "Plugin",
@@ -209,8 +207,7 @@ const vi: LocaleType = {
       DeleteConfirm: "Xác nhận xóa?",
     },
     EditModal: {
-      Title: (readonly: boolean) =>
-        `Chỉnh sửa mẫu ${readonly ? "(chỉ xem)" : ""}`,
+      Title: (readonly: boolean) => `Chỉnh sửa mẫu ${readonly ? "(chỉ xem)" : ""}`,
       Download: "Tải xuống",
       Clone: "Tạo bản sao",
     },
