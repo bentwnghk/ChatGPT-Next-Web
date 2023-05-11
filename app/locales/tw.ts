@@ -82,6 +82,7 @@ const tw: LocaleType = {
         // de: "Deutsch",
         // vi: "Vietnamese",
         // ru: "Русский",
+        // cs: "Čeština",
       },
     },
     Avatar: "大頭貼",

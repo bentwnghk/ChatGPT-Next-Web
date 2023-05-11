@@ -83,6 +83,7 @@ const ru: LocaleType = {
         // de: "Deutsch",
         // vi: "Vietnamese",
         // ru: "Русский",
+        // cs: "Čeština",
       },
     },
       Avatar: "Аватар",

@@ -83,6 +83,7 @@ const jp: LocaleType = {
         // de: "Deutsch",
         // vi: "Vietnamese",
         // ru: "Русский",
+        // cs: "Čeština",
       },
     },
     Avatar: "アバター",
