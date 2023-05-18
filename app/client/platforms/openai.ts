@@ -71,13 +71,9 @@ export class ChatGPTApi implements LLMApi {
 
       if (shouldStream) {
         let responseText = "";
-        let finished = false;
 
         const finish = () => {
-          if (!finished) {
-            options.onFinish(responseText);
-            finished = true;
-          }
+          options.onFinish(responseText);
         };
 
         controller.signal.onabort = finish;
@@ -86,14 +82,11 @@ export class ChatGPTApi implements LLMApi {
           ...chatPayload,
           async onopen(res) {
             clearTimeout(requestTimeoutId);
-            const contentType = res.headers.get("content-type");
-            console.log(
-              "[OpenAI] request response content type: ",
-              contentType,
-            );
-
-            if (contentType?.startsWith("text/plain")) {
-              responseText = await res.clone().text();
+            if (
+              res.ok &&
+              res.headers.get("content-type") !== EventStreamContentType
+            ) {
+              responseText += await res.clone().json();
               return finish();
             }
 
@@ -107,25 +100,20 @@ export class ChatGPTApi implements LLMApi {
               const responseTexts = [responseText];
               let extraInfo = await res.clone().text();
               try {
-                const resJson = await res.clone().json();
-                extraInfo = prettyObject(resJson);
+                extraInfo = await res.clone().json();
               } catch {}
 
-              if (res.status === 401) {
-                responseTexts.push(Locale.Error.Unauthorized);
-              }
+              responseText += "\n\n" + Locale.Error.Unauthorized;
 
-              if (extraInfo) {
-                responseTexts.push(extraInfo);
+              if (extraInfo.error) {
+                responseText += "\n\n" + prettyObject(extraInfo);
               }
-
-              responseText = responseTexts.join("\n\n");
 
               return finish();
             }
           },
           onmessage(msg) {
-            if (msg.data === "[DONE]" || finished) {
+            if (msg.data === "[DONE]") {
               return finish();
             }
             const text = msg.data;

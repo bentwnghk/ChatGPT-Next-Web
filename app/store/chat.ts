@@ -13,7 +13,7 @@ import {
   VoiceConfig,
 } from "./config";
 import { createEmptyMask, Mask } from "./mask";
-import { REQUEST_TIMEOUT_MS, StoreKey } from "../constant";
+import { StoreKey } from "../constant";
 import { api, RequestMessage } from "../client/api";
 import { ChatControllerPool } from "../client/controller";
 import { prettyObject } from "../utils/format";
