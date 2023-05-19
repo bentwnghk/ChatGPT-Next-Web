@@ -71,21 +71,6 @@ const tw: LocaleType = {
     Lang: {
       Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`
       All: "所有語言",
-      Options: {
-        cn: "简体中文",
-        en: "English",
-        tw: "繁體中文",
-        // fr: "Français",
-        // es: "Español",
-        // it: "Italiano",
-        // tr: "Türkçe",
-        // jp: "日本語",
-        // de: "Deutsch",
-        // vi: "Tiếng Việt",
-        // ru: "Русский",
-        // cs: "Čeština",
-        // ko: "한국어",
-      },
     },
     Avatar: "大頭貼",
     FontSize: {
@@ -222,6 +207,11 @@ const tw: LocaleType = {
     Config: {
       Avatar: "角色頭像",
       Name: "角色名稱",
+      Sync: {
+        Title: "使用全局設置",
+        SubTitle: "當前對話是否使用全局模型設置",
+        Confirm: "當前對話的自定義設置將會被自動覆蓋，確認啟用全局設置？",
+      },
     },
   },
   NewChat: {
