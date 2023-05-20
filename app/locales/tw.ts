@@ -25,9 +25,9 @@ const tw: LocaleType = {
     Input: (submitKey: string) => {
       var inputHints = `輸入訊息後，按下 ${submitKey} 鍵發送`;
       if (submitKey === String(SubmitKey.Enter)) {
-        inputHints += "；按下 Shift + Enter 鍵換行";
+        inputHints += "，按下 Shift + Enter 鍵換行";
       }
-      return inputHints + "；按下 / 鍵觸發提示詞";
+      return inputHints + "，按下 / 鍵觸發提示詞";
     },
     Send: "發送",
     Config: {
