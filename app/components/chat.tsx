@@ -14,6 +14,8 @@ import MaskIcon from "../icons/mask.svg";
 import MaxIcon from "../icons/max.svg";
 import MinIcon from "../icons/min.svg";
 import ResetIcon from "../icons/reload.svg";
+import BreakIcon from "../icons/break.svg";
+import SettingsIcon from "../icons/chat-settings.svg";
 
 import LightIcon from "../icons/light.svg";
 import DarkIcon from "../icons/dark.svg";
@@ -55,7 +57,7 @@ import { IconButton } from "./button";
 import styles from "./home.module.scss";
 import chatStyle from "./chat.module.scss";
 
-import { List, ListItem, Modal, showModal } from "./ui-lib";
+import { List, ListItem, Modal, showModal, showToast } from "./ui-lib";
 import { useLocation, useNavigate } from "react-router-dom";
 import { LAST_INPUT_KEY, Path, REQUEST_TIMEOUT_MS } from "../constant";
 import { Avatar } from "./emoji";
@@ -123,9 +125,13 @@ export function SessionConfigModel(props: { onClose: () => void }) {
             icon={<ResetIcon />}
             bordered
             text={Locale.Chat.Config.Reset}
-            onClick={() =>
-              confirm(Locale.Memory.ResetConfirm) && chatStore.resetSession()
-            }
+            onClick={() => {
+              if (confirm(Locale.Memory.ResetConfirm)) {
+                chatStore.updateCurrentSession(
+                  (session) => (session.memoryPrompt = ""),
+                );
+              }
+            }}
           />,
           <IconButton
             key="copy"
@@ -374,6 +380,28 @@ export function PromptHints(props: {
   );
 }
 
+function ClearContextDivider() {
+  const chatStore = useChatStore();
+
+  return (
+    <div
+      className={chatStyle["clear-context"]}
+      onClick={() =>
+        chatStore.updateCurrentSession(
+          (session) => (session.clearContextIndex = -1),
+        )
+      }
+    >
+      <div className={chatStyle["clear-context-tips"]}>
+        {Locale.Context.Clear}
+      </div>
+      <div className={chatStyle["clear-context-revert-btn"]}>
+        {Locale.Context.Revert}
+      </div>
+    </div>
+  );
+}
+
 function useScrollToBottom() {
   // for auto-scroll
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -409,6 +437,7 @@ export function ChatActions(props: {
 }) {
   const config = useAppConfig();
   const navigate = useNavigate();
+  const chatStore = useChatStore();
 
   // switch themes
   const theme = config.theme;
@@ -452,7 +481,7 @@ export function ChatActions(props: {
           className={`${chatStyle["chat-input-action"]} clickable`}
           onClick={props.showPromptModal}
         >
-          <BrainIcon />
+          <SettingsIcon />
         </div>
       )}
 
@@ -497,6 +526,22 @@ export function ChatActions(props: {
         onClick={toggleAssistantVoice}
       >
         {props.soundOn ? <SoundOnIcon /> : <SoundOffIcon />}
+      </div>
+
+      <div
+        className={`${chatStyle["chat-input-action"]} clickable`}
+        onClick={() => {
+          chatStore.updateCurrentSession((session) => {
+            if (session.clearContextIndex === session.messages.length) {
+              session.clearContextIndex = -1;
+            } else {
+              session.clearContextIndex = session.messages.length;
+              session.memoryPrompt = ""; // will clear memory
+            }
+          });
+        }}
+      >
+        <BreakIcon />
       </div>
     </div>
   );
@@ -745,6 +790,12 @@ export function Chat() {
     session.messages[session.messages.length - 1]?.content,
     session.messages[session.messages.length - 1]?.streaming,
   ]);
+  
+  // clear context index = context length + index in messages
+  const clearContextIndex =
+    (session.clearContextIndex ?? -1) >= 0
+      ? session.clearContextIndex! + context.length
+      : -1;
 
   // preview messages
   const messages = context
@@ -977,58 +1028,84 @@ export function Chat() {
             !(message.preview || message.content.length === 0);
           const showTyping = message.preview || message.streaming;
 
+          const shouldShowClearContextDivider = i === clearContextIndex - 1;
+
           return (
-            <div
-              key={i}
-              className={
-                isUser ? styles["chat-message-user"] : styles["chat-message"]
-              }
-            >
-              <div className={styles["chat-message-container"]}>
-                <div className={styles["chat-message-avatar"]}>
-                  {message.role === "user" ? (
-                    <Avatar avatar={config.avatar} />
-                  ) : (
-                    <MaskAvatar mask={session.mask} />
-                  )}
-                </div>
-                {showTyping && (
-                  <div className={styles["chat-message-status"]}>
-                    {Locale.Chat.Typing}
+            <>
+              <div
+                key={i}
+                className={
+                  isUser ? styles["chat-message-user"] : styles["chat-message"]
+                }
+              >
+                <div className={styles["chat-message-container"]}>
+                  <div className={styles["chat-message-avatar"]}>
+                    {message.role === "user" ? (
+                      <Avatar avatar={config.avatar} />
+                    ) : (
+                      <MaskAvatar mask={session.mask} />
+                    )}
                   </div>
-                )}
-                <div className={styles["chat-message-item"]}>
-                  {showActions && (
-                    <div className={styles["chat-message-top-actions"]}>
-                      {message.streaming ? (
+                  {showTyping && (
+                    <div className={styles["chat-message-status"]}>
+                      {Locale.Chat.Typing}
+                    </div>
+                  )}
+                  <div className={styles["chat-message-item"]}>
+                    {showActions && (
+                      <div className={styles["chat-message-top-actions"]}>
+                        {message.streaming ? (
+                          <div
+                            className={styles["chat-message-top-action"]}
+                            onClick={() => onUserStop(message.id ?? i)}
+                          >
+                            {Locale.Chat.Actions.Stop}
+                          </div>
+                        ) : (
+                          <>
+                            <div
+                              className={styles["chat-message-top-action"]}
+                              onClick={() => onDelete(message.id ?? i)}
+                            >
+                              {Locale.Chat.Actions.Delete}
+                            </div>
+                            <div
+                              className={styles["chat-message-top-action"]}
+                              onClick={() => onResend(message.id ?? i)}
+                            >
+                              {Locale.Chat.Actions.Retry}
+                            </div>
+                          </>
+                        )}
+
                         <div
                           className={styles["chat-message-top-action"]}
-                          onClick={() => onUserStop(message.id ?? i)}
+                          onClick={() => copyToClipboard(message.content)}
                         >
-                          {Locale.Chat.Actions.Stop}
+                          {Locale.Chat.Actions.Copy}
                         </div>
-                      ) : (
-                        <>
-                          <div
-                            className={styles["chat-message-top-action"]}
-                            onClick={() => onDelete(message.id ?? i)}
-                          >
-                            {Locale.Chat.Actions.Delete}
-                          </div>
-                          <div
-                            className={styles["chat-message-top-action"]}
-                            onClick={() => onResend(message.id ?? i)}
-                          >
-                            {Locale.Chat.Actions.Retry}
-                          </div>
-                        </>
-                      )}
-
-                      <div
-                        className={styles["chat-message-top-action"]}
-                        onClick={() => copyToClipboard(message.content)}
-                      >
-                        {Locale.Chat.Actions.Copy}
+                      </div>
+                    )}
+                    <Markdown
+                      content={message.content}
+                      loading={
+                        (message.preview || message.content.length === 0) &&
+                        !isUser
+                      }
+                      onContextMenu={(e) => onRightClick(e, message)}
+                      onDoubleClickCapture={() => {
+                        if (!isMobileScreen) return;
+                        setUserInput(message.content);
+                      }}
+                      fontSize={fontSize}
+                      parentRef={scrollRef}
+                      defaultShow={i >= messages.length - 10}
+                    />
+                  </div>
+                  {!isUser && !message.preview && (
+                    <div className={styles["chat-message-actions"]}>
+                      <div className={styles["chat-message-action-date"]}>
+                        {message.date.toLocaleString()}
                       </div>
                       <div
                         className={styles["chat-message-top-action"]}
@@ -1041,31 +1118,10 @@ export function Chat() {
                       </div>
                     </div>
                   )}
-                  <Markdown
-                    content={message.content}
-                    loading={
-                      (message.preview || message.content.length === 0) &&
-                      !isUser
-                    }
-                    onContextMenu={(e) => onRightClick(e, message)}
-                    onDoubleClickCapture={() => {
-                      if (!isMobileScreen) return;
-                      setUserInput(message.content);
-                    }}
-                    fontSize={fontSize}
-                    parentRef={scrollRef}
-                    defaultShow={i >= messages.length - 10}
-                  />
                 </div>
-                {!isUser && !message.preview && (
-                  <div className={styles["chat-message-actions"]}>
-                    <div className={styles["chat-message-action-date"]}>
-                      {message.date.toLocaleString()}
-                    </div>
-                  </div>
-                )}
               </div>
-            </div>
+              {shouldShowClearContextDivider && <ClearContextDivider />}
+            </>
           );
         })}
       </div>
