@@ -212,6 +212,10 @@ const tw: LocaleType = {
         SubTitle: "當前對話是否使用全局模型設置",
         Confirm: "當前對話的自定義設置將會被自動覆蓋，確認啟用全局設置？",
       },
+      HideContext: {
+        Title: "隱藏預設對話",
+        SubTitle: "隱藏後預設對話不會出現在聊天界面",
+      },
     },
   },
   NewChat: {
