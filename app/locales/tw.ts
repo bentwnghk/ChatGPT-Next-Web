@@ -10,7 +10,7 @@ const tw: LocaleType = {
     ChatItemCount: (count: number) => `${count} 條對話`,
   },
   Chat: {
-    SubTitle: (count: number) => `您已經與 ChatGPT 進行了 ${count} 條對話`,
+    SubTitle: (count: number) => `與 ChatGPT 的 ${count} 條對話`,
     Actions: {
       ChatList: "查看訊息列表",
       CompressedHistory: "查看壓縮後的歷史 Prompt",
@@ -32,7 +32,7 @@ const tw: LocaleType = {
     Send: "發送",
     Config: {
       Reset: "重置默認",
-      SaveAs: "另存為面具",
+      SaveAs: "存為面具",
     },
   },
   Export: {
@@ -43,12 +43,12 @@ const tw: LocaleType = {
     MessageFromChatGPT: "來自 ChatGPT 的訊息",
   },
   Memory: {
-    Title: "上下文記憶 Prompt",
-    EmptyContent: "尚未記憶",
-    Copy: "複製全部",
-    Send: "發送記憶",
-    Reset: "重設對話",
-    ResetConfirm: "重設後將清除目前對話記錄以及歷史記憶，確認重設？",
+    Title: "歷史摘要",
+    EmptyContent: "對話內容過短，無需總結",
+    Send: "自動壓縮聊天記錄並作為上下文發送",
+    Copy: "複製摘要",
+    Reset: "[unused]",
+    ResetConfirm: "確認清空歷史摘要？",
   },
   Home: {
     NewChat: "新的對話",
@@ -105,7 +105,7 @@ const tw: LocaleType = {
       Edit: "編輯",
       Modal: {
         Title: "提示詞列表",
-        Add: "新增一條",
+        Add: "新增",
         Search: "搜尋提示詞",
       },
       EditModal: {
@@ -132,7 +132,7 @@ const tw: LocaleType = {
       },
       IsChecking: "正在檢查…",
       Check: "重新檢查",
-      NoAccess: "輸入 API Key 查看餘額",
+      NoAccess: "輸入 API Key 或授權碼查看餘額",
     },
     AccessCode: {
       Title: "授權碼",
@@ -155,15 +155,15 @@ const tw: LocaleType = {
   },
   Store: {
     DefaultTopic: "新的對話",
-    BotHello: "請問需要我的協助嗎？",
+    BotHello: "請問有什麼可以幫你？",
     Error: "出錯了，請稍後再嘗試",
     Prompt: {
       History: (content: string) =>
-        "這是 AI 與用戶的歷史聊天總結，作為前情提要：" + content,
+        "這是歷史聊天總結，作為前情提要：" + content,
       Topic:
-        "Use the language used by the user (e.g. en for english conversation, zh-hant for chinese conversation, etc.) to generate a title (at most 6 words) summarizing our conversation without any lead-in, quotation marks, preamble like 'Title:', direct text copies, single-word replies, quotation marks, translations, or brackets. Remove enclosing quotation marks. The title should make third-party grasp the essence of the conversation in first sight.",
+        "使用四到五個字直接返回這句話的簡要主題，不要解釋、不要標點、不要語氣詞、不要多餘文本，如果沒有主題，請直接返回“閒聊”",
       Summarize:
-        "Use the language used by the user (e.g. en-us for english conversation, zh-hant for chinese conversation, etc.) to summarise the conversation in at most 200 words. The summary will be used as prompt for you to continue the conversation in the future.",
+        "簡要總結一下對話內容，用作後續的上下文提示 prompt，控制在 200 字以內",
     },
   },
   Copy: {
@@ -171,18 +171,22 @@ const tw: LocaleType = {
     Failed: "複製失敗，請賦予剪貼簿權限",
   },
   Context: {
-    Toast: (x: any) => `已設定 ${x} 條前置上下文`,
-    Edit: "前置上下文和歷史記憶",
-    Add: "新增一條",
+    Toast: (x: any) => `包含 ${x} 條預設提示詞`,
+    Edit: "當前對話設置",
+    Add: "新增預設對話",
+    Clear: "上下文已清除",
+    Revert: "恢復上下文",
   },
-  Plugin: { Name: "插件" },
+  Plugin: {
+    Name: "插件",
+  },
   Mask: {
     Name: "面具",
     Page: {
       Title: "預設角色面具",
       SubTitle: (count: number) => `${count} 個預設角色定義`,
       Search: "搜索角色面具",
-      Create: "新建",
+      Create: "新增",
     },
     Item: {
       Info: (count: number) => `包含 ${count} 條預設對話`,
@@ -214,18 +218,18 @@ const tw: LocaleType = {
   },
   NewChat: {
     Return: "返回",
-    Skip: "跳過",
-    Title: "挑選一個面具",
-    SubTitle: "現在開始，與面具背後的靈魂思維碰撞",
-    More: "搜索更多",
+    Skip: "直接開始",
     NotShow: "不再展示",
     ConfirmNoShow: "確認禁用？禁用後可以隨時在設置中重新啟用。",
+    Title: "挑選一個面具",
+    SubTitle: "現在開始，與面具背後的靈魂思維碰撞",
+    More: "查看全部",
   },
   UI: {
     Confirm: "確認",
     Cancel: "取消",
     Close: "關閉",
-    Create: "新建",
+    Create: "新增",
     Edit: "編輯",
   },
 };
