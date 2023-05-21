@@ -1084,6 +1084,15 @@ export function Chat() {
                         >
                           {Locale.Chat.Actions.Copy}
                         </div>
+                        <div
+                          className={styles["chat-message-top-action"]}
+                          onClick={() =>
+                            soundOn &&
+                            speak(message.content, session.ttsConfig?.voice)
+                          }
+                        >
+                          {Locale.Chat.Actions.Speak}
+                        </div>
                       </div>
                     )}
                     <Markdown
@@ -1106,15 +1115,6 @@ export function Chat() {
                     <div className={styles["chat-message-actions"]}>
                       <div className={styles["chat-message-action-date"]}>
                         {message.date.toLocaleString()}
-                      </div>
-                      <div
-                        className={styles["chat-message-top-action"]}
-                        onClick={() =>
-                          soundOn &&
-                          speak(message.content, session.ttsConfig?.voice)
-                        }
-                      >
-                        {Locale.Chat.Actions.Speak}
                       </div>
                     </div>
                   )}
