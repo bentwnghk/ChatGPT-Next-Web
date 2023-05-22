@@ -38,11 +38,30 @@ const tw: LocaleType = {
     },
   },
   Export: {
-    Title: "將聊天記錄匯出為 Markdown",
+    Title: "分享聊天記錄",
     Copy: "複製全部",
     Download: "下載檔案",
+    Share: "分享到 ShareGPT",
     MessageFromYou: "來自您的訊息",
     MessageFromChatGPT: "來自 ChatGPT 的訊息",
+    Format: {
+      Title: "導出格式",
+      SubTitle: "可以導出 Markdown 文本或者 PNG 圖片",
+    },
+    IncludeContext: {
+      Title: "包含面具上下文",
+      SubTitle: "是否在訊息中展示面具上下文",
+    },
+    Steps: {
+      Select: "選取",
+      Preview: "預覽",
+    },
+  },
+  Select: {
+    Search: "搜索訊息",
+    All: "選取全部",
+    Latest: "最近十條",
+    Clear: "清除選取",
   },
   Memory: {
     Title: "歷史摘要",
