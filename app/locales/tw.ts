@@ -58,7 +58,7 @@ const tw: LocaleType = {
   Select: {
     Search: "搜索訊息",
     All: "選取全部",
-    Latest: "最近十條",
+    Latest: "最近幾條",
     Clear: "清除選取",
   },
   Memory: {
