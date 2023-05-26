@@ -200,7 +200,7 @@ export function MessageSelector(props: {
               </div>
               <div className={styles["body"]}>
                 <div className={styles["date"]}>
-                  {new Date(m.date).toLocaleString()}
+                  {m.date}
                 </div>
                 <div className={`${styles["content"]} one-line`}>
                   {m.content}
