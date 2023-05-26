@@ -459,9 +459,7 @@ export function ImagePreviewer(props: {
             </div>
             <div className={styles["chat-info-item"]}>
               Time:{" "}
-              {new Date(
-                props.messages.at(-1)?.date ?? Date.now(),
-              ).toLocaleString()}
+              {props.messages.at(-1)?.date ?? Date.now()}
             </div>
           </div>
         </div>
