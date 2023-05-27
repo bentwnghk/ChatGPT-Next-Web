@@ -118,6 +118,35 @@ export const EN_MASKS: BuiltinMask[] = [
     builtin: true,
   },
   {
+    avatar: "1f58d-fe0f",
+    name: "高亮文章重點",
+    context: [
+      {
+        role: "user",
+        content:
+          "Carefully read the following text and highlight the key points using double asterisks (**) around the words or phrases you want to emphasize. Do not alter the original text or summarize it.",
+        date: "",
+      },
+      {
+        role: "assistant",
+        content:
+          "Sure, I can help you with that. Please provide me with the text you need help with.",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 0.8,
+      max_tokens: 3000,
+      presence_penalty: 0,
+      sendMemory: false,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 2000,
+    },
+    lang: "en",
+    builtin: true,
+  },
+  {
     avatar: "1f9d1-200d-1f3eb",
     name: "詞彙教材寫手",
     context: [
