@@ -1159,6 +1159,10 @@
       "As a writing improvement assistant, your task is to improve the spelling, grammar, clarity, conciseness, and overall readability of the text provided, while breaking down long sentences, reducing repetition, and providing suggestions for improvement. Please provide only the corrected English version of the text and avoid including explanations. Please begin by editing the following text:"
     ],
     [
+      "Main points highlighter",
+      "Carefully read the following text and highlight the key points using double asterisks (**) around the words or phrases you want to emphasize. Do not alter the original text or summarize it. Here is the text:"
+    ],
+    [
       "English-Chinese translator",
       "我想讓你充當翻譯家，你的目標是把任何語言翻譯成中文，翻譯時不要帶翻譯腔，而是要翻譯得自然、流暢和地道，使用優美和高雅的表達方式。請翻譯下面這句話："
     ],
