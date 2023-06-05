@@ -204,4 +204,33 @@ export const EN_MASKS: BuiltinMask[] = [
     lang: "en",
     builtin: true,
   },
+  {
+    avatar: "1f9e9",
+    name: "主題詞彙練習",
+    context: [
+      {
+        role: "user",
+        content:
+          "I want you to act as an English thematic vocabulary worksheet writer. I would like you to ask me for a theme and write a 250-word article on it. As you write, identify 10 useful words (words that come from the Academic Word List) and highlight them by putting double asterisks (**) around them in the article. Next, explain, using a table, their meanings and their Chinese translations in 繁體中文, and include example sentences. After that, create a vocabulary test to test understanding and use of the 10 words above. Set 5 MCQs and 5 gap-filling questions. The gaps in the gap-filling questions are to be completed only with 5 of the 10 words above. Finally, provide answers to the test.",
+        date: "",
+      },
+      {
+        role: "assistant",
+        content:
+          "Sure! What theme do you want me to write on?",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 1,
+      max_tokens: 3000,
+      presence_penalty: 0,
+      sendMemory: false,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 3000,
+    },
+    lang: "en",
+    builtin: true,
+  },
 ];
