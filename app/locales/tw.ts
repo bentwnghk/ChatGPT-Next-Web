@@ -5,7 +5,14 @@ const tw: LocaleType = {
   WIP: "該功能仍在開發中……",
   Error: {
     Unauthorized:
-      "目前您的狀態是未授權，請前往[設定頁面](/#/settings)輸入授權碼。",
+      "訪問密碼不正確或為空，請前往[登錄](/#/auth)頁輸入正確的訪問密碼。",
+  },
+  Auth: {
+    Title: "訪問密碼驗證",
+    Tips: "請在下方輸入訪問密碼",
+    Input: "訪問密碼",
+    Confirm: "確認",
+    Later: "稍後再說",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 條對話`,
