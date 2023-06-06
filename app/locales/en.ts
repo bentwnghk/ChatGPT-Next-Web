@@ -5,7 +5,14 @@ const en: RequiredLocaleType = {
   WIP: "Coming Soon...",
   Error: {
     Unauthorized:
-      "Unauthorized access, please enter access code in [settings page](/#/settings).",
+      "Unauthorized access, please enter access code in [auth](/#/auth).",
+  },
+  Auth: {
+    Title: "Access Code Required",
+    Tips: "Please enter access code below",
+    Input: "access code",
+    Confirm: "Confirm",
+    Later: "Later",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} messages`,

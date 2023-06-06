@@ -350,7 +350,7 @@ function ClearContextDivider() {
       className={chatStyle["clear-context"]}
       onClick={() =>
         chatStore.updateCurrentSession(
-          (session) => (session.clearContextIndex = -1),
+          (session) => (session.clearContextIndex = undefined),
         )
       }
     >
@@ -495,7 +495,7 @@ export function ChatActions(props: {
         onClick={() => {
           chatStore.updateCurrentSession((session) => {
             if (session.clearContextIndex === session.messages.length) {
-              session.clearContextIndex = -1;
+              session.clearContextIndex = undefined;
             } else {
               session.clearContextIndex = session.messages.length;
               session.memoryPrompt = ""; // will clear memory
