@@ -225,7 +225,7 @@ const tw: LocaleType = {
     },
     EditModal: {
       Title: (readonly: boolean) =>
-        `編輯預設面具 ${readonly ? "（只讀）" : ""}`,
+        `編輯預設面具 ${readonly ? "（唯讀）" : ""}`,
       Download: "下載預設",
       Clone: "複製預設",
     },
