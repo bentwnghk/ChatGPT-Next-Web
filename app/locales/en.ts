@@ -5,18 +5,11 @@ const en: RequiredLocaleType = {
   WIP: "Coming Soon...",
   Error: {
     Unauthorized:
-      "Unauthorized access, please enter access code in [auth](/#/auth).",
+      "Unauthorized access! Please enter access code in [auth](/#/auth).",
   },
   Auth: {
     Title: "Access Code Required",
-    Tips: "Please enter access code below",
-    Input: "access code",
-    Confirm: "Confirm",
-    Later: "Later",
-  },
-  Auth: {
-    Title: "Need Access Code",
-    Tips: "Please enter access code below",
+    Tips: "Please enter access code below.",
     Input: "access code",
     Confirm: "Confirm",
     Later: "Later",
