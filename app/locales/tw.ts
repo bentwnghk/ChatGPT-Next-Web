@@ -28,6 +28,19 @@ const tw: LocaleType = {
       Retry: "重試",
       Delete: "刪除",
     },
+    InputActions: {
+      Stop: "停止響應",
+      ToBottom: "滾到最新",
+      Theme: {
+        auto: "自動主題",
+        light: "亮色模式",
+        dark: "深色模式",
+      },
+      Prompt: "快捷指令",
+      Masks: "所有面具",
+      Clear: "清除聊天",
+      Settings: "對話設置",
+    },
     Rename: "重命名對話",
     Typing: "正在輸入…",
     Input: (submitKey: string) => {
