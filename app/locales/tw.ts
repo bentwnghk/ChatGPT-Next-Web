@@ -29,6 +29,21 @@ const tw: LocaleType = {
       Delete: "刪除",
       Speak: "AI語音",
     },
+    InputActions: {
+      Stop: "停止响应",
+      ToBottom: "滚到最新",
+      Theme: {
+        auto: "自动主题",
+        light: "亮色模式",
+        dark: "深色模式",
+      },
+      Prompt: "快捷指令",
+      Masks: "所有面具",
+      TTS: "語音偏好",
+      Voice: "語音開/關",
+      Clear: "清除聊天",
+      Settings: "对话设置",
+    },
     Rename: "重命名對話",
     Typing: "正在輸入…",
     Input: (submitKey: string) => {

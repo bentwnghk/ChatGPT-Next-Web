@@ -39,6 +39,8 @@ const en: RequiredLocaleType = {
       },
       Prompt: "Prompts",
       Masks: "Masks",
+      TTS: "Voice Preference",
+      Voice: "Voice On/Off",
       Clear: "Clear Context",
       Settings: "Settings",
     },

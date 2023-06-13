@@ -38,6 +38,8 @@ const cn = {
       },
       Prompt: "快捷指令",
       Masks: "所有面具",
+      TTS: "语音偏好",
+      Voice: "语音开/关",
       Clear: "清除聊天",
       Settings: "对话设置",
     },
