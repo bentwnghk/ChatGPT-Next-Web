@@ -29,6 +29,19 @@ const en: RequiredLocaleType = {
       Delete: "Delete",
       Speak: "Speak",
     },
+    InputActions: {
+      Stop: "Stop",
+      ToBottom: "To Latest",
+      Theme: {
+        auto: "Auto",
+        light: "Light Theme",
+        dark: "Dark Theme",
+      },
+      Prompt: "Prompts",
+      Masks: "Masks",
+      Clear: "Clear Context",
+      Settings: "Settings",
+    },
     Rename: "Rename Chat",
     Typing: "Typing…",
     Input: (submitKey: string) => {
