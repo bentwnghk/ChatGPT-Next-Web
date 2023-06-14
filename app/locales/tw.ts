@@ -42,7 +42,7 @@ const tw: LocaleType = {
       TTS: "語音偏好",
       Voice: "語音開/關",
       Clear: "清除聊天",
-      Settings: "对话设置",
+      Settings: "對話設置",
     },
     Rename: "重命名對話",
     Typing: "正在輸入…",
