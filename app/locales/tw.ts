@@ -179,6 +179,10 @@ const tw: LocaleType = {
       SubTitle: "已開啟授權訪問限制",
       Placeholder: "請輸入授權碼",
     },
+    Endpoint: {
+      Title: "接口地址",
+      SubTitle: "除默認地址外，必須包含 http(s)://",
+    },
     Model: "模型 (model)",
     Temperature: {
       Title: "隨機性 (temperature)",
