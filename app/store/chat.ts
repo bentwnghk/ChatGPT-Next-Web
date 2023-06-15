@@ -243,6 +243,7 @@ export const useChatStore = create<ChatStore>()(
 
       onNewMessage(message) {
         get().updateCurrentSession((session) => {
+          session.messages = session.messages.concat();
           session.lastUpdate = Date.now();
         });
         get().updateStat(message);
@@ -289,8 +290,7 @@ export const useChatStore = create<ChatStore>()(
 
         // save user's and bot's message
         get().updateCurrentSession((session) => {
-          session.messages.push(userMessage);
-          session.messages.push(botMessage);
+          session.messages = session.messages.concat([userMessage, botMessage]);
         });
 
         // make request
@@ -303,7 +303,9 @@ export const useChatStore = create<ChatStore>()(
             if (message) {
               botMessage.content = message;
             }
-            set(() => ({}));
+            get().updateCurrentSession((session) => {
+              session.messages = session.messages.concat();
+            });
           },
           onFinish(message) {
             botMessage.streaming = false;
@@ -315,7 +317,6 @@ export const useChatStore = create<ChatStore>()(
               sessionIndex,
               botMessage.id ?? messageIndex,
             );
-            set(() => ({}));
           },
           onError(error) {
             const isAborted = error.message.includes("aborted");
@@ -328,8 +329,9 @@ export const useChatStore = create<ChatStore>()(
             botMessage.streaming = false;
             userMessage.isError = !isAborted;
             botMessage.isError = !isAborted;
-
-            set(() => ({}));
+            get().updateCurrentSession((session) => {
+              session.messages = session.messages.concat();
+            });
             ChatControllerPool.remove(
               sessionIndex,
               botMessage.id ?? messageIndex,
