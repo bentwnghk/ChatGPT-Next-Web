@@ -202,7 +202,7 @@ const en: LocaleType = {
     FrequencyPenalty: {
       Title: "Frequency Penalty",
       SubTitle:
-        "A larger value decreasing the likelihood to repeat the same line",
+        "A larger value decreases the likelihood to repeat the same line",
     },
   },
   Store: {
