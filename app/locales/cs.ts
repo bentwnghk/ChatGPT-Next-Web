@@ -157,6 +157,11 @@ const cs: PartialLocaleType = {
       SubTitle: "Větší hodnota zvyšuje pravděpodobnost nových témat.",
     },
     Voice: "Hlas",
+    FrequencyPenalty: {
+      Title: "Frekvenční penalizace",
+      SubTitle:
+        "Větší hodnota snižující pravděpodobnost opakování stejného řádku",
+    },
   },
   Store: {
     DefaultTopic: "Nová konverzace",

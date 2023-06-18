@@ -201,6 +201,10 @@ const cn = {
       SubTitle: "值越大，越有可能扩展到新话题",
     },
     Voice: "语音类型",
+    FrequencyPenalty: {
+      Title: "频率惩罚度 (frequency_penalty)",
+      SubTitle: "值越大，越有可能降低重复字词",
+    },
   },
   Store: {
     DefaultTopic: "新的聊天",

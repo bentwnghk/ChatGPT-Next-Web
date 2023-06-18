@@ -160,6 +160,11 @@ const tr: PartialLocaleType = {
         "Daha büyük bir değer, yeni konular hakkında konuşma olasılığını artırır",
     },
     Voice: "Ses",
+    FrequencyPenalty: {
+      Title: "Frekans Cezası",
+      SubTitle:
+        "Aynı satırı tekrar etme olasılığını azaltan daha büyük bir değer",
+    },
   },
   Store: {
     DefaultTopic: "Yeni Konuşma",

@@ -160,6 +160,10 @@ const jp: PartialLocaleType = {
       SubTitle: "値が大きいほど、新しいトピックへの展開が可能になります。",
     },
     Voice: "音声",
+    FrequencyPenalty: {
+      Title: "話題の頻度 (frequency_penalty)",
+      SubTitle: "値が大きいほど、重複語を低減する可能性が高くなります",
+    },
   },
   Store: {
     DefaultTopic: "新しいチャット",

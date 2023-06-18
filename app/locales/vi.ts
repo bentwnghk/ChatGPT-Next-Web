@@ -153,6 +153,10 @@ const vi: PartialLocaleType = {
       SubTitle: "Giá trị càng lớn tăng khả năng mở rộng sang các chủ đề mới",
     },
     Voice: "Tiếng nói",
+    FrequencyPenalty: {
+      Title: "Hình phạt tần suất",
+      SubTitle: "Giá trị lớn hơn làm giảm khả năng lặp lại cùng một dòng",
+    },
   },
   Store: {
     DefaultTopic: "Cuộc trò chuyện mới",

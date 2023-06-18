@@ -203,6 +203,11 @@ const en: LocaleType = {
         "A larger value increases the likelihood to talk about new topics",
     },
     Voice: "Voice",
+    FrequencyPenalty: {
+      Title: "Frequency Penalty",
+      SubTitle:
+        "A larger value decreases the likelihood to repeat the same line",
+    },
   },
   Store: {
     DefaultTopic: "New Conversation",

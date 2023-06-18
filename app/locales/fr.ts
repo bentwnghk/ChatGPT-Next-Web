@@ -161,6 +161,11 @@ const fr: PartialLocaleType = {
         "Une valeur plus élevée augmentera la probabilité d'introduire de nouveaux sujets",
     },
     Voice: "Voix",
+    FrequencyPenalty: {
+      Title: "Pénalité de fréquence",
+      SubTitle:
+        "Une valeur plus élevée diminuant la probabilité de répéter la même ligne",
+    },
   },
   Store: {
     DefaultTopic: "Nouvelle conversation",

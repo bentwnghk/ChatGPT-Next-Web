@@ -35,6 +35,7 @@ export const DEFAULT_CONFIG = {
     temperature: 0.8,
     max_tokens: 3000,
     presence_penalty: 0,
+    frequency_penalty: 0,
     sendMemory: true,
     historyMessageCount: 6,
     compressMessageLengthThreshold: 2000,
@@ -152,6 +153,9 @@ export const ModalConfigValidator = {
     return limitNumber(x, 0, 32000, 2000);
   },
   presence_penalty(x: number) {
+    return limitNumber(x, -2, 2, 0);
+  },
+  frequency_penalty(x: number) {
     return limitNumber(x, -2, 2, 0);
   },
   temperature(x: number) {
