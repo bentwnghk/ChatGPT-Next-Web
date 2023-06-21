@@ -226,6 +226,12 @@ const vi: PartialLocaleType = {
     Create: "Tạo",
     Edit: "Chỉnh sửa",
   },
+  Exporter: {
+    Model: "Mô hình",
+    Messages: "Thông điệp",
+    Topic: "Chủ đề",
+    Time: "Thời gian",
+  },
 };
 
 export default vi;

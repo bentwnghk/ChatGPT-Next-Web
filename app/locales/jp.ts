@@ -246,6 +246,12 @@ const jp: PartialLocaleType = {
     Create: "新規",
     Edit: "編集",
   },
+  Exporter: {
+    Model: "モデル",
+    Messages: "メッセージ",
+    Topic: "トピック",
+    Time: "時間",
+  },
 };
 
 export default jp;
