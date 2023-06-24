@@ -118,6 +118,10 @@ const tw: PartialLocaleType = {
       Title: "字型大小",
       SubTitle: "聊天內容的字型大小",
     },
+    InputTemplate: {
+      Title: "用戶輸入預處理",
+      SubTitle: "用戶最新的一條消息會填充到此模板",
+    },
     Update: {
       Version: (x: string) => `當前版本：${x}`,
       IsLatest: "已是最新版本",

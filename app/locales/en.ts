@@ -119,12 +119,10 @@ const en: LocaleType = {
       Title: "Font Size",
       SubTitle: "Adjust font size of chat content",
     },
-
     InputTemplate: {
       Title: "Input Template",
       SubTitle: "Newest message will be filled to this template",
     },
-
     Update: {
       Version: (x: string) => `Version: ${x}`,
       IsLatest: "Latest version",
