@@ -1176,49 +1176,6 @@ export function Chat() {
                     </div>
                   )}
                   <div className={styles["chat-message-item"]}>
-                    {showActions && (
-                      <div className={styles["chat-message-top-actions"]}>
-                        {message.streaming ? (
-                          <div
-                            className={styles["chat-message-top-action"]}
-                            onClick={() => onUserStop(message.id ?? i)}
-                          >
-                            {Locale.Chat.Actions.Stop}
-                          </div>
-                        ) : (
-                          <>
-                            <div
-                              className={styles["chat-message-top-action"]}
-                              onClick={() => onDelete(message.id ?? i)}
-                            >
-                              {Locale.Chat.Actions.Delete}
-                            </div>
-                            <div
-                              className={styles["chat-message-top-action"]}
-                              onClick={() => onResend(message.id ?? i)}
-                            >
-                              {Locale.Chat.Actions.Retry}
-                            </div>
-                          </>
-                        )}
-
-                        <div
-                          className={styles["chat-message-top-action"]}
-                          onClick={() => copyToClipboard(message.content)}
-                        >
-                          {Locale.Chat.Actions.Copy}
-                        </div>
-                        <div
-                          className={styles["chat-message-top-action"]}
-                          onClick={() =>
-                            soundOn &&
-                            speak(message.content, session.ttsConfig?.voice)
-                          }
-                        >
-                          {Locale.Chat.Actions.Speak}
-                        </div>
-                      </div>
-                    )}
                     <Markdown
                       content={message.content}
                       loading={
@@ -1273,6 +1230,14 @@ export function Chat() {
                                 text={Locale.Chat.Actions.Copy}
                                 icon={<CopyIcon />}
                                 onClick={() => copyToClipboard(message.content)}
+                              />
+                              <ChatAction
+                                text={Locale.Chat.Actions.Speak}
+                                icon={<SoundOnIcon />}
+                                onClick={() =>
+                                  soundOn &&
+                                  speak(message.content, session.ttsConfig?.voice)
+                                }
                               />
                             </>
                           )}
