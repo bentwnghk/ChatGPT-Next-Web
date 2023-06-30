@@ -60,13 +60,7 @@ const vi: PartialLocaleType = {
   Settings: {
     Title: "Cài đặt",
     SubTitle: "Tất cả cài đặt",
-    Actions: {
-      ClearAll: "Xóa toàn bộ dữ liệu",
-      ResetAll: "Khôi phục cài đặt gốc",
-      Close: "Đóng",
-      ConfirmResetAll: "Bạn chắc chắn muốn thiết lập lại tất cả cài đặt?",
-      ConfirmClearAll: "Bạn chắc chắn muốn thiết lập lại tất cả dữ liệu?",
-    },
+
     Lang: {
       Name: "Language",
       All: "Tất cả ngôn ngữ",
