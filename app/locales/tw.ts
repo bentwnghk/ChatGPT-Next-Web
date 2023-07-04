@@ -199,6 +199,10 @@ const tw: PartialLocaleType = {
       Title: "隨機性 (temperature)",
       SubTitle: "值越大，回應越隨機",
     },
+    TopP: {
+      Title: "核採樣 (top_p)",
+      SubTitle: "與隨機性類似，但不要和隨機性一起更改",
+    },
     MaxTokens: {
       Title: "單次回應限制 (max_tokens)",
       SubTitle: "單次互動所用的最大 Token 數",
