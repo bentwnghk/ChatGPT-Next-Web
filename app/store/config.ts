@@ -59,6 +59,11 @@ export type ChatConfigStore = ChatConfig & {
 
 export type ModelConfig = ChatConfig["modelConfig"];
 
+export type VoiceConfig = {
+  voice: string;
+  lang: string;
+};
+
 export function limitNumber(
   x: number,
   min: number,
