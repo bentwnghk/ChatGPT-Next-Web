@@ -142,8 +142,10 @@ const tw: PartialLocaleType = {
       SubTitle: "在預覽氣泡中預覽 Markdown 内容",
     },
     Mask: {
-      Title: "面具啟動頁",
-      SubTitle: "新建聊天時，展示面具啟動頁",
+      Splash: {
+        Title: "面具啟動頁",
+        SubTitle: "新建聊天時，展示面具啟動頁",
+      },
     },
     Prompt: {
       Disable: {
