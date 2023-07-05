@@ -146,6 +146,10 @@ const tw: PartialLocaleType = {
         Title: "面具啟動頁",
         SubTitle: "新建聊天時，展示面具啟動頁",
       },
+      Builtin: {
+        Title: "隱藏內置面具",
+        SubTitle: "在所有面具列表中隱藏內置面具",
+      },
     },
     Prompt: {
       Disable: {
@@ -278,6 +282,11 @@ const tw: PartialLocaleType = {
       HideContext: {
         Title: "隱藏預設對話",
         SubTitle: "隱藏後預設對話不會出現在聊天界面",
+      },
+      Share: {
+        Title: "分享此面具",
+        SubTitle: "生成此面具的直達鏈接",
+        Action: "複製鏈接",
       },
     },
   },
