@@ -2,43 +2,13 @@ import { BuiltinMask } from "./typing";
 
 export const EN_MASKS: BuiltinMask[] = [
   {
-    avatar: "1f4da",
-    name: "校對高手",
-    context: [
-      {
-        role: "user",
-        content:
-          "I want you to act as a proofreader. I will provide you with a text and I would like you to review them for any spelling, vocabulary, grammar, or punctuation errors. Once you have finished reviewing the text, provide me with any necessary corrections for the text.",
-        date: "",
-      },
-      {
-        role: "assistant",
-        content:
-          "Sure, please provide me with the text you want me to proofread.",
-        date: "",
-      },
-    ],
-    modelConfig: {
-      model: "gpt-3.5-turbo",
-      temperature: 0.8,
-      max_tokens: 2000,
-      presence_penalty: 0,
-      frequency_penalty: 0,
-      sendMemory: true,
-      historyMessageCount: 4,
-      compressMessageLengthThreshold: 2000,
-    },
-    lang: "en",
-    builtin: true,
-  },
-  {
     avatar: "1f4d5",
-    name: "語法檢查器",
+    name: "語法檢查",
     context: [
       {
         role: "user",
         content:
-          "I want you to act as a grammar checker. I will provide you with a text and I would like you to check the grammar, use a table to highlight the wrong sentences and provide me with suggested corrections.",
+          "I want you to act as a grammar checker. I will provide you with a text and your task is to perform a grammar check, use a table to highlight the wrong sentences and provide a suggested correction.",
         date: "",
       },
       {
@@ -68,7 +38,7 @@ export const EN_MASKS: BuiltinMask[] = [
       {
         role: "user",
         content:
-          "I want you to act as a writing improvement assistant. I will provide you with a text and I would like you to improve its spelling, grammar, clarity, conciseness, and overall readability, while breaking down long sentences, reducing repetition, and providing suggestions for improvement.",
+          "I want you to act as a writing improvement assistant. I will provide you with a text that needs improving and your task is to improve its spelling, grammar, clarity, conciseness, and overall readability, while breaking down long sentences, reducing repetition, and providing suggestions for improvement. Please provide only the corrected English version of the text and avoid including explanations.",
         date: "",
       },
       {
@@ -92,13 +62,13 @@ export const EN_MASKS: BuiltinMask[] = [
     builtin: true,
   },
   {
-    avatar: "1f9d1-200d-1f3eb",
+    avatar: "1f4da",
     name: "英專寫手",
     context: [
       {
         role: "user",
         content:
-          "I want you to act as an English spell checker and improver. I will speak to you in English and you will reply with the corrected and improved version of my text, in English. I want you to replace my simplified A0-level words and sentences with more beautiful and elegant, upper level English words and sentences. Keep the meaning same, but make them more professional. I want you to only reply with the corrections and the improvements, and nothing else; do not write any explanation.",
+          "I want you to act as a professional writer and editor. I will provide you with a text and your task is to correct and improve it. You should replace my simple words and sentences with more advanced and complicated English words and sentences. Keep the same meaning, but make the text more literary and beautiful.",
         date: "",
       },
       {
@@ -158,13 +128,13 @@ export const EN_MASKS: BuiltinMask[] = [
       {
         role: "user",
         content:
-          "I want you to act as an English vocabulary worksheet writer. I would like you to ask me for a list of target words and create a vocabulary worksheet out of it. The worksheet is intended for an English Language class at junior secondary level. For the type of activities to be included in the worksheet, I want 5 matching questions, 5 multiple-choice questions, and 10 fill-in-the-blank sentences. The target words can be repeated in the various activities. Please also give me the answers to all the questions at the end of the worksheet.",
+          "I want you to act as an English vocabulary worksheet generator. I want you to create a worksheet that tests students' understanding of my requested vocabulary items. As for the test items to be included in the worksheet, I want 5 questions of matching definitions, 5 multiple-choice questions, and 10 fill-in-the-blank sentences. The target vocabulary items can be repeated in the various test items. Finally, provide the answers at the end of the worksheet.",
         date: "",
       },
       {
         role: "assistant",
         content:
-          "Sure! Please provide me with a list of the target words you would like to include in the worksheet.",
+          "Sure! Please provide me with a list of target vocabulary items for the worksheet.",
         date: "",
       },
     ],
@@ -188,13 +158,13 @@ export const EN_MASKS: BuiltinMask[] = [
       {
         role: "user",
         content:
-          "I want you to act as a reading comprehension worksheet writer. I would like you to ask me for a theme for a reading passage and create a reading comprehension worksheet out of it. The worksheet is intended for an English Language class at junior secondary level. For the reading passage, I want it to contain no less than 400 words. For the type of activities to be included in the worksheet, I want 5 multiple-choice questions, 5 true/false/not-given questions and 5 short-answer questions. Please also give me the answers to all the questions at the end of the worksheet.",
+          "I want you to act as a reading comprehension exercise generator. Write a passage on my requested topic and formulate MCQs to test students' understanding of the passage. One of the questions you set must be inference or analysis questions. Finally, provide the answers at the end.",
         date: "",
       },
       {
         role: "assistant",
         content:
-          "Sure! What theme would you like for the reading passage?",
+          "Sure! Please provide me with a topic, the desired length of the passage, the level of difficulty of the words in the passage, and the number of MCQs to be set.",
         date: "",
       },
     ],
@@ -218,7 +188,7 @@ export const EN_MASKS: BuiltinMask[] = [
       {
         role: "user",
         content:
-          "I want you to act as an English thematic vocabulary worksheet writer. I would like you to ask me for a theme and write a 250-word article on it. As you write, identify 10 useful words (words that come from the Academic Word List) and highlight them by putting double asterisks (**) around them in the article. Next, explain, using a table, their meanings and their Chinese translations in 繁體中文, and include example sentences. After that, create a vocabulary test to test understanding and use of the 10 words above. Set 5 MCQs and 5 gap-filling questions. The gaps in the gap-filling questions are to be completed only with 5 of the 10 words above. Finally, provide answers to the test.",
+          "I want you to act as an English thematic vocabulary worksheet writer. I would like you to write a 250-word article on my requested theme. As you write, identify 10 useful words (words that come from the Academic Word List) and highlight them by putting double asterisks (**) around them in the article. Next, explain, using a table, their meanings and their Chinese translations in 繁體中文, and include example sentences. After that, create a vocabulary test to test understanding and use of the 10 words above. Set 5 MCQs and 5 gap-filling questions. The gaps in the gap-filling questions are to be completed only with the 10 words above. Finally, provide answers to the test.",
         date: "",
       },
       {
