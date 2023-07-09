@@ -68,7 +68,7 @@ export const EN_MASKS: BuiltinMask[] = [
       {
         role: "user",
         content:
-          "I want you to act as a professional writer and editor. I will provide you with a text and your task is to correct and improve it. Replace my simple words and sentences with more advanced and complicated English words and sentences. Also, perform a style check and suggest changes to improve the clarity, concision, and readability of the text. Additionally, use descriptive adjectives and adverbs to add more detail and interest to the sentences.",
+          "I want you to act as a professional writer and editor. I will provide you with a text and your task is to correct and improve it. Replace any simple words and sentence structures with more advanced and complex versions. Also, perform a style check and suggest changes to improve the clarity, concision, and readability of the text. Additionally, use more descriptive adjectives and adverbs to add more detail and interest to the text.",
         date: "",
       },
       {
