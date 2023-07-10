@@ -18,7 +18,7 @@ const tw: PartialLocaleType = {
     ChatItemCount: (count: number) => `${count} 條對話`,
   },
   Chat: {
-    SubTitle: (count: number) => `與 ChatGPT 的 ${count} 條對話`,
+    SubTitle: (count: number) => `共 ${count} 條對話`,
     Actions: {
       ChatList: "查看訊息列表",
       CompressedHistory: "查看壓縮後的歷史 Prompt",
@@ -26,7 +26,19 @@ const tw: PartialLocaleType = {
       Copy: "複製",
       Stop: "停止",
       Retry: "重試",
+      Pin: "固定",
+      PinToastContent: "已將 1 條對話固定至預設提示詞",
+      PinToastAction: "查看",
       Delete: "刪除",
+      Edit: "編輯",
+    },
+    Commands: {
+      new: "新建聊天",
+      newm: "從面具新建聊天",
+      next: "下一個聊天",
+      prev: "上一個聊天",
+      clear: "清除上下文",
+      del: "刪除聊天",
     },
     InputActions: {
       Stop: "停止響應",
@@ -55,6 +67,7 @@ const tw: PartialLocaleType = {
       Reset: "重置默認",
       SaveAs: "存為面具",
     },
+    IsContext: "預設提示詞",
   },
   Export: {
     Title: "分享聊天記錄",
@@ -74,6 +87,10 @@ const tw: PartialLocaleType = {
     Steps: {
       Select: "選取",
       Preview: "預覽",
+    },
+    Image: {
+      Toast: "正在生成截圖",
+      Modal: "長按或右鍵保存圖片",
     },
   },
   Select: {
@@ -199,6 +216,10 @@ const tw: PartialLocaleType = {
     Endpoint: {
       Title: "接口地址",
       SubTitle: "除默認地址外，必須包含 http(s)://",
+    },
+    CustomModel: {
+      Title: "自定義模型名",
+      SubTitle: "增加自定義模型可選項，使用英文逗號隔開",
     },
     Model: "模型 (model)",
     Temperature: {
