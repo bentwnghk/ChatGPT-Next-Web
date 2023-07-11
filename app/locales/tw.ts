@@ -42,10 +42,10 @@ const tw: PartialLocaleType = {
       del: "刪除聊天",
     },
     InputActions: {
-      Stop: "停止响应",
+      Stop: "停止響應",
       ToBottom: "滚到最新",
       Theme: {
-        auto: "自动主题",
+        auto: "自動主題",
         light: "亮色模式",
         dark: "深色模式",
       },
