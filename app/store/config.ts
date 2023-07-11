@@ -47,6 +47,7 @@ export const DEFAULT_CONFIG = {
     sendMemory: true,
     historyMessageCount: 6,
     compressMessageLengthThreshold: 2000,
+    enableInjectSystemPrompts: true,
     template: DEFAULT_INPUT_TEMPLATE,
   },
 };
@@ -151,7 +152,7 @@ export const useAppConfig = create<ChatConfigStore>()(
     }),
     {
       name: StoreKey.Config,
-      version: 3.5,
+      version: 3.6,
       migrate(persistedState, version) {
         const state = persistedState as ChatConfig;
 
@@ -168,6 +169,10 @@ export const useAppConfig = create<ChatConfigStore>()(
 
         if (version < 3.5) {
           state.customModels = "claude,claude-100k";
+        }
+
+        if (version < 3.6) {
+          state.modelConfig.enableInjectSystemPrompts = true;
         }
 
         return state as any;
