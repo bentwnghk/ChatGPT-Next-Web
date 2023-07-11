@@ -139,6 +139,10 @@ const tw: PartialLocaleType = {
       Title: "字型大小",
       SubTitle: "聊天內容的字型大小",
     },
+    InjectSystemPrompts: {
+      Title: "注入系統提示",
+      SubTitle: "強制在每個請求的訊息列表開頭添加一個模擬 ChatGPT 的系統提示",
+    },
     InputTemplate: {
       Title: "用戶輸入預處理",
       SubTitle: "用戶最新的一條消息會填充到此模板",
