@@ -5,7 +5,7 @@ import "./styles/highlight.scss";
 import { getClientConfig } from "./config/client";
 
 export const metadata = {
-  title: "Mr.5️⃣ ChatGPT+",
+  title: "Mr.🆖 ChatGPT+",
   description: "人工智能聊天機械人",
   viewport: {
     width: "device-width",
@@ -17,7 +17,7 @@ export const metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#151515" },
   ],
   appleWebApp: {
-    title: "Mr.5️⃣ ChatGPT+",
+    title: "Mr.🆖 ChatGPT+",
     statusBarStyle: "default",
   },
 };
