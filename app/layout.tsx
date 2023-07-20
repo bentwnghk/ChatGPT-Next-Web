@@ -3,10 +3,11 @@ import "./styles/globals.scss";
 import "./styles/markdown.scss";
 import "./styles/highlight.scss";
 import { getClientConfig } from "./config/client";
+import { type Metadata } from 'next';
 
-export const metadata = {
-  title: "Mr.🆖 ChatGPT+",
-  description: "人工智能聊天機械人",
+export const metadata: Metadata = {
+  title: "Mr.🆖 AI English Tutor",
+  description: "由 OpenAI 支持的人工智能英語學習利器",
   viewport: {
     width: "device-width",
     initialScale: 1,
