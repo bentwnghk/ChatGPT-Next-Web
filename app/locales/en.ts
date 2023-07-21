@@ -343,6 +343,11 @@ const en: LocaleType = {
     ConfirmNoShow: "Confirm to disable？You can enable it in settings later.",
   },
 
+  URLCommand: {
+    Code: "Detected access code from URL, confirm to apply? ",
+    Settings: "Detected settings from URL, confirm to apply?",
+  },
+
   UI: {
     Confirm: "Confirm",
     Cancel: "Cancel",
@@ -355,11 +360,6 @@ const en: LocaleType = {
     Messages: "Messages",
     Topic: "Topic",
     Time: "Time",
-  },
-
-  URLCommand: {
-    Code: "Detected access code from url, confirm to apply? ",
-    Settings: "Detected settings from url, confirm to apply?",
   },
 };
 
