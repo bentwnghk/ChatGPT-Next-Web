@@ -337,12 +337,10 @@ const tw: PartialLocaleType = {
     SubTitle: "現在開始，與面具背後的靈魂思維碰撞",
     More: "查看全部",
   },
-
   URLCommand: {
     Code: "檢測到鏈接中已經包含訪問碼，是否自動填入？",
     Settings: "檢測到鏈接中包含了預製設置，是否自動填入？",
   },
-
   UI: {
     Confirm: "確認",
     Cancel: "取消",
