@@ -19,6 +19,12 @@ const tw: PartialLocaleType = {
   },
   Chat: {
     SubTitle: (count: number) => `共 ${count} 條對話`,
+    EditMessage: {
+      Topic: {
+        Title: "聊天主題",
+        SubTitle: "更改當前聊天主題",
+      },
+    },
     Actions: {
       ChatList: "查看訊息列表",
       CompressedHistory: "查看壓縮後的歷史 Prompt",
@@ -323,6 +329,10 @@ const tw: PartialLocaleType = {
     Title: "挑選一個面具",
     SubTitle: "現在開始，與面具背後的靈魂思維碰撞",
     More: "查看全部",
+  },
+  URLCommand: {
+    Code: "檢測到鏈接中已經包含訪問碼，是否自動填入？",
+    Settings: "檢測到鏈接中包含了預製設置，是否自動填入？",
   },
   UI: {
     Confirm: "確認",
