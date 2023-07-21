@@ -9,7 +9,7 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "grammar-check-0",
         role: "user",
         content:
-          "I want you to act as a grammar checker. I will provide you with a text and your task is to perform a grammar check, use a table to highlight the wrong sentences and provide a suggested correction.",
+          "I want you to act as a grammar checker. I will provide you with a text and your task is to perform a grammar check. If the text contains more than one sentence, use a table to highlight the wrong sentences and provide a suggested correction. Otherwise, do not use any table.",
         date: "",
       },
       {

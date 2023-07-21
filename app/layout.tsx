@@ -6,8 +6,8 @@ import { getClientConfig } from "./config/client";
 import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Mr.🆖 AI English Tutor",
-  description: "由 OpenAI 支持的人工智能英語學習利器",
+  title: "Mr.🆖 ChatGPT+",
+  description: "由 AzureAI 支持的人工智能聊天機器人",
   viewport: {
     width: "device-width",
     initialScale: 1,
