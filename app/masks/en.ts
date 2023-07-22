@@ -232,4 +232,37 @@ export const EN_MASKS: BuiltinMask[] = [
     builtin: true,
     createdAt: 1688899480413,
   },
+  {
+    avatar: "270d-fe0f",
+    name: "英語診斷測試",
+    context: [
+      {
+        id: "diag-test-0",
+        role: "user",
+        content:
+          "Create a diagnostic test for me to evaluate my proficiency in English across different skills and domains.",
+        date: "",
+      },
+      {
+        id: "diag-test-1",
+        role: "assistant",
+        content:
+          "Sure! How many questions do you want me to set for the test?",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 1,
+      max_tokens: 3000,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: false,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 3000,
+    },
+    lang: "en",
+    builtin: true,
+    createdAt: 1688899480413,
+  },
 ];
