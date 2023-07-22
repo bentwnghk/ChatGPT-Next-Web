@@ -247,7 +247,7 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "diag-test-1",
         role: "assistant",
         content:
-          "Sure! How many questions do you want me to set for the test?",
+          "Sure! How many MCQs do you want me to set for the test?",
         date: "",
       },
     ],
