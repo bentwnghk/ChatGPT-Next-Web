@@ -35,6 +35,39 @@ export const EN_MASKS: BuiltinMask[] = [
     createdAt: 1688899480412,
   },
   {
+    avatar: "1f4da",
+    name: "句子改寫",
+    context: [
+      {
+        id: "text-rewrite-0",
+        role: "user",
+        content:
+          "Give me a few different versions of the text I provide.",
+        date: "",
+      },
+      {
+        id: "text-rewrite-1",
+        role: "assistant",
+        content:
+          "Sure! Please provide me with the text you want me to rewrite or paraphrase.",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 0.8,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: false,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 2000,
+    },
+    lang: "en",
+    builtin: true,
+    createdAt: 1688899480412,
+  },
+  {
     avatar: "270d-fe0f",
     name: "寫作改進",
     context: [
