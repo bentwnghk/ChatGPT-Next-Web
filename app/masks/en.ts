@@ -168,7 +168,7 @@ export const EN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "1f9d1-200d-1f3eb",
-    name: "詞彙教材寫手",
+    name: "詞彙練習",
     context: [
       {
         id: "vocab-worksheet-0",
@@ -201,7 +201,40 @@ export const EN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "1f9d1-200d-1f3eb",
-    name: "閱讀理解寫手",
+    name: "構詞填空練習",
+    context: [
+      {
+        id: "word-formation-0",
+        role: "user",
+        content:
+          "I want you to generate a word formation cloze exercise, where students have to change the part of speech of a given word in brackets, for example, from 'happy' to 'happiness' or from 'beauty' to 'beautiful. The aim of the exercise is to help students learn how words are related and how to use them in different contexts. Provide the answers at the end of the exercise.",
+        date: "",
+      },
+      {
+        id: "word-formation-1",
+        role: "assistant",
+        content:
+          "Sure! How many questions do you want for the exercise?",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 1,
+      max_tokens: 3000,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 2000,
+    },
+    lang: "en",
+    builtin: true,
+    createdAt: 1688899480413,
+  },
+  {
+    avatar: "1f9d1-200d-1f3eb",
+    name: "閱讀理解練習",
     context: [
       {
         id: "reading-worksheet-0",
