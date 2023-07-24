@@ -306,14 +306,14 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "diag-test-0",
         role: "user",
         content:
-          "Create a diagnostic test for me to evaluate my proficiency in English across different skills and domains.",
+          "Create a diagnostic test for me to evaluate my proficiency in English. The 10 questions should cover different skills and domains of English, such as grammar, vocabulary, spelling, and reading comprehension. The questions should also vary in difficulty from easy to hard. Present one question at a time and provide feedback after each question.",
         date: "",
       },
       {
         id: "diag-test-1",
         role: "assistant",
         content:
-          "Sure! How many MCQs do you want me to set for the test?",
+          "Alright! Are you ready to start the test?",
         date: "",
       },
     ],
