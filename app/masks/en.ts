@@ -306,7 +306,7 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "diag-test-0",
         role: "user",
         content:
-          "Create a diagnostic test for me to evaluate my proficiency in English. The 10 questions should cover different skills and domains of English, such as grammar, vocabulary, spelling, and reading comprehension. The questions should also vary in difficulty from easy to hard. Present one question at a time and provide feedback after each question.",
+          "Create a diagnostic test for me to evaluate my proficiency in English. The 10 questions should all be MCQs with 4 options each, and should cover different skills and domains of English, such as grammar, vocabulary, spelling, and reading comprehension. Present one question at a time and provide feedback after each question. Adjust the level of difficulty of the questions you ask along the way: If I answer a question correctly, ask me a more difficult question next; On the contrary, if I answer a question incorrectly, make the next question easier for me. At the end of the test, tell me my score and comment on my performance.",
         date: "",
       },
       {
@@ -321,10 +321,10 @@ export const EN_MASKS: BuiltinMask[] = [
       model: "gpt-3.5-turbo",
       temperature: 1,
       max_tokens: 3000,
-      presence_penalty: 0,
-      frequency_penalty: 0,
+      presence_penalty: 0.5,
+      frequency_penalty: 1,
       sendMemory: false,
-      historyMessageCount: 4,
+      historyMessageCount: 10,
       compressMessageLengthThreshold: 3000,
     },
     lang: "en",
