@@ -1172,7 +1172,7 @@
     ],
     [
       "DSE vocabulary list",
-      "Generate a 10-item vocabulary list for HKDSE English Language examination, in the format '**English word** [繁體中文定義] <word class>: example sentence 例句中文翻譯'. When finished, generate a 10-item MCQ cloze test for the list above."
+      "Generate a 10-item vocabulary list for HKDSE English Language examination, in the format '**English word** [繁體中文定義] <word class>: example sentence 例句中文翻譯'. When finished, generate a 10-item MCQ test for the list above."
     ],
     [
       "Vocabulary worksheet generator",
