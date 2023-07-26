@@ -68,6 +68,39 @@ export const EN_MASKS: BuiltinMask[] = [
     createdAt: 1688899480412,
   },
   {
+    avatar: "1f4d1",
+    name: "DSE詞彙表",
+    context: [
+      {
+        id: "dse-vocab-0",
+        role: "user",
+        content:
+          "Generate a vocabulary list for HKDSE English Language examination. The list should be in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'.",
+        date: "",
+      },
+      {
+        id: "dse-vocab-1",
+        role: "assistant",
+        content:
+          "Sure! Please tell me how many vocabulary items you want me to include on the list.",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 0.8,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: false,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 2000,
+    },
+    lang: "en",
+    builtin: true,
+    createdAt: 1688899480412,
+  },
+  {
     avatar: "270d-fe0f",
     name: "寫作改進",
     context: [
