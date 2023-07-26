@@ -75,14 +75,14 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "dse-vocab-0",
         role: "user",
         content:
-          "Generate a vocabulary list for HKDSE English Language examination. The list should be in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'.",
+          "Generate a vocabulary list for HKDSE English Language examination, in the format '**English word** [繁體中文定義] <word class>: example sentence 例句中文翻譯'. When finished, generate a MCQ cloze test for the list above.",
         date: "",
       },
       {
         id: "dse-vocab-1",
         role: "assistant",
         content:
-          "Sure! Please tell me how many vocabulary items you want me to include on the list.",
+          "Sure! Please tell me how many items you want me to include on the vocabulary list and how many items you want me to include for the test.",
         date: "",
       },
     ],
