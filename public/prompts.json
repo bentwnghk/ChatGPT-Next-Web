@@ -1171,8 +1171,8 @@
       "Create a diagnostic test for me to evaluate my proficiency in English. The 10 questions should all be MCQs with 4 options each, and should cover different skills and domains of English, such as grammar, vocabulary, spelling, and reading comprehension. Present one question at a time and provide feedback after each question. Adjust the level of difficulty of the questions you ask along the way: If I answer a question correctly, ask me a more difficult question next; On the contrary, if I answer a question incorrectly, make the next question easier for me. At the end of the test, tell me my score and comment on my performance."
     ],
     [
-      "DSE vocabulary list",
-      "Generate a 10-item vocabulary list for HKDSE English Language examination, in the format '**English word** [繁體中文定義] <word class>: example sentence 例句中文翻譯'. When finished, generate a 10-item MCQ cloze test for the list above."
+      "DSE vocabulary test",
+      "Generate a 15-item vocabulary list for HKDSE English Language examination, based on CEFR A1-C2, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 10-item MCQ test for the list above. Now, start by asking me which CEFR level I need."
     ],
     [
       "Vocabulary worksheet generator",
