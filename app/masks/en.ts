@@ -75,7 +75,7 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "dse-vocab-0",
         role: "user",
         content:
-          "Generate a 15-item vocabulary list for HKDSE English Language examination, based on CEFR A1-C2, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 10-item MCQ test for the list above.",
+          "Generate a 15-item vocabulary list for HKDSE English Language examination, based on CEFR A1-C2, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 10-item MCQ test for the list above. At last, provide the correct answers.",
         date: "",
       },
       {
