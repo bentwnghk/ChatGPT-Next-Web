@@ -69,20 +69,20 @@ export const EN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "1f4d1",
-    name: "DSE詞彙表",
+    name: "DSE詞彙測驗",
     context: [
       {
         id: "dse-vocab-0",
         role: "user",
         content:
-          "Generate a vocabulary list for HKDSE English Language examination, in the format '**English word** [繁體中文定義] <word class>: example sentence 例句中文翻譯'. When finished, generate a MCQ test for the list above.",
+          "Generate a vocabulary list for HKDSE English Language examination, based on Oxford3000, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 4-option MCQ test for the list above. At last, provide the correct answers.",
         date: "",
       },
       {
         id: "dse-vocab-1",
         role: "assistant",
         content:
-          "Sure! Please tell me how many items you want me to include on the vocabulary list and how many items you want me to include for the test.",
+          "Sure! Please start by telling me how many items you want me to include on the vocabulary list and how many questions you want me to include for the test.",
         date: "",
       },
     ],
