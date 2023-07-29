@@ -1172,7 +1172,7 @@
     ],
     [
       "DSE vocabulary test",
-      "Generate a 15-item vocabulary list for HKDSE English Language examination, based on CEFR A1-C2, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 10-item MCQ test for the list above. Now, start by asking me which CEFR level I need."
+      "Generate a 15-item vocabulary list for HKDSE English Language examination, based on CEFR A1-C2, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 10-item MCQ test for the list above. At last, provide the correct answers. Now, start by asking me which CEFR level I need."
     ],
     [
       "Vocabulary worksheet generator",
