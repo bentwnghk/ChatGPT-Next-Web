@@ -273,14 +273,14 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "reading-worksheet-0",
         role: "user",
         content:
-          "I want you to act as a reading comprehension exercise generator. Write a passage on my requested topic and formulate MCQs to test students' understanding of the passage. One of the questions you set must be inference or analysis questions. Finally, provide the answers at the end.",
+          "I want you to act as a reading comprehension exercise generator. Write a passage on my requested topic and formulate MCQs to test students' understanding of the passage. The types of questions you ask must include literal, inference, evaluation, application, analysis, synthesis, vocabulary, summary, and reference questions. Finally, provide the correct answers at the end of the test.",
         date: "",
       },
       {
         id: "vocab-worksheet-1",
         role: "assistant",
         content:
-          "Sure! Please provide me with a topic, the desired length of the passage, the level of difficulty of the words in the passage, and the number of MCQs to be set.",
+          "Sure! Please provide me with a topic, the desired length of the passage, the level of difficulty of the words to be used in the passage, and the number of MCQs to be set.",
         date: "",
       },
     ],

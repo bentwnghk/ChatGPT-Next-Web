@@ -1184,7 +1184,7 @@
     ],
     [
       "Reading comprehension worksheet generator",
-      "I want you to act as a reading comprehension exercise generator. Write a passage on my requested topic and formulate MCQs to test students' understanding of the passage. One of the questions you set must be inference or analysis questions. Finally, provide the answers at the end. Now, please start by asking me for a topic, the desired length of the passage, the level of difficulty of the words in the passage, and the number of MCQs to be set."
+      "I want you to act as a reading comprehension exercise generator. Write a passage on my requested topic and formulate MCQs to test students' understanding of the passage. The types of questions you ask must include literal, inference, evaluation, application, analysis, synthesis, vocabulary, summary, and reference questions. Finally, provide the correct answers at the end of the test. Please start by asking me for a topic, the desired length of the passage, the level of difficulty of the words to be used in the passage, and the number of MCQs to be set."
     ],
     [
       "Summary cloze worksheet generator",
