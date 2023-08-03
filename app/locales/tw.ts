@@ -5,12 +5,12 @@ const tw: PartialLocaleType = {
   WIP: "該功能仍在開發中……",
   Error: {
     Unauthorized:
-      "訪問密碼不正確或為空，請前往[登錄](/#/auth)頁輸入正確的訪問密碼。",
+      "目前您的狀態是未授權，請前往[設定頁面](/#/auth)輸入授權碼。",
   },
   Auth: {
-    Title: "訪問密碼驗證",
-    Tips: "請在下方輸入訪問密碼",
-    Input: "訪問密碼",
+    Title: "授權碼驗證",
+    Tips: "請在下方輸入授權碼",
+    Input: "授權碼",
     Confirm: "確認",
     Later: "稍後再說",
   },

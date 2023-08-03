@@ -455,18 +455,27 @@ function ChatAction(props: {
 function useScrollToBottom() {
   // for auto-scroll
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [autoScroll, setAutoScroll] = useState(true);
+  const autoScroll = useRef(true);
   const scrollToBottom = useCallback(() => {
     const dom = scrollRef.current;
     if (dom) {
       requestAnimationFrame(() => dom.scrollTo(0, dom.scrollHeight));
     }
   }, []);
+  const setAutoScroll = (enable: boolean) => {
+    autoScroll.current = enable;
+  };
 
   // auto scroll
   useEffect(() => {
-    autoScroll && scrollToBottom();
-  });
+    const intervalId = setInterval(() => {
+      if (autoScroll.current) {
+        scrollToBottom();
+      }
+    }, 30);
+    return () => clearInterval(intervalId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return {
     scrollRef,
@@ -612,6 +621,7 @@ export function ChatActions(props: {
 
       {showModelSelector && (
         <Selector
+          defaultSelectedValue={currentModel}
           items={models.map((m) => ({
             title: m,
             value: m,
@@ -639,7 +649,7 @@ export function EditMessageModal(props: { onClose: () => void }) {
   return (
     <div className="modal-mask">
       <Modal
-        title={Locale.UI.Edit}
+        title={Locale.Chat.EditMessage.Title}
         onClose={props.onClose}
         actions={[
           <IconButton
@@ -697,10 +707,7 @@ export function Chat() {
   type RenderMessage = ChatMessage & { preview?: boolean };
 
   const chatStore = useChatStore();
-  const [session, sessionIndex] = useChatStore((state) => [
-    state.currentSession(),
-    state.currentSessionIndex,
-  ]);
+  const session = chatStore.currentSession();
   const config = useAppConfig();
   const fontSize = config.fontSize;
 
@@ -716,9 +723,14 @@ export function Chat() {
   const isMobileScreen = useMobileScreen();
   const navigate = useNavigate();
 
+  const lastBodyScroolTop = useRef(0);
   const onChatBodyScroll = (e: HTMLElement) => {
     const isTouchBottom = e.scrollTop + e.clientHeight >= e.scrollHeight - 10;
     setHitBottom(isTouchBottom);
+
+    // only enable auto scroll when scroll down and touched bottom
+    setAutoScroll(e.scrollTop >= lastBodyScroolTop.current && isTouchBottom);
+    lastBodyScroolTop.current = e.scrollTop;
   };
 
   // prompt hints
@@ -1277,7 +1289,6 @@ export function Chat() {
         ref={scrollRef}
         onScroll={(e) => onChatBodyScroll(e.currentTarget)}
         onMouseDown={() => inputRef.current?.blur()}
-        onWheel={(e) => setAutoScroll(hitBottom && e.deltaY > 0)}
         onTouchStart={() => {
           inputRef.current?.blur();
           setAutoScroll(false);
@@ -1397,7 +1408,7 @@ export function Chat() {
                       }}
                       fontSize={fontSize}
                       parentRef={scrollRef}
-                      defaultShow={i >= messages.length - 10}
+                      defaultShow={i >= messages.length - 6}
                     />
                   </div>
 
@@ -1445,7 +1456,6 @@ export function Chat() {
             value={userInput}
             onKeyDown={onInputKeyDown}
             onFocus={() => setAutoScroll(true)}
-            onBlur={() => setAutoScroll(false)}
             rows={inputRows}
             autoFocus={autoFocus}
             style={{
