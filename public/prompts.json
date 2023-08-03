@@ -1171,8 +1171,20 @@
       "Create a diagnostic test for me to evaluate my proficiency in English. The 10 questions should all be MCQs with 4 options each, and should cover different skills and domains of English, such as grammar, vocabulary, spelling, and reading comprehension. Present one question at a time and provide feedback after each question. Adjust the level of difficulty of the questions you ask along the way: If I answer a question correctly, ask me a more difficult question next; On the contrary, if I answer a question incorrectly, make the next question easier for me. At the end of the test, tell me my score and comment on my performance."
     ],
     [
-      "DSE vocabulary test",
-      "Generate a 15-item vocabulary list for HKDSE English Language examination, based on CEFR A1-C2, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 10-item MCQ test for the list above. At last, provide the correct answers. Now, start by asking me which CEFR level I need."
+      "English grammar lesson",
+      "Generate a worksheet to help me learn and practice English grammar. Give me some lesson notes first and then generate 10 MCQs. Provide the correct answers at the end of the worksheet. Now, ask me which grammar topic I want for the worksheet."
+    ],
+    [
+      "Oxford 3000 vocabulary test",
+      "Generate at random a 15-item vocabulary list from Oxford 3000, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above, and give me the correct answers at the end of the test."
+    ],
+    [
+      "Academic vocabulary test",
+      "Generate at random a 15-item vocabulary list from the Academic Word List, in the format '**English word** (sublist number) [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above. Finally, provide the correct answers at the end of the test."
+    ],
+    [
+      "CEFR vocabulary test",
+      "Generate at random a 15-item vocabulary list based on CEFR A1-C2, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above, and give me the correct answers at the end of the test. Now, start by asking me which CEFR level I need."
     ],
     [
       "Vocabulary worksheet generator",

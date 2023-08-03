@@ -69,20 +69,53 @@ export const EN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "1f4d1",
-    name: "DSE詞彙測驗",
+    name: "AWL詞彙測驗",
     context: [
       {
-        id: "dse-vocab-0",
+        id: "awl-vocab-0",
         role: "user",
         content:
-          "Generate a 15-item vocabulary list for HKDSE English Language examination, based on CEFR A1-C2, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 10-item MCQ test for the list above. At last, provide the correct answers.",
+          "Generate at random a 15-item vocabulary list from the Academic Word List, in the format '**English word** (sublist number) [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above. Finally, provide the correct answers at the end of the test.",
         date: "",
       },
       {
-        id: "dse-vocab-1",
+        id: "awl-vocab-1",
         role: "assistant",
         content:
-          "Sure! Please start by telling me which CEFR level you need.",
+          "Sure! Please start by telling me which sublist(s) of the Academic Word List you need.",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 0.8,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: false,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 2000,
+    },
+    lang: "en",
+    builtin: true,
+    createdAt: 1688899480412,
+  },
+  {
+    avatar: "1f4d6",
+    name: "語法重溫",
+    context: [
+      {
+        id: "grammar-lesson-0",
+        role: "user",
+        content:
+          "Generate a worksheet to help me learn and practice English grammar. Give me some lesson notes first and then generate 10 MCQs. Provide the correct answers at the end of the worksheet.",
+        date: "",
+      },
+      {
+        id: "grammar-lesson-1",
+        role: "assistant",
+        content:
+          "Sure! Please start by telling me which grammar topic you want for the worksheet.",
         date: "",
       },
     ],
