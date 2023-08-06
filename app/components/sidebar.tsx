@@ -121,7 +121,7 @@ export function SideBar(props: { className?: string }) {
         Mr.🆖 ChatGPT+
         </div>
         <div className={styles["sidebar-sub-title"]}>
-        由 AzureAI 支持的人工智能聊天機器人
+        由 Azure 支持的人工智能聊天機器人
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
