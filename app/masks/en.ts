@@ -240,7 +240,7 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "vocab-worksheet-0",
         role: "user",
         content:
-          "I want you to act as an English vocabulary worksheet generator. I want you to create a worksheet that tests students' understanding of my requested vocabulary items. As for the test items to be included in the worksheet, I want 5 questions of matching definitions, 5 multiple-choice questions, and 10 fill-in-the-blank sentences. The target vocabulary items can be repeated in the various test items. Finally, provide the answers at the end of the worksheet.",
+          "I want you to act as an English vocabulary worksheet generator. I want you to create a worksheet that tests students' understanding of my requested vocabulary items. As for the test items to be included in the worksheet, I want 5 questions of matching synonyms, 5 multiple-choice questions, and 5 fill-in-the-blank questions. The target vocabulary items can be repeated in the various test items. Finally, provide the answers at the end of the worksheet.",
         date: "",
       },
       {
