@@ -21,7 +21,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       temperature: 0.8,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -42,7 +42,7 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "text-rewrite-0",
         role: "user",
         content:
-          "Give me a few different versions of the text I provide.",
+          "Give me 5 different versions of the text I provide.",
         date: "",
       },
       {
@@ -54,8 +54,8 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
-      temperature: 0.8,
+      model: "gpt-4",
+      temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
       frequency_penalty: 0,
@@ -87,9 +87,9 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
-      temperature: 0.8,
-      max_tokens: 2000,
+      model: "gpt-4",
+      temperature: 1,
+      max_tokens: 3000,
       presence_penalty: 0,
       frequency_penalty: 0,
       sendMemory: false,
@@ -120,9 +120,9 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
-      temperature: 0.8,
-      max_tokens: 2000,
+      model: "gpt-4",
+      temperature: 1,
+      max_tokens: 3000,
       presence_penalty: 0,
       frequency_penalty: 0,
       sendMemory: false,
@@ -186,8 +186,8 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
-      temperature: 0.8,
+      model: "gpt-4",
+      temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
       frequency_penalty: 0,
@@ -252,7 +252,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       temperature: 1,
       max_tokens: 3000,
       presence_penalty: 0,
@@ -285,7 +285,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       temperature: 1,
       max_tokens: 3000,
       presence_penalty: 0,
@@ -318,7 +318,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       temperature: 1,
       max_tokens: 3000,
       presence_penalty: 0,
@@ -351,7 +351,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       temperature: 1,
       max_tokens: 3000,
       presence_penalty: 0,
@@ -384,7 +384,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
       temperature: 1,
       max_tokens: 3000,
       presence_penalty: 0.5,
