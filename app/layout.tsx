@@ -7,7 +7,7 @@ import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Mr.🆖 ChatGPT+",
-  description: "由 AzureAI 支持的人工智能聊天機器人",
+  description: "由 Azure 支持的人工智能聊天機器人",
   viewport: {
     width: "device-width",
     initialScale: 1,
