@@ -472,7 +472,7 @@ export function ImagePreviewer(props: {
           <div>
             <div className={styles["main-title"]}>Mr.🆖 ChatGPT+</div>
             <div className={styles["sub-title"]}>
-              ai7.mister5.net
+              ai2.mister5.net
             </div>
             <div className={styles["icons"]}>
               <ExportAvatar avatar={config.avatar} />
