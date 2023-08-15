@@ -168,6 +168,10 @@ const tw: PartialLocaleType = {
       Title: "預覽氣泡",
       SubTitle: "在預覽氣泡中預覽 Markdown 内容",
     },
+    AutoGenerateTitle: {
+      Title: "自動生成標題",
+      SubTitle: "根據對話內容生成合適的標題",
+    },
     Mask: {
       Splash: {
         Title: "面具啟動頁",
