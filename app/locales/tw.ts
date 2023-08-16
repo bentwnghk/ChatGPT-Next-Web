@@ -4,8 +4,9 @@ import type { PartialLocaleType } from "./index";
 const tw: PartialLocaleType = {
   WIP: "該功能仍在開發中……",
   Error: {
-    Unauthorized:
-      "目前您的狀態是未授權，請前往[設定頁面](/#/auth)輸入授權碼。",
+    Unauthorized: isApp
+      ? "檢測到無效 API Key，請前往[設置](/#/settings)檢查 API Key 是否配置正確。"
+      : "目前您的狀態是未授權，請前往[登錄](/#/auth)輸入正確的授權碼。",
   },
   Auth: {
     Title: "授權碼驗證",
