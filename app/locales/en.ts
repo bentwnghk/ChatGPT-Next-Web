@@ -1,12 +1,16 @@
+import { getClientConfig } from "../config/client";
 import { SubmitKey } from "../store/config";
 import { LocaleType } from "./index";
 
 // if you are adding a new translation, please use PartialLocaleType instead of LocaleType
+
+const isApp = !!getClientConfig()?.isApp;
 const en: LocaleType = {
   WIP: "Coming Soon...",
   Error: {
-    Unauthorized:
-      "Unauthorized access! Please enter access code in [auth](/#/auth).",
+    Unauthorized: isApp
+      ? "Invalid API Key, please check in [Settings](/#/settings)."
+      : "Unauthorized access, please enter access code in [auth](/#/auth).",
   },
   Auth: {
     Title: "Access Code Required",
