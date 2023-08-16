@@ -1,5 +1,8 @@
+import { getClientConfig } from "../config/client";
 import { SubmitKey } from "../store/config";
 import type { PartialLocaleType } from "./index";
+
+const isApp = !!getClientConfig()?.isApp;
 
 const tw: PartialLocaleType = {
   WIP: "該功能仍在開發中……",
