@@ -63,7 +63,7 @@ const tw: PartialLocaleType = {
       Clear: "清除聊天",
       Settings: "對話設置",
     },
-    Rename: "重命名對話",
+    Rename: "重新命名對話",
     Typing: "正在輸入…",
     Input: (submitKey: string) => {
       var inputHints = `輸入訊息後，按下 ${submitKey} 鍵發送`;
@@ -74,8 +74,8 @@ const tw: PartialLocaleType = {
     },
     Send: "發送",
     Config: {
-      Reset: "重置默認",
-      SaveAs: "存為面具",
+      Reset: "重置預設",
+      SaveAs: "另存新檔",
     },
     IsContext: "預設提示詞",
   },
@@ -150,7 +150,7 @@ const tw: PartialLocaleType = {
       SubTitle: "聊天內容的字型大小",
     },
     InjectSystemPrompts: {
-      Title: "注入系統提示",
+      Title: "匯入系統提示",
       SubTitle: "強制在每個請求的訊息列表開頭添加一個模擬 ChatGPT 的系統提示",
     },
     InputTemplate: {
@@ -178,8 +178,8 @@ const tw: PartialLocaleType = {
     },
     Mask: {
       Splash: {
-        Title: "面具啟動頁",
-        SubTitle: "新建聊天時，展示面具啟動頁",
+        Title: "面具啟動頁面",
+        SubTitle: "新增聊天時，呈現面具啟動頁面",
       },
       Builtin: {
         Title: "隱藏內置面具",
@@ -286,14 +286,14 @@ const tw: PartialLocaleType = {
     Revert: "恢復上下文",
   },
   Plugin: {
-    Name: "插件",
+    Name: "外掛",
   },
   Mask: {
     Name: "面具",
     Page: {
       Title: "預設角色面具",
       SubTitle: (count: number) => `${count} 個預設角色定義`,
-      Search: "搜索角色面具",
+      Search: "搜尋角色面具",
       Create: "新增",
     },
     Item: {
@@ -331,12 +331,12 @@ const tw: PartialLocaleType = {
   },
   NewChat: {
     Return: "返回",
-    Skip: "直接開始",
-    NotShow: "不再展示",
-    ConfirmNoShow: "確認禁用？禁用後可以隨時在設置中重新啟用。",
+    Skip: "跳過",
+    NotShow: "不再呈現",
+    ConfirmNoShow: "確認禁用？禁用後可以随時在設定中重新啟用。",
     Title: "挑選一個面具",
     SubTitle: "現在開始，與面具背後的靈魂思維碰撞",
-    More: "查看全部",
+    More: "搜尋更多",
   },
   URLCommand: {
     Code: "檢測到鏈接中已經包含訪問碼，是否自動填入？",
@@ -351,7 +351,7 @@ const tw: PartialLocaleType = {
   },
   Exporter: {
     Model: "模型",
-    Messages: "消息",
+    Messages: "訊息",
     Topic: "主題",
     Time: "時間",
   },
