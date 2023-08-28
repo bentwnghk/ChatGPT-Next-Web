@@ -285,8 +285,12 @@ const tw: PartialLocaleType = {
     Clear: "上下文已清除",
     Revert: "恢復上下文",
   },
-  Plugin: { Name: "外掛" },
-  FineTuned: { Sysmessage: "你是一個助手" },
+  Plugin: {
+    Name: "插件",
+  },
+  FineTuned: {
+    Sysmessage: "你是一個助手",
+  },
   Mask: {
     Name: "面具",
     Page: {
