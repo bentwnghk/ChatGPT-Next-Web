@@ -289,6 +289,9 @@ const cn = {
   Plugin: {
     Name: "插件",
   },
+  FineTuned: {
+    Sysmessage: "你是一个助手",
+  },
   Mask: {
     Name: "面具",
     Page: {
