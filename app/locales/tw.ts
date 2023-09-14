@@ -176,6 +176,42 @@ const tw: PartialLocaleType = {
       Title: "自動生成標題",
       SubTitle: "根據對話內容生成合適的標題",
     },
+    Sync: {
+      CloudState: "雲端數據",
+      NotSyncYet: "還沒有進行過同步",
+      Success: "同步成功",
+      Fail: "同步失敗",
+
+      Config: {
+        Modal: {
+          Title: "配置雲同步",
+        },
+        SyncType: {
+          Title: "同步類型",
+          SubTitle: "選擇喜愛的同步服務器",
+        },
+        Proxy: {
+          Title: "啟用代理",
+          SubTitle: "在瀏覽器中同步時，必須啟用代理以避免跨域限制",
+        },
+        ProxyUrl: {
+          Title: "代理地址",
+          SubTitle: "僅適用於本項目自帶的跨域代理",
+        },
+
+        WebDav: {
+          Endpoint: "WebDAV 地址",
+          UserName: "用戶名",
+          Password: "密碼",
+        },
+      },
+
+      LocalState: "本地數據",
+      Overview: (overview: any) => {
+        return `${overview.chat} 次對話，${overview.message} 條消息，${overview.prompt} 條提示詞，${overview.mask} 個面具`;
+      },
+      ImportFailed: "導入失敗",
+    },
     Mask: {
       Splash: {
         Title: "面具啟動頁面",
@@ -351,6 +387,10 @@ const tw: PartialLocaleType = {
     Close: "關閉",
     Create: "新增",
     Edit: "編輯",
+    Export: "導出",
+    Import: "導入",
+    Sync: "同步",
+    Config: "配置",
   },
   Exporter: {
     Model: "模型",
