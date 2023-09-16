@@ -8,7 +8,7 @@ export const FETCH_COMMIT_URL = `https://api.github.com/repos/${OWNER}/${REPO}/c
 export const FETCH_TAG_URL = `https://api.github.com/repos/${OWNER}/${REPO}/tags?per_page=1`;
 export const RUNTIME_CONFIG_DOM = "danger-runtime-config";
 export const HOME_URL = `https://mr5drive.com`;
-export const DEFAULT_CORS_HOST = "https://chatgpt2.nextweb.fun";
+export const DEFAULT_CORS_HOST = "https://ai2.mister5.net";
 export const DEFAULT_API_HOST = `${DEFAULT_CORS_HOST}/api/proxy`;
 
 export enum Path {
