@@ -185,6 +185,7 @@ const tw: PartialLocaleType = {
       Config: {
         Modal: {
           Title: "配置雲同步",
+          Check: "檢查可用性",
         },
         SyncType: {
           Title: "同步類型",
@@ -203,6 +204,12 @@ const tw: PartialLocaleType = {
           Endpoint: "WebDAV 地址",
           UserName: "用戶名",
           Password: "密碼",
+        },
+
+        UpStash: {
+          Endpoint: "UpStash Redis REST Url",
+          UserName: "備份名稱",
+          Password: "UpStash Redis REST Token",
         },
       },
 
