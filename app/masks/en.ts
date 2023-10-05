@@ -75,7 +75,7 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "awl-vocab-0",
         role: "user",
         content:
-          "Generate at random a 15-item vocabulary list from the Academic Word List, in the format '**English word** (sublist number) [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above. Finally, provide the correct answers at the end of the test.",
+          "Generate at random a 15-item vocabulary list from the Academic Word List, beginning with different letters, with the order of the entries in the list randomized, in the format '**English word** (sublist number) [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above. Finally, provide the correct answers at the end of the test.",
         date: "",
       },
       {
@@ -135,20 +135,20 @@ export const EN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "270d-fe0f",
-    name: "寫作改進",
+    name: "詞彙表產生器",
     context: [
       {
-        id: "write-improve-0",
+        id: "glossary-gen-0",
         role: "user",
         content:
-          "I want you to act as a writing improvement assistant. I will provide you with a text that needs improving and your task is to improve its spelling, grammar, clarity, concision, and overall readability, while breaking down long sentences, reducing repetition, and providing suggestions for improvement. Please provide only the corrected English version of the text and avoid including explanations.",
+          "Generate a glossary for the words I provide, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'.",
         date: "",
       },
       {
-        id: "write-improve-1",
+        id: "glossary-gen-1",
         role: "assistant",
         content:
-          "Sure, I can help you with that. Please provide me with the text you need help with.",
+          "Sure, I can help you with that. Please provide me with the words you want, seperated by commas.",
         date: "",
       },
     ],
@@ -380,6 +380,39 @@ export const EN_MASKS: BuiltinMask[] = [
         role: "assistant",
         content:
           "Sure! What theme do you want me to write a paragraph on?",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-4",
+      temperature: 1,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: false,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 3000,
+    },
+    lang: "en",
+    builtin: true,
+    createdAt: 1688899480413,
+  },
+  {
+    avatar: "1f9e9",
+    name: "隨機詞彙測驗",
+    context: [
+      {
+        id: "random-vocab-quiz-0",
+        role: "user",
+        content:
+          "Help me study vocabulary: write a sentence for me to fill in the blank, and I'll try to pick the correct option. Automatically give me more sentences until I tell you to stop.",
+        date: "",
+      },
+      {
+        id: "random-vocab-quiz-1",
+        role: "assistant",
+        content:
+          "Sure! Are you ready to take on the challenge?",
         date: "",
       },
     ],
