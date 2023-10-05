@@ -1140,11 +1140,11 @@
     ],
     [
       "Grammar checker",
-      "Do a grammar check on the text I provide. If the text contains more than one sentence, use a table to highlight the wrong sentences and provide a suggested correction. Otherwise, do not use any table."
+      "Do a grammar check on the text I provide. Highlight the revised words for me."
     ],
     [
       "Text rewrite",
-      "Give me a few different versions of the text I provide."
+      "Give me 5 different versions of the text I provide."
     ],
     [
       "English polisher",
@@ -1159,8 +1159,8 @@
       "I want you to act as an AI writing tutor. I will provide you with a text that needs improving and your task is to use artificial intelligence tools, such as natural language processing, to give feedback on how the text can be improved. You should also use your rhetorical knowledge and experience about effective writing techniques in order to suggest ways that I can better express my thoughts and ideas in written form."
     ],
     [
-      "Main points highlighter",
-      "Carefully read the following text and highlight the key points using double asterisks (**) around the words or phrases you want to emphasize. Do not alter the original text or summarize it. Here is the text:"
+      "Random vocabulary test",
+      "Help me study vocabulary: write a sentence for me to fill in the blank, and I'll try to pick the correct option. Automatically give me more sentences until I tell you to stop."
     ],
     [
       "English-Chinese translator",
@@ -1176,15 +1176,15 @@
     ],
     [
       "Oxford 3000 vocabulary test",
-      "Generate at random a 15-item vocabulary list from Oxford 3000, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above, and give me the correct answers at the end of the test."
+      "Generate at random a 15-item vocabulary list from Oxford 3000, beginning with different letters, with the order of the entries in the list randomized, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above, and give me the correct answers at the end of the test."
     ],
     [
       "Academic vocabulary test",
-      "Generate at random a 15-item vocabulary list from the Academic Word List, in the format '**English word** (sublist number) [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above. Finally, provide the correct answers at the end of the test."
+      "Generate at random a 15-item vocabulary list from the Academic Word List, beginning with different letters, with the order of the entries in the list randomized, in the format '**English word** (sublist number) [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above. Finally, provide the correct answers at the end of the test."
     ],
     [
       "CEFR vocabulary test",
-      "Generate at random a 15-item vocabulary list based on CEFR A1-C2, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above, and give me the correct answers at the end of the test. Now, start by asking me which CEFR level I need."
+      "Generate at random a 15-item vocabulary list based on CEFR A1-C2, beginning with different letters, with the order of the entries in the list randomized, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above, and give me the correct answers at the end of the test. Now, start by asking me which CEFR level I need."
     ],
     [
       "Vocabulary worksheet generator",
@@ -1215,8 +1215,8 @@
       "請用英漢詞典的格式為單詞提供釋義，包含以下內容： 1.單詞的英式音標與美式音標； 2.簡明的中文釋義、英文釋義與英文釋義的中文翻譯，帶詞性； 3.每項釋義對應一個帶中文翻譯的例句； 4.單詞的詞源詞根與對應的中文翻譯； 5.單詞的近義詞（帶詞性）。以上每項之間都換行。現在，請先問我要查詢那個英文單詞。"
     ],
     [
-      "Pronunciation helper",
-      "I want you to act as an English pronunciation assistant for Chinese speaking people. I will write you sentences and you will only answer their pronunciations, and nothing else. The replies must not be translations of my sentence but only pronunciations. Pronunciations should use English letters for phonetics. Do not write explanations on replies. My first sentence is:"
+      "Glossary generator",
+      "Generate a glossary for the words I provide, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'."
     ],
     [
       "Show photos",
