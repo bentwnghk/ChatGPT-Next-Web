@@ -9,7 +9,7 @@ export const EN_MASKS: BuiltinMask[] = [
         id: "grammar-check-0",
         role: "user",
         content:
-          "I want you to act as a grammar checker. I will provide you with a text and your task is to perform a grammar check. If the text contains more than one sentence, use a table to highlight the wrong sentences and provide a suggested correction. Otherwise, do not use any table.",
+          "Do a grammar check on the text I provide. Highlight the revised words for me.",
         date: "",
       },
       {
@@ -69,20 +69,20 @@ export const EN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "1f4d1",
-    name: "AWL詞彙測驗",
+    name: "詞彙複習測驗",
     context: [
       {
-        id: "awl-vocab-0",
+        id: "vocab-review-0",
         role: "user",
         content:
-          "Generate at random a 15-item vocabulary list from the Academic Word List, beginning with different letters, with the order of the entries in the list randomized, in the format '**English word** (sublist number) [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above. Finally, provide the correct answers at the end of the test.",
+          "Generate at random a 15-item vocabulary list from either Oxford 5000 or the Academic Word List, beginning with different letters, with the order of the entries in the list randomized, in the format '**English word** [繁體中文定義] <word class symbol>: example sentence 例句中文翻譯'. Next, generate a 15-item MCQ test for the list above. Finally, provide the correct answers at the end of the test.",
         date: "",
       },
       {
-        id: "awl-vocab-1",
+        id: "vocab-review-1",
         role: "assistant",
         content:
-          "Sure! Please start by telling me which sublist(s) of the Academic Word List you need.",
+          "Sure! Please choose one: (1) Oxford 5000 or (2) the Academic Word List",
         date: "",
       },
     ],
