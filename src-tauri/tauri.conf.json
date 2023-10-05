@@ -62,7 +62,7 @@
         "icons/icon.ico"
       ],
       "identifier": "com.yida.chatgpt.next.web",
-      "longDescription": "Mr.🆖 ChatGPT+ is a cross-platform ChatGPT client, including Web/Win/Linux/OSX/PWA.",
+      "longDescription": "Mr.🆖 AI English Tutor is a cross-platform AI English learning client, including Web/Win/Linux/OSX/PWA.",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
@@ -71,7 +71,7 @@
         "signingIdentity": null
       },
       "resources": [],
-      "shortDescription": "Mr.🆖 ChatGPT+ App",
+      "shortDescription": "Mr.🆖 AI English Tutor App",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,
@@ -98,7 +98,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "Mr.🆖 ChatGPT+",
+        "title": "Mr.🆖 AI English Tutor",
         "width": 960,
         "hiddenTitle": true,
         "titleBarStyle": "Overlay"
