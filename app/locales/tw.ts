@@ -357,8 +357,8 @@ const tw: PartialLocaleType = {
       Clone: "複製預設",
     },
     Config: {
-      Avatar: "角色頭像",
-      Name: "角色名稱",
+      Avatar: "工具頭像",
+      Name: "工具名稱",
       Sync: {
         Title: "使用全局設置",
         SubTitle: "當前對話是否使用全局模型設置",
