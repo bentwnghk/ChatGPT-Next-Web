@@ -44,7 +44,7 @@ const tw: PartialLocaleType = {
     },
     Commands: {
       new: "新建聊天",
-      newm: "從面具新建聊天",
+      newm: "從工具新建聊天",
       next: "下一個聊天",
       prev: "上一個聊天",
       clear: "清除上下文",
@@ -59,7 +59,7 @@ const tw: PartialLocaleType = {
         dark: "深色模式",
       },
       Prompt: "快捷指令",
-      Masks: "所有面具",
+      Masks: "所有工具",
       Clear: "清除聊天",
       Settings: "對話設置",
     },
@@ -91,8 +91,8 @@ const tw: PartialLocaleType = {
       SubTitle: "可以導出 Markdown 文本或者 PNG 圖片",
     },
     IncludeContext: {
-      Title: "包含面具上下文",
-      SubTitle: "是否在訊息中展示面具上下文",
+      Title: "包含工具上下文",
+      SubTitle: "是否在訊息中展示工具上下文",
     },
     Steps: {
       Select: "選取",
@@ -215,18 +215,18 @@ const tw: PartialLocaleType = {
 
       LocalState: "本地數據",
       Overview: (overview: any) => {
-        return `${overview.chat} 次對話，${overview.message} 條消息，${overview.prompt} 條提示詞，${overview.mask} 個面具`;
+        return `${overview.chat} 次對話，${overview.message} 條消息，${overview.prompt} 條提示詞，${overview.mask} 個工具`;
       },
       ImportFailed: "導入失敗",
     },
     Mask: {
       Splash: {
-        Title: "面具啟動頁面",
-        SubTitle: "新增聊天時，呈現面具啟動頁面",
+        Title: "工具啟動頁面",
+        SubTitle: "新增聊天時，呈現工具啟動頁面",
       },
       Builtin: {
-        Title: "隱藏內置面具",
-        SubTitle: "在所有面具列表中隱藏內置面具",
+        Title: "隱藏內置工具",
+        SubTitle: "在所有工具列表中隱藏內置工具",
       },
     },
     Prompt: {
@@ -335,11 +335,11 @@ const tw: PartialLocaleType = {
     Sysmessage: "你是一個助手",
   },
   Mask: {
-    Name: "面具",
+    Name: "工具",
     Page: {
-      Title: "預設角色面具",
-      SubTitle: (count: number) => `${count} 個預設角色定義`,
-      Search: "搜尋角色面具",
+      Title: "預設工具",
+      SubTitle: (count: number) => `${count} 個預設工具定義`,
+      Search: "搜尋工具",
       Create: "新增",
     },
     Item: {
@@ -352,7 +352,7 @@ const tw: PartialLocaleType = {
     },
     EditModal: {
       Title: (readonly: boolean) =>
-        `編輯預設面具 ${readonly ? "（唯讀）" : ""}`,
+        `編輯預設工具 ${readonly ? "（唯讀）" : ""}`,
       Download: "下載預設",
       Clone: "複製預設",
     },
@@ -369,8 +369,8 @@ const tw: PartialLocaleType = {
         SubTitle: "隱藏後預設對話不會出現在聊天界面",
       },
       Share: {
-        Title: "分享此面具",
-        SubTitle: "生成此面具的直達鏈接",
+        Title: "分享此工具",
+        SubTitle: "生成此工具的直達鏈接",
         Action: "複製鏈接",
       },
     },
@@ -380,8 +380,8 @@ const tw: PartialLocaleType = {
     Skip: "跳過",
     NotShow: "不再呈現",
     ConfirmNoShow: "確認禁用？禁用後可以随時在設定中重新啟用。",
-    Title: "挑選一個面具",
-    SubTitle: "現在開始，與面具背後的靈魂思維碰撞",
+    Title: "挑選一個工具",
+    SubTitle: "現在開始，與工具背後的靈魂思維碰撞",
     More: "搜尋更多",
   },
   URLCommand: {
