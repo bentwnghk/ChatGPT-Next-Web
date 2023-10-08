@@ -13,6 +13,7 @@ const cn = {
   Auth: {
     Title: "访问密码验证",
     Tips: "请在下方输入访问密码",
+    SubTips: "或者输入你的 OpenAI API 密钥",
     Input: "访问密码",
     Confirm: "确认",
     Later: "稍后再说",
@@ -321,6 +322,10 @@ const cn = {
   Copy: {
     Success: "已写入剪切板",
     Failed: "复制失败，请赋予剪切板权限",
+  },
+  Download: {
+    Success: "内容已下载到您的目录。",
+    Failed: "下载失败。",
   },
   Context: {
     Toast: (x: any) => `包含 ${x} 条预设提示词`,

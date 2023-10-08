@@ -19,10 +19,10 @@ const tw: PartialLocaleType = {
     Later: "稍後再說",
   },
   ChatItem: {
-    ChatItemCount: (count: number) => `${count} 條對話`,
+    ChatItemCount: (count: number) => `${count} 則對話`,
   },
   Chat: {
-    SubTitle: (count: number) => `共 ${count} 條對話`,
+    SubTitle: (count: number) => `您已經與 Mr.🆖 AI English Tutor 進行了 ${count} 則對話`,
     EditMessage: {
       Topic: {
         Title: "聊天主題",
@@ -30,8 +30,8 @@ const tw: PartialLocaleType = {
       },
     },
     Actions: {
-      ChatList: "查看訊息列表",
-      CompressedHistory: "查看壓縮後的歷史 Prompt",
+      ChatList: "檢視訊息列表",
+      CompressedHistory: "檢視壓縮後的歷史 Prompt",
       Export: "匯出聊天紀錄",
       Copy: "複製",
       Stop: "停止",
@@ -66,15 +66,15 @@ const tw: PartialLocaleType = {
     Rename: "重新命名對話",
     Typing: "正在輸入…",
     Input: (submitKey: string) => {
-      var inputHints = `輸入訊息後，按下 ${submitKey} 鍵發送`;
+      var inputHints = `輸入訊息後，按下 ${submitKey} 鍵即可傳送`;
       if (submitKey === String(SubmitKey.Enter)) {
         inputHints += "，按下 Shift + Enter 鍵換行";
       }
       return inputHints + "，按下 / 鍵觸發提示詞";
     },
-    Send: "發送",
+    Send: "傳送",
     Config: {
-      Reset: "重置預設",
+      Reset: "重設",
       SaveAs: "另存新檔",
     },
     IsContext: "預設提示詞",
@@ -110,12 +110,12 @@ const tw: PartialLocaleType = {
     Clear: "清除選取",
   },
   Memory: {
-    Title: "歷史摘要",
-    EmptyContent: "對話內容過短，無需總結",
-    Send: "自動壓縮聊天記錄並作為上下文發送",
-    Copy: "複製摘要",
-    Reset: "[unused]",
-    ResetConfirm: "確認清空歷史摘要？",
+    Title: "上下文記憶 Prompt",
+    EmptyContent: "尚未記憶",
+    Copy: "複製全部",
+    Send: "傳送記憶",
+    Reset: "重設對話",
+    ResetConfirm: "重設後將清除目前對話記錄以及歷史記憶，確認重設？",
   },
   Home: {
     NewChat: "新的對話",
@@ -151,26 +151,26 @@ const tw: PartialLocaleType = {
     },
     InjectSystemPrompts: {
       Title: "匯入系統提示",
-      SubTitle: "強制在每個請求的訊息列表開頭添加一個模擬 ChatGPT 的系統提示",
+      SubTitle: "強制在每個請求的訊息列表開頭新增一個模擬 ChatGPT 的系統提示",
     },
     InputTemplate: {
       Title: "用戶輸入預處理",
       SubTitle: "用戶最新的一條消息會填充到此模板",
     },
     Update: {
-      Version: (x: string) => `當前版本：${x}`,
+      Version: (x: string) => `目前版本：${x}`,
       IsLatest: "已是最新版本",
       CheckUpdate: "檢查更新",
       IsChecking: "正在檢查更新...",
       FoundUpdate: (x: string) => `發現新版本：${x}`,
       GoToUpdate: "有更新",
     },
-    SendKey: "發送鍵",
+    SendKey: "傳送鍵",
     Theme: "主題",
     TightBorder: "緊湊邊框",
     SendPreviewBubble: {
       Title: "預覽氣泡",
-      SubTitle: "在預覽氣泡中預覽 Markdown 内容",
+      SubTitle: "在預覽氣泡中預覽 Markdown 內容",
     },
     AutoGenerateTitle: {
       Title: "自動生成標題",
@@ -236,7 +236,7 @@ const tw: PartialLocaleType = {
       },
       List: "自定義提示詞列表",
       ListCount: (builtin: number, custom: number) =>
-        `內建 ${builtin} 條，用戶定義 ${custom} 條`,
+        `內建 ${builtin} 條，使用者定義 ${custom} 條`,
       Edit: "編輯",
       Modal: {
         Title: "提示詞列表",
@@ -267,7 +267,7 @@ const tw: PartialLocaleType = {
       },
       IsChecking: "正在檢查…",
       Check: "重新檢查",
-      NoAccess: "輸入 API Key 或授權碼查看餘額",
+      NoAccess: "輸入 API Key 檢視餘額",
     },
     AccessCode: {
       Title: "授權碼",
@@ -297,7 +297,7 @@ const tw: PartialLocaleType = {
     },
     PresencePenalty: {
       Title: "話題新穎度 (presence_penalty)",
-      SubTitle: "值越大，越有可能擴展到新話題",
+      SubTitle: "值越大，越有可能拓展到新話題",
     },
     FrequencyPenalty: {
       Title: "頻率懲罰度 (frequency_penalty)",
@@ -310,7 +310,7 @@ const tw: PartialLocaleType = {
     Error: "出錯了，請稍後再嘗試",
     Prompt: {
       History: (content: string) =>
-        "這是歷史聊天總結，作為前情提要：" + content,
+        "這是 AI 與使用者的歷史聊天總結，作為前情提要：" + content,
       Topic:
         "使用四到五個字直接返回這句話的簡要主題，不要解釋、不要標點、不要語氣詞、不要多餘文本，如果沒有主題，請直接返回“閒聊”",
       Summarize:
@@ -345,7 +345,7 @@ const tw: PartialLocaleType = {
     Item: {
       Info: (count: number) => `包含 ${count} 條預設對話`,
       Chat: "對話",
-      View: "查看",
+      View: "檢視",
       Edit: "編輯",
       Delete: "刪除",
       DeleteConfirm: "確認刪除？",
@@ -379,7 +379,7 @@ const tw: PartialLocaleType = {
     Return: "返回",
     Skip: "跳過",
     NotShow: "不再呈現",
-    ConfirmNoShow: "確認禁用？禁用後可以随時在設定中重新啟用。",
+    ConfirmNoShow: "確認停用？停用後可以随時在設定中重新啟用。",
     Title: "挑選一個工具",
     SubTitle: "現在開始，與工具背後的靈魂思維碰撞",
     More: "搜尋更多",
