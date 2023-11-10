@@ -265,19 +265,56 @@ const tw: PartialLocaleType = {
       Check: "重新檢查",
       NoAccess: "輸入 API Key 檢視餘額",
     },
-    AccessCode: {
-      Title: "授權碼",
-      SubTitle: "已開啟授權訪問限制",
-      Placeholder: "請輸入授權碼",
+
+    Access: {
+      AccessCode: {
+        Title: "授權碼",
+        SubTitle: "已開啟授權訪問限制",
+        Placeholder: "請輸入授權碼",
+      },
+      CustomEndpoint: {
+        Title: "自訂接口",
+        SubTitle: "使用自訂 Azure 或 OpenAI 服務",
+      },
+      Provider: {
+        Title: "模型提供者",
+        SubTitle: "選擇 Azure 或 OpenAI",
+      },
+      OpenAI: {
+        ApiKey: {
+          Title: "OpenAI API 鑰匙",
+          SubTitle: "用戶自訂 OpenAI API 鑰匙",
+          Placeholder: "sk-xxx",
+        },
+
+        Endpoint: {
+          Title: "OpenAI 接口",
+          SubTitle: "以 http(s):// 開始或預設使用 /api/openai",
+        },
+      },
+      Azure: {
+        ApiKey: {
+          Title: "Azure API 鑰匙",
+          SubTitle: "從 Azure 控制台檢查您 API 鑰匙",
+          Placeholder: "Azure API 鑰匙",
+        },
+
+        Endpoint: {
+          Title: "Azure 接口",
+          SubTitle: "從 Azure 控制台檢查您的接口地址",
+        },
+
+        ApiVerion: {
+          Title: "Azure API 版本",
+          SubTitle: "從 Azure 控制台檢查您的 API 版本",
+        },
+      },
+      CustomModel: {
+        Title: "自定義模型名",
+        SubTitle: "增加自定義模型可選項，使用英文逗號隔開",
+      },
     },
-    Endpoint: {
-      Title: "接口地址",
-      SubTitle: "除默認地址外，必須包含 http(s)://",
-    },
-    CustomModel: {
-      Title: "自定義模型名",
-      SubTitle: "增加自定義模型可選項，使用英文逗號隔開",
-    },
+
     Model: "模型 (model)",
     Temperature: {
       Title: "隨機性 (temperature)",
