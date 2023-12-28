@@ -13,7 +13,7 @@ const cn = {
   Auth: {
     Title: "访问密码验证",
     Tips: "请在下方输入访问密码",
-    SubTips: "或者输入你的 OpenAI API 密钥",
+    SubTips: "或者输入你的 OpenAI API 或 Google API 密钥",
     Input: "访问密码",
     Confirm: "确认",
     Later: "稍后再说",
@@ -311,6 +311,23 @@ const cn = {
           SubTitle: "选择指定的部分版本",
         },
       },
+      Google: {
+        ApiKey: {
+          Title: "接口密钥",
+          SubTitle: "使用自定义 Google AI Studio API Key 绕过密码访问限制",
+          Placeholder: "Google AI Studio API Key",
+        },
+
+        Endpoint: {
+          Title: "接口地址",
+          SubTitle: "样例：",
+        },
+
+        ApiVerion: {
+          Title: "接口版本 (gemini-pro api version)",
+          SubTitle: "选择指定的部分版本",
+        },
+      },
       CustomModel: {
         Title: "自定义模型名",
         SubTitle: "增加自定义模型可选项，使用英文逗号隔开",
@@ -346,7 +363,7 @@ const cn = {
     Prompt: {
       History: (content: string) => "这是历史聊天总结作为前情提要：" + content,
       Topic:
-        "使用四到五个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要多余文本，如果没有主题，请直接返回“闲聊”",
+        "使用四到五个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要多余文本，不要加粗，如果没有主题，请直接返回“闲聊”",
       Summarize:
         "简要总结一下对话内容，用作后续的上下文提示 prompt，控制在 200 字以内",
     },
@@ -440,9 +457,9 @@ const cn = {
     Config: "配置",
   },
   Exporter: {
-    Description : {
-      Title: "只有清除上下文之后的消息会被展示"
-    },  
+    Description: {
+      Title: "只有清除上下文之后的消息会被展示",
+    },
     Model: "模型",
     Messages: "消息",
     Topic: "主题",
