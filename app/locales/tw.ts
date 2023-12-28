@@ -309,6 +309,23 @@ const tw: PartialLocaleType = {
           SubTitle: "從 Azure 控制台檢查您的 API 版本",
         },
       },
+      Google: {
+        ApiKey: {
+          Title: "接口鑰匙",
+          SubTitle: "使用自訂 Google AI Studio API Key 绕过授權訪問限制",
+          Placeholder: "Google AI Studio API Key",
+        },
+
+        Endpoint: {
+          Title: "接口地址",
+          SubTitle: "以 http(s):// 開始",
+        },
+
+        ApiVerion: {
+          Title: "接口版本 (gemini-pro api version)",
+          SubTitle: "選擇指定的部分版本",
+        },
+      },
       CustomModel: {
         Title: "自定義模型名",
         SubTitle: "增加自定義模型可選項，使用英文逗號隔開",
