@@ -321,9 +321,9 @@ const tw: PartialLocaleType = {
           SubTitle: "以 http(s):// 開始",
         },
 
-        ApiVerion: {
-          Title: "接口版本 (gemini-pro api version)",
-          SubTitle: "選擇指定的部分版本",
+        ApiVersion: {
+          Title: "API 版本 (僅適用於 gemini-pro)",
+          SubTitle: "選擇一個特定的 API 版本",
         },
       },
       CustomModel: {
