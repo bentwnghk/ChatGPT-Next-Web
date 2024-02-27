@@ -1,20 +1,21 @@
 import { getClientConfig } from "../config/client";
 import { SubmitKey } from "../store/config";
-import type { PartialLocaleType } from "./index";
 
 const isApp = !!getClientConfig()?.isApp;
 
-const tw: PartialLocaleType = {
+const tw = {
   WIP: "該功能仍在開發中……",
   Error: {
     Unauthorized: isApp
-      ? "檢測到無效 API Key，請前往[設置](/#/settings)檢查 API Key 是否配置正確。"
-      : "目前您的狀態是未授權，請前往[登錄](/#/auth)輸入正確的授權碼。",
+      ? "檢測到無效 API Key，請前往[設定](/#/settings)頁檢查 API Key 是否配置正確。"
+      : "訪問密碼不正確或為空，請前往[登錄](/#/auth)頁輸入正確的訪問密碼，或者在[設定](/#/settings)頁填入你自己的 OpenAI API Key。",
   },
+
   Auth: {
-    Title: "授權碼驗證",
-    Tips: "請在下方輸入授權碼",
-    Input: "授權碼",
+    Title: "需要密碼",
+    Tips: "管理員開啟了密碼驗證，請在下方填入訪問碼",
+    SubTips: "或者輸入你的 OpenAI 或 Google API 密鑰",
+    Input: "在此處填寫訪問碼",
     Confirm: "確認",
     Later: "稍後再說",
   },
@@ -24,6 +25,7 @@ const tw: PartialLocaleType = {
   Chat: {
     SubTitle: (count: number) => `您已經與 Mr.🆖 AI English Tutor 進行了 ${count} 則對話`,
     EditMessage: {
+      Title: "編輯消息記錄",
       Topic: {
         Title: "聊天主題",
         SubTitle: "更改當前聊天主題",
@@ -44,7 +46,7 @@ const tw: PartialLocaleType = {
     },
     Commands: {
       new: "新建聊天",
-      newm: "從工具新建聊天",
+      newm: "從面具新建聊天",
       next: "下一個聊天",
       prev: "上一個聊天",
       clear: "清除上下文",
@@ -59,9 +61,10 @@ const tw: PartialLocaleType = {
         dark: "深色模式",
       },
       Prompt: "快捷指令",
-      Masks: "所有工具",
+      Masks: "所有面具",
       Clear: "清除聊天",
-      Settings: "對話設置",
+      Settings: "對話設定",
+      UploadImage: "上傳圖片",
     },
     Rename: "重新命名對話",
     Typing: "正在輸入…",
@@ -85,14 +88,14 @@ const tw: PartialLocaleType = {
     Download: "下載檔案",
     Share: "分享到 ShareGPT",
     MessageFromYou: "來自您的訊息",
-    MessageFromChatGPT: "來自 ChatGPT 的訊息",
+    MessageFromChatGPT: "來自 Mr.🆖 AI English Tutor 的訊息",
     Format: {
       Title: "導出格式",
       SubTitle: "可以導出 Markdown 文本或者 PNG 圖片",
     },
     IncludeContext: {
-      Title: "包含工具上下文",
-      SubTitle: "是否在訊息中展示工具上下文",
+      Title: "包含面具上下文",
+      SubTitle: "是否在消息中展示面具上下文",
     },
     Steps: {
       Select: "選取",
@@ -104,7 +107,7 @@ const tw: PartialLocaleType = {
     },
   },
   Select: {
-    Search: "搜索訊息",
+    Search: "搜索對話",
     All: "選取全部",
     Latest: "最近幾條",
     Clear: "清除選取",
@@ -126,18 +129,19 @@ const tw: PartialLocaleType = {
   Settings: {
     Title: "設定",
     SubTitle: "設定選項",
+
     Danger: {
       Reset: {
-        Title: "重設所有設定",
-        SubTitle: "將所有設定重置回默認值",
-        Action: "立即重設",
-        Confirm: "您確定要將所有設定重置回默認值嗎？",
+        Title: "重置所有設定",
+        SubTitle: "重置所有設定項回默認值",
+        Action: "立即重置",
+        Confirm: "確認重置所有設定？",
       },
       Clear: {
-        Title: "清除所有資料",
-        SubTitle: "清除所有對話和設定",
+        Title: "清除所有數據",
+        SubTitle: "清除所有聊天、設定數據",
         Action: "立即清除",
-        Confirm: "您確定要清除所有對話和設定嗎？",
+        Confirm: "確認清除所有聊天、設定數據？",
       },
     },
     Lang: {
@@ -184,7 +188,7 @@ const tw: PartialLocaleType = {
 
       Config: {
         Modal: {
-          Title: "配置雲同步",
+          Title: "配置雲端同步",
           Check: "檢查可用性",
         },
         SyncType: {
@@ -215,7 +219,7 @@ const tw: PartialLocaleType = {
 
       LocalState: "本地數據",
       Overview: (overview: any) => {
-        return `${overview.chat} 次對話，${overview.message} 條消息，${overview.prompt} 條提示詞，${overview.mask} 個工具`;
+        return `${overview.chat} 次對話，${overview.message} 條消息，${overview.prompt} 條提示詞，${overview.mask} 個面具`;
       },
       ImportFailed: "導入失敗",
     },
@@ -227,6 +231,10 @@ const tw: PartialLocaleType = {
       Builtin: {
         Title: "隱藏內置工具",
         SubTitle: "在所有工具列表中隱藏內置工具",
+      },
+      Builtin: {
+        Title: "隱藏內置面具",
+        SubTitle: "在所有面具列表中隱藏內置面具",
       },
     },
     Prompt: {
@@ -268,34 +276,34 @@ const tw: PartialLocaleType = {
 
     Access: {
       AccessCode: {
-        Title: "授權碼",
-        SubTitle: "已開啟授權訪問限制",
-        Placeholder: "請輸入授權碼",
+        Title: "訪問密碼",
+        SubTitle: "管理員已開啟加密訪問",
+        Placeholder: "請輸入訪問密碼",
       },
       CustomEndpoint: {
-        Title: "自訂接口",
-        SubTitle: "使用自訂 Azure 或 OpenAI 服務",
+        Title: "自定義接口 (Endpoint)",
+        SubTitle: "是否使用自定義 Azure 或 OpenAI 服務",
       },
       Provider: {
-        Title: "模型提供者",
-        SubTitle: "選擇 Azure 或 OpenAI",
+        Title: "模型服務商",
+        SubTitle: "切換不同的服務商",
       },
       OpenAI: {
         ApiKey: {
-          Title: "OpenAI API 鑰匙",
-          SubTitle: "用戶自訂 OpenAI API 鑰匙",
-          Placeholder: "sk-xxx",
+          Title: "API Key",
+          SubTitle: "使用自定義 OpenAI Key 繞過密碼訪問限制",
+          Placeholder: "OpenAI API Key",
         },
 
         Endpoint: {
-          Title: "OpenAI 接口",
-          SubTitle: "以 http(s):// 開始或預設使用 /api/openai",
+          Title: "接口(Endpoint) 地址",
+          SubTitle: "除默認地址外，必須包含 http(s)://",
         },
       },
       Azure: {
         ApiKey: {
           Title: "Azure API 鑰匙",
-          SubTitle: "從 Azure 控制台檢查您 API 鑰匙",
+          SubTitle: "使用自定義 Azure Key 繞過密碼訪問限制",
           Placeholder: "Azure API 鑰匙",
         },
 
@@ -311,18 +319,18 @@ const tw: PartialLocaleType = {
       },
       Google: {
         ApiKey: {
-          Title: "接口鑰匙",
-          SubTitle: "使用自訂 Google AI Studio API Key 绕过授權訪問限制",
-          Placeholder: "Google AI Studio API Key",
+          Title: "API 密鑰",
+          SubTitle: "從 Google AI 獲取您的 API 密鑰",
+          Placeholder: "輸入您的 Google AI Studio API 密鑰",
         },
 
         Endpoint: {
-          Title: "接口地址",
-          SubTitle: "以 http(s):// 開始",
+          Title: "終端地址",
+          SubTitle: "示例：",
         },
 
         ApiVersion: {
-          Title: "API 版本 (僅適用於 gemini-pro)",
+          Title: "API 版本（僅適用於 gemini-pro）",
           SubTitle: "選擇一個特定的 API 版本",
         },
       },
@@ -338,7 +346,7 @@ const tw: PartialLocaleType = {
       SubTitle: "值越大，回應越隨機",
     },
     TopP: {
-      Title: "核採樣 (top_p)",
+      Title: "核采樣 (top_p)",
       SubTitle: "與隨機性類似，但不要和隨機性一起更改",
     },
     MaxTokens: {
@@ -371,10 +379,14 @@ const tw: PartialLocaleType = {
     Success: "已複製到剪貼簿中",
     Failed: "複製失敗，請賦予剪貼簿權限",
   },
+  Download: {
+    Success: "內容已下載到您的目錄。",
+    Failed: "下載失敗。",
+  },
   Context: {
-    Toast: (x: any) => `包含 ${x} 條預設提示詞`,
-    Edit: "當前對話設置",
-    Add: "新增預設對話",
+    Toast: (x: any) => `已設定 ${x} 條前置上下文`,
+    Edit: "前置上下文和歷史記憶",
+    Add: "新增一條",
     Clear: "上下文已清除",
     Revert: "恢復上下文",
   },
@@ -407,20 +419,20 @@ const tw: PartialLocaleType = {
       Clone: "複製預設",
     },
     Config: {
-      Avatar: "工具頭像",
-      Name: "工具名稱",
+      Avatar: "角色頭像",
+      Name: "角色名稱",
       Sync: {
-        Title: "使用全局設置",
-        SubTitle: "當前對話是否使用全局模型設置",
-        Confirm: "當前對話的自定義設置將會被自動覆蓋，確認啟用全局設置？",
+        Title: "使用全局設定",
+        SubTitle: "當前對話是否使用全局模型設定",
+        Confirm: "當前對話的自定義設定將會被自動覆蓋，確認啟用全局設定？",
       },
       HideContext: {
         Title: "隱藏預設對話",
         SubTitle: "隱藏後預設對話不會出現在聊天界面",
       },
       Share: {
-        Title: "分享此工具",
-        SubTitle: "生成此工具的直達鏈接",
+        Title: "分享此面具",
+        SubTitle: "生成此面具的直達鏈接",
         Action: "複製鏈接",
       },
     },
@@ -429,14 +441,14 @@ const tw: PartialLocaleType = {
     Return: "返回",
     Skip: "跳過",
     NotShow: "不再呈現",
-    ConfirmNoShow: "確認停用？停用後可以随時在設定中重新啟用。",
-    Title: "挑選一個工具",
-    SubTitle: "現在開始，與工具背後的靈魂思維碰撞",
+    ConfirmNoShow: "確認停用？停用後可以隨時在設定中重新啟用。",
+    Title: "挑選一個面具",
+    SubTitle: "現在開始，與面具背後的靈魂思維碰撞",
     More: "搜尋更多",
   },
   URLCommand: {
     Code: "檢測到鏈接中已經包含訪問碼，是否自動填入？",
-    Settings: "檢測到鏈接中包含了預製設置，是否自動填入？",
+    Settings: "檢測到鏈接中包含了預設設置，是否自動填入？",
   },
   UI: {
     Confirm: "確認",
@@ -450,6 +462,9 @@ const tw: PartialLocaleType = {
     Config: "配置",
   },
   Exporter: {
+    Description: {
+      Title: "只有清除上下文之後的消息會被展示",
+    },
     Model: "模型",
     Messages: "訊息",
     Topic: "主題",
@@ -457,4 +472,14 @@ const tw: PartialLocaleType = {
   },
 };
 
+type DeepPartial<T> = T extends object
+  ? {
+    [P in keyof T]?: DeepPartial<T[P]>;
+  }
+  : T;
+
+export type LocaleType = typeof tw;
+export type PartialLocaleType = DeepPartial<typeof tw>;
+
 export default tw;
+// Translated by @chunkiuuu, feel free the submit new pr if there are typo/incorrect translations :D
