@@ -225,12 +225,8 @@ const tw = {
     },
     Mask: {
       Splash: {
-        Title: "工具啟動頁面",
-        SubTitle: "新增聊天時，呈現工具啟動頁面",
-      },
-      Builtin: {
-        Title: "隱藏內置工具",
-        SubTitle: "在所有工具列表中隱藏內置工具",
+        Title: "面具啟動頁面",
+        SubTitle: "新增聊天時，呈現面具啟動頁面",
       },
       Builtin: {
         Title: "隱藏內置面具",
