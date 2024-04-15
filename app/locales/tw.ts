@@ -444,7 +444,7 @@ const tw = {
         SubTitle: "隱藏後預設對話不會出現在聊天介面",
       },
       Share: {
-        Title: "分享此工具,
+        Title: "分享此工具",
         SubTitle: "生成此工具的直達鏈接",
         Action: "複製鏈接",
       },
