@@ -149,13 +149,13 @@ const openaiModels = [
   "gpt-4o",
   "gpt-4o-2024-05-13",
   "gpt-4-vision-preview",
-  "gpt-4-turbo-2024-04-09"
+  "gpt-4-turbo-2024-04-09",
+  "gemini-1.5-pro-latest", 
+  "gemini-1.5-flash-latest",
 ];
 
 const googleModels = [
   "gemini-1.0-pro",
-  "gemini-1.5-pro-latest",
-  "gemini-1.5-flash-latest",
   "gemini-pro-vision",
 ];
 
