@@ -97,9 +97,8 @@ export const Azure = {
 };
 
 export const Google = {
-  // ExampleEndpoint: "https://generativelanguage.googleapis.com/",
-  // ChatPath: (modelName: string) => `v1beta/models/${modelName}:generateContent`,
-  ChatPath: "v1/chat/completions",
+  ExampleEndpoint: "https://generativelanguage.googleapis.com/",
+  ChatPath: (modelName: string) => `v1beta/models/${modelName}:generateContent`,
 };
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
@@ -156,8 +155,8 @@ const openaiModels = [
 const googleModels = [
   "gemini-1.0-pro",
   "gemini-pro-vision",
-  "gemini-1.5-flash-latest", 
-  "gemini-1.5-pro-latest",
+  // "gemini-1.5-pro-latest", 
+  // "gemini-1.5-flash-latest",
 ];
 
 const anthropicModels = [
