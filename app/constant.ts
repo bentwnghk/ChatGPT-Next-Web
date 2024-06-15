@@ -7,8 +7,8 @@ export const RELEASE_URL = `${REPO_URL}/releases`;
 export const FETCH_COMMIT_URL = `https://api.github.com/repos/${OWNER}/${REPO}/commits?per_page=1`;
 export const FETCH_TAG_URL = `https://api.github.com/repos/${OWNER}/${REPO}/tags?per_page=1`;
 export const RUNTIME_CONFIG_DOM = "danger-runtime-config";
-export const HOME_URL = `https://mr5drive.com`;
-export const DEFAULT_API_HOST = "https://api.nextchat.dev";
+export const HOME_URL = `https://api.mister5.net`;
+export const DEFAULT_API_HOST = "https://api.mister5.net";
 export const OPENAI_BASE_URL = "https://api.openai.com";
 export const ANTHROPIC_BASE_URL = "https://api.anthropic.com";
 

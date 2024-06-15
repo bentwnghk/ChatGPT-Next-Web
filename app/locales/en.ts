@@ -409,7 +409,7 @@ const en: LocaleType = {
     Revert: "Revert",
   },
   Plugin: {
-    Name: "Plugin",
+    Name: "Get API Key",
   },
   FineTuned: {
     Sysmessage: "You are an assistant that",

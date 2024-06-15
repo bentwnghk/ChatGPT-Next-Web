@@ -404,7 +404,7 @@ const tw = {
     Revert: "恢復上下文",
   },
   Plugin: {
-    Name: "插件",
+    Name: "取得 API Key",
   },
   FineTuned: {
     Sysmessage: "你是一個助手",
