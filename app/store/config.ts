@@ -5,6 +5,7 @@ import {
   DEFAULT_MODELS,
   DEFAULT_SIDEBAR_WIDTH,
   StoreKey,
+  ServiceProvider,
 } from "../constant";
 import { createPersistStore } from "../utils/store";
 
@@ -48,7 +49,8 @@ export const DEFAULT_CONFIG = {
 
   modelConfig: {
     model: "gpt-3.5-turbo" as ModelType,
-    temperature: 0.8,
+    providerName: "Openai" as ServiceProvider,
+    temperature: 0.6,
     top_p: 1,
     max_tokens: 4000,
     presence_penalty: 0,
