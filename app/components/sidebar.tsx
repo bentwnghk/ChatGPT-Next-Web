@@ -184,7 +184,7 @@ export function SideBar(props: { className?: string }) {
           text={shouldNarrow ? undefined : Locale.Plugin.Name}
           className={styles["sidebar-bar-button"]}
           onClick={() => {
-            window.open("https://api.mister5.net", "_blank");
+            window.open("https://api.mr5ai.com", "_blank");
           }}
           shadow
         />
