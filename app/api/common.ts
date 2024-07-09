@@ -80,10 +80,14 @@ export async function requestOpenai(req: NextRequest) {
           const [fullName, displayName] = m.split("=");
           const [_, providerName] = fullName.split("@");
           if (providerName === "azure" && !displayName) {
-            const [_, deployId] = serverConfig.azureUrl.split("deployments/");
-            if (deployId) {
-              realDeployName = deployId;
+            const azureUrl = serverConfig.azureUrl;
+            if (azureUrl) {
+              const [_, deployId] = azureUrl.split("deployments/");
+              if (deployId) {
+                realDeployName = deployId;
+              }
             }
+          }
           }
         });
       if (realDeployName) {
