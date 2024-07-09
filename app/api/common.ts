@@ -79,17 +79,13 @@ export async function requestOpenai(req: NextRequest) {
         .forEach((m) => {
           const [fullName, displayName] = m.split("=");
           const [_, providerName] = fullName.split("@");
-          if (providerName === "azure" && !displayName) {
-            const azureUrl = serverConfig.azureUrl;
-            if (azureUrl) {
-              const [_, deployId] = azureUrl.split("deployments/");
-              if (deployId) {
-                realDeployName = deployId;
-              }
+          if (providerName === "azure" && !displayName && serverConfig.azureUrl) {
+            const [_, deployId] = serverConfig.azureUrl.split("deployments/") ?? [];
+            if (deployId) {
+              realDeployName = deployId;
             }
           }
-          }
-        )};
+        });
       if (realDeployName) {
         console.log("[Replace with DeployId", realDeployName);
         path = path.replaceAll(modelName, realDeployName);
