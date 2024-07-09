@@ -89,7 +89,7 @@ export async function requestOpenai(req: NextRequest) {
             }
           }
           }
-        });
+        )};
       if (realDeployName) {
         console.log("[Replace with DeployId", realDeployName);
         path = path.replaceAll(modelName, realDeployName);
