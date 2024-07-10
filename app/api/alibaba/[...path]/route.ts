@@ -128,7 +128,7 @@ async function request(req: NextRequest) {
   // #1815 try to refuse some request to some models
   if (serverConfig.customModels && req.body) {
     try {
-      not undefined and is false
+      // not undefined and is false
       if (
         isModelAvailableInServer(
           serverConfig.customModels,
