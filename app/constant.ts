@@ -184,6 +184,7 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 
 const openaiModels = [
   "gpt-3.5-turbo",
+  "gpt-35-turbo",
   "gpt-3.5-turbo-1106",
   "gpt-3.5-turbo-0125",
   "gpt-4",
@@ -200,49 +201,49 @@ const openaiModels = [
 ];
 
 const googleModels = [
-  "gemini-1.0-pro",
-  "gemini-pro-vision",
-  "gemini-1.5-pro-latest",
-  "gemini-1.5-flash-latest",
+  "xgemini-1.0-pro",
+  "xgemini-pro-vision",
+  "xgemini-1.5-pro-latest",
+  "xgemini-1.5-flash-latest",
 ];
 
 const anthropicModels = [
-  "claude-instant-1.2",
-  "claude-2.0",
-  "claude-2.1",
-  "claude-3-sonnet-20240229",
-  "claude-3-opus-20240229",
-  "claude-3-haiku-20240307",
-  "claude-3-5-sonnet-20240620",
+  "xclaude-instant-1.2",
+  "xclaude-2.0",
+  "xclaude-2.1",
+  "xclaude-3-sonnet-20240229",
+  "xclaude-3-opus-20240229",
+  "xclaude-3-haiku-20240307",
+  "xclaude-3-5-sonnet-20240620",
 ];
 
 const baiduModels = [
-  "ernie-4.0-turbo-8k",
-  "ernie-4.0-8k",
-  "ernie-4.0-8k-preview",
-  "ernie-4.0-8k-preview-0518",
-  "ernie-4.0-8k-latest",
-  "ernie-3.5-8k",
-  "ernie-3.5-8k-0205",
+  "xernie-4.0-turbo-8k",
+  "xernie-4.0-8k",
+  "xernie-4.0-8k-preview",
+  "xernie-4.0-8k-preview-0518",
+  "xernie-4.0-8k-latest",
+  "xernie-3.5-8k",
+  "xernie-3.5-8k-0205",
 ];
 
 const bytedanceModels = [
-  "Doubao-lite-4k",
-  "Doubao-lite-32k",
-  "Doubao-lite-128k",
-  "Doubao-pro-4k",
-  "Doubao-pro-32k",
-  "Doubao-pro-128k",
+  "xDoubao-lite-4k",
+  "xDoubao-lite-32k",
+  "xDoubao-lite-128k",
+  "xDoubao-pro-4k",
+  "xDoubao-pro-32k",
+  "xDoubao-pro-128k",
 ];
 
 const alibabaModes = [
-  "qwen-turbo",
-  "qwen-plus",
-  "qwen-max",
-  "qwen-max-0428",
-  "qwen-max-0403",
-  "qwen-max-0107",
-  "qwen-max-longcontext",
+  "xqwen-turbo",
+  "xqwen-plus",
+  "xqwen-max",
+  "xqwen-max-0428",
+  "xqwen-max-0403",
+  "xqwen-max-0107",
+  "xqwen-max-longcontext",
 ];
 
 export const DEFAULT_MODELS = [
@@ -257,7 +258,7 @@ export const DEFAULT_MODELS = [
   })),
   ...openaiModels.map((name) => ({
     name,
-    available: true,
+    available: false,
     provider: {
       id: "azure",
       providerName: "Azure",
