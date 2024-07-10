@@ -81,9 +81,9 @@ export enum ServiceProvider {
   Azure = "Azure",
   Google = "Google",
   Anthropic = "Anthropic",
-  // Baidu = "Baidu",
+  Baidu = "Baidu",
   ByteDance = "ByteDance",
-  Alibaba = "Alibaba",
+  // Alibaba = "Alibaba",
 }
 
 export enum ModelProvider {
