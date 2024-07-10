@@ -3,12 +3,12 @@ import {
   // Alibaba,
   ALIBABA_BASE_URL,
   ApiPath,
-  ModelProvider,
+  // ModelProvider,
   ServiceProvider,
 } from "@/app/constant";
 import { prettyObject } from "@/app/utils/format";
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "@/app/api/auth";
+// import { auth } from "@/app/api/auth";
 import { isModelAvailableInServer } from "@/app/utils/model";
 import type { RequestPayload } from "@/app/client/platforms/openai";
 
@@ -24,12 +24,12 @@ async function handle(
     return NextResponse.json({ body: "OK" }, { status: 200 });
   }
 
-  const authResult = auth(req, ModelProvider.Qwen);
-  if (authResult.error) {
-    return NextResponse.json(authResult, {
-      status: 401,
-    });
-  }
+  // const authResult = auth(req, ModelProvider.Qwen);
+  // if (authResult.error) {
+    // return NextResponse.json(authResult, {
+      // status: 401,
+    // });
+  // }
 
   try {
     const response = await request(req);
