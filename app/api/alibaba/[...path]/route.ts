@@ -1,15 +1,15 @@
 import { getServerSideConfig } from "@/app/config/server";
 import {
-  // Alibaba,
+  Alibaba,
   ALIBABA_BASE_URL,
   ApiPath,
-  // ModelProvider,
+  ModelProvider,
   ServiceProvider,
 } from "@/app/constant";
 import { prettyObject } from "@/app/utils/format";
 import { NextRequest, NextResponse } from "next/server";
-// import { auth } from "@/app/api/auth";
-// import { isModelAvailableInServer } from "@/app/utils/model";
+import { auth } from "@/app/api/auth";
+import { isModelAvailableInServer } from "@/app/utils/model";
 import type { RequestPayload } from "@/app/client/platforms/openai";
 
 const serverConfig = getServerSideConfig();
@@ -24,12 +24,12 @@ async function handle(
     return NextResponse.json({ body: "OK" }, { status: 200 });
   }
 
-  // const authResult = auth(req, ModelProvider.Qwen);
-  // if (authResult.error) {
-    // return NextResponse.json(authResult, {
-      // status: 401,
-    // });
-  // }
+  const authResult = auth(req, ModelProvider.Qwen);
+  if (authResult.error) {
+    return NextResponse.json(authResult, {
+      status: 401,
+    });
+  }
 
   try {
     const response = await request(req);
@@ -126,30 +126,30 @@ async function request(req: NextRequest) {
   };
 
   // #1815 try to refuse some request to some models
-  // if (serverConfig.customModels && req.body) {
-    // try {
-      // not undefined and is false
-      // if (
-        // isModelAvailableInServer(
-          // serverConfig.customModels,
-          // model as string,
-          // ServiceProvider.Alibaba as string,
-        // )
-      // ) {
-        // return NextResponse.json(
-          // {
-            // error: true,
-            // message: `you are not allowed to use ${model} model`,
-          // },
-          // {
-            // status: 403,
-          // },
-        // );
-      // }
-    // } catch (e) {
-      // console.error(`[Alibaba] filter`, e);
-    // }
-  // }
+  if (serverConfig.customModels && req.body) {
+    try {
+      not undefined and is false
+      if (
+        isModelAvailableInServer(
+          serverConfig.customModels,
+          model as string,
+          ServiceProvider.Alibaba as string,
+        )
+      ) {
+        return NextResponse.json(
+          {
+            error: true,
+            message: `you are not allowed to use ${model} model`,
+          },
+          {
+            status: 403,
+          },
+        );
+      }
+    } catch (e) {
+      console.error(`[Alibaba] filter`, e);
+    }
+  }
   try {
     const res = await fetch(fetchUrl, fetchOptions);
 

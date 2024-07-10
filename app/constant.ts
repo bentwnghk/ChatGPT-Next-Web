@@ -83,7 +83,7 @@ export enum ServiceProvider {
   Anthropic = "Anthropic",
   Baidu = "Baidu",
   ByteDance = "ByteDance",
-  // Alibaba = "Alibaba",
+  Alibaba = "Alibaba",
 }
 
 export enum ModelProvider {
@@ -92,7 +92,7 @@ export enum ModelProvider {
   Claude = "Claude",
   Ernie = "Ernie",
   Doubao = "Doubao",
-  // Qwen = "Qwen",
+  Qwen = "Qwen",
 }
 
 export const Anthropic = {
