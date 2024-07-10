@@ -81,7 +81,7 @@ export enum ServiceProvider {
   Azure = "Azure",
   Google = "Google",
   Anthropic = "Anthropic",
-  Baidu = "Baidu",
+  // Baidu = "Baidu",
   ByteDance = "ByteDance",
   Alibaba = "Alibaba",
 }
@@ -92,7 +92,7 @@ export enum ModelProvider {
   Claude = "Claude",
   Ernie = "Ernie",
   Doubao = "Doubao",
-  Qwen = "Qwen",
+  // Qwen = "Qwen",
 }
 
 export const Anthropic = {
@@ -258,7 +258,7 @@ export const DEFAULT_MODELS = [
   })),
   ...openaiModels.map((name) => ({
     name,
-    available: false,
+    available: true,
     provider: {
       id: "azure",
       providerName: "Azure",

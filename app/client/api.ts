@@ -1,7 +1,7 @@
 import { getClientConfig } from "../config/client";
 import {
   ACCESS_CODE_PREFIX,
-  Azure,
+  // Azure,
   ModelProvider,
   ServiceProvider,
 } from "../constant";
@@ -11,7 +11,7 @@ import { GeminiProApi } from "./platforms/google";
 import { ClaudeApi } from "./platforms/anthropic";
 import { ErnieApi } from "./platforms/baidu";
 import { DoubaoApi } from "./platforms/bytedance";
-import { QwenApi } from "./platforms/alibaba";
+// import { QwenApi } from "./platforms/alibaba";
 
 export const ROLES = ["system", "user", "assistant"] as const;
 export type MessageRole = (typeof ROLES)[number];
@@ -114,9 +114,9 @@ export class ClientApi {
       case ModelProvider.Doubao:
         this.llm = new DoubaoApi();
         break;
-      case ModelProvider.Qwen:
-        this.llm = new QwenApi();
-        break;
+      // case ModelProvider.Qwen:
+        // this.llm = new QwenApi();
+        // break;
       default:
         this.llm = new ChatGPTApi();
     }
@@ -185,7 +185,7 @@ export function getHeaders() {
     const isAnthropic = modelConfig.providerName === ServiceProvider.Anthropic;
     const isBaidu = modelConfig.providerName == ServiceProvider.Baidu;
     const isByteDance = modelConfig.providerName === ServiceProvider.ByteDance;
-    const isAlibaba = modelConfig.providerName === ServiceProvider.Alibaba;
+    // const isAlibaba = modelConfig.providerName === ServiceProvider.Alibaba;
     const isEnabledAccessControl = accessStore.enabledAccessControl();
     const apiKey = isGoogle
       ? accessStore.googleApiKey
@@ -195,8 +195,8 @@ export function getHeaders() {
       ? accessStore.anthropicApiKey
       : isByteDance
       ? accessStore.bytedanceApiKey
-      : isAlibaba
-      ? accessStore.alibabaApiKey
+      // : isAlibaba
+      // ? accessStore.alibabaApiKey
       : accessStore.openaiApiKey;
     return {
       isGoogle,
@@ -204,7 +204,7 @@ export function getHeaders() {
       isAnthropic,
       isBaidu,
       isByteDance,
-      isAlibaba,
+      // isAlibaba,
       apiKey,
       isEnabledAccessControl,
     };
@@ -261,8 +261,8 @@ export function getClientApi(provider: ServiceProvider): ClientApi {
       return new ClientApi(ModelProvider.Ernie);
     case ServiceProvider.ByteDance:
       return new ClientApi(ModelProvider.Doubao);
-    case ServiceProvider.Alibaba:
-      return new ClientApi(ModelProvider.Qwen);
+    // case ServiceProvider.Alibaba:
+      // return new ClientApi(ModelProvider.Qwen);
     default:
       return new ClientApi(ModelProvider.GPT);
   }
