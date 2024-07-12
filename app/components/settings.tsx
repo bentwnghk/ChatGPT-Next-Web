@@ -1196,8 +1196,7 @@ export function Settings() {
                       <ListItem
                         title={Locale.Settings.Access.Baidu.Endpoint.Title}
                         subTitle={
-                          Locale.Settings.Access.Anthropic.Endpoint.SubTitle +
-                          Baidu.ExampleEndpoint
+                          Locale.Settings.Access.Baidu.Endpoint.SubTitle
                         }
                       >
                         <input
