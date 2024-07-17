@@ -134,6 +134,12 @@ export const Baidu = {
     if (modelName === "ernie-3.5-8k") {
       endpoint = "completions";
     }
+    if (modelName === "ernie-speed-128k") {
+      endpoint = "ernie-speed-128k";
+    }
+    if (modelName === "ernie-speed-8k") {
+      endpoint = "ernie_speed";
+    }
     return `rpc/2.0/ai_custom/v1/wenxinworkshop/chat/${endpoint}`;
   },
 };
@@ -225,7 +231,11 @@ const baiduModels = [
   "xernie-4.0-8k-preview-0518",
   "xernie-4.0-8k-latest",
   "xernie-3.5-8k",
-  "xernie-3.5-8k-0205",
+  "xxernie-3.5-8k-0205",
+  "xernie-speed-128k",
+  "xernie-speed-8k",
+  "xernie-lite-8k",
+  "xernie-tiny-8k"
 ];
 
 const bytedanceModels = [
