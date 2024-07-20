@@ -185,8 +185,8 @@ Latex inline: \\(x^2\\)
 Latex block: $$e=mc^2$$
 `;
 
-export const SUMMARIZE_MODEL = "gpt-4o-mini";
-export const GEMINI_SUMMARIZE_MODEL = "gemini-pro";
+export const SUMMARIZE_MODEL = "gpt-35-turbo";
+export const GEMINI_SUMMARIZE_MODEL = "gemini-1.5-flash-001";
 
 export const KnowledgeCutOffDate: Record<string, string> = {
   default: "2021-09",
