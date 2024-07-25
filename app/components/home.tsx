@@ -172,9 +172,10 @@ function Screen() {
 
   return (
     <div
-      className={`${styles.container} ${
-        shouldTightBorder ? styles["tight-container"] : styles.container
-      } ${getLang() === "ar" ? styles["rtl-screen"] : ""}`}
+      className={
+        styles.container +
+        ` ${shouldTightBorder ? styles["tight-container"] : styles.container}`
+      }
     >
       {renderContent()}
     </div>
