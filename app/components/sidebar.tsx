@@ -253,7 +253,7 @@ export function SideBar(props: { className?: string }) {
           <Selector
             items={[
               {
-                title: "👇 Please select the plugin you need to use",
+                title: "👇 Select the plugin to use",
                 value: "-",
                 disable: true,
               },
