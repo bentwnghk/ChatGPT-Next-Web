@@ -10,10 +10,10 @@ import { GoogleTagManager } from "@next/third-parties/google";
 const serverConfig = getServerSideConfig();
 
 export const metadata: Metadata = {
-  title: "Mr.🆖 AI English Tutor",
-  description: "由 OpenAI 驅動的人工智能英語學習利器",
+  title: "Mr.🆖 AI Tutor",
+  description: "由 OpenAI 驅動的人工智能學習利器",
   appleWebApp: {
-    title: "🆖 AI English",
+    title: "🆖 AI Tutor",
     statusBarStyle: "default",
   },
 };

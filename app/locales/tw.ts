@@ -23,7 +23,7 @@ const tw = {
     ChatItemCount: (count: number) => `${count} 則對話`,
   },
   Chat: {
-    SubTitle: (count: number) => `您已經與 Mr.🆖 AI English Tutor 進行了 ${count} 則對話`,
+    SubTitle: (count: number) => `您已經與 Mr.🆖 AI Tutor 進行了 ${count} 則對話`,
     EditMessage: {
       Title: "編輯訊息記錄",
       Topic: {
@@ -88,7 +88,7 @@ const tw = {
     Download: "下載檔案",
     Share: "分享到 ShareGPT",
     MessageFromYou: "來自您的訊息",
-    MessageFromChatGPT: "來自 Mr.🆖 AI English Tutor 的訊息",
+    MessageFromChatGPT: "來自 Mr.🆖 AI Tutor 的訊息",
     Format: {
       Title: "匯出格式",
       SubTitle: "可以匯出 Markdown 文字檔或者 PNG 圖片",
