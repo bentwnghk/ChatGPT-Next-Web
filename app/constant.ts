@@ -9,7 +9,10 @@ export const FETCH_TAG_URL = `https://api.github.com/repos/${OWNER}/${REPO}/tags
 export const RUNTIME_CONFIG_DOM = "danger-runtime-config";
 export const HOME_URL = `https://api.mr5ai.com`;
 export const DEFAULT_API_HOST = "https://api.mr5ai.com";
+
+export const STABILITY_BASE_URL = "https://api.stability.ai";
 export const OPENAI_BASE_URL = "https://api.openai.com";
+
 export const ANTHROPIC_BASE_URL = "https://api.anthropic.com";
 
 export const GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/";
@@ -31,6 +34,8 @@ export enum Path {
   NewChat = "/new-chat",
   Masks = "/masks",
   Auth = "/auth",
+  Sd = "/sd",
+  SdNew = "/sd-new",
 }
 
 export enum ApiPath {
@@ -42,6 +47,7 @@ export enum ApiPath {
   Baidu = "/api/baidu",
   ByteDance = "/api/bytedance",
   Alibaba = "/api/alibaba",
+  Stability = "/api/stability",
 }
 
 export enum SlotID {
@@ -62,6 +68,7 @@ export enum StoreKey {
   Prompt = "prompt-store",
   Update = "chat-update",
   Sync = "sync",
+  SdList = "sd-list",
 }
 
 export const DEFAULT_SIDEBAR_WIDTH = 300;
@@ -88,6 +95,7 @@ export enum ServiceProvider {
   Baidu = "Baidu",
   ByteDance = "ByteDance",
   Alibaba = "Alibaba",
+  Stability = "Stability",
 }
 
 // Google API safety settings, see https://ai.google.dev/gemini-api/docs/safety-settings
@@ -100,6 +108,7 @@ export enum GoogleSafetySettingsThreshold {
 }
 
 export enum ModelProvider {
+  Stability = "Stability",
   GPT = "GPT",
   GeminiPro = "GeminiPro",
   Claude = "Claude",
@@ -107,6 +116,11 @@ export enum ModelProvider {
   Doubao = "Doubao",
   Qwen = "Qwen",
 }
+
+export const Stability = {
+  GeneratePath: "v2beta/stable-image/generate",
+  ExampleEndpoint: "https://api.stability.ai",
+};
 
 export const Anthropic = {
   ChatPath: "v1/messages",
@@ -352,3 +366,5 @@ export const internalAllowedWebDavEndpoints = [
   "https://webdav.yandex.com",
   "https://app.koofr.net/dav/Koofr",
 ];
+
+export const PLUGINS = [{ name: "Stable Diffusion", path: Path.Sd }];
