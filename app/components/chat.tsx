@@ -589,7 +589,9 @@ export function ChatActions(props: {
       />
 
       <ChatAction
-        onClick={() => showToast(Locale.WIP)}
+        onClick={() => {
+          window.open("https://api.mr5ai.com", "_blank");
+        }}
         text={Locale.Plugin.Name}
         icon={<PluginIcon />}
       />
