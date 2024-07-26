@@ -8,7 +8,7 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "NextChat",
+    "productName": "Mr.🆖 AI Tutor",
     "version": "2.14.0"
   },
   "tauri": {
