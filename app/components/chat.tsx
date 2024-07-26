@@ -624,14 +624,6 @@ export function ChatActions(props: {
       )}
 
       <ChatAction
-        onClick={() => {
-          window.open("https://api.mr5ai.com", "_blank");
-        }}
-        text={Locale.Plugin.Name}
-        icon={<PluginIcon />}
-      />
-
-      <ChatAction
         onClick={() => setShowPluginSelector(true)}
         text={Locale.Plugin.Name}
         icon={<PluginIcon />}
