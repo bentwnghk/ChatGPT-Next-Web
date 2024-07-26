@@ -404,7 +404,11 @@ const tw = {
     Revert: "恢復上下文",
   },
   Plugin: {
-    Name: "取得 API Key",
+    Name: "插件",
+    Artifacts: "Artifacts",
+  },
+  Discovery: {
+    Name: "發現",
   },
   FineTuned: {
     Sysmessage: "你是一個助手",
