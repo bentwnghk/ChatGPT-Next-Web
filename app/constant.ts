@@ -300,7 +300,7 @@ const alibabaModes = [
   "xqwen-max-longcontext",
 ];
 
-const moonshotModes = ["moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k"];
+const moonshotModes = ["xmoonshot-v1-8k", "xmoonshot-v1-32k", "xmoonshot-v1-128k"];
 
 export const DEFAULT_MODELS = [
   ...openaiModels.map((name) => ({
