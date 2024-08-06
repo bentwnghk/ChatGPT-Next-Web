@@ -337,11 +337,11 @@ const tencentModels = [
 const moonshotModes = ["xmoonshot-v1-8k", "xmoonshot-v1-32k", "xmoonshot-v1-128k"];
 
 const iflytekModels = [
-  "general",
-  "generalv3",
-  "pro-128k",
-  "generalv3.5",
-  "4.0Ultra",
+  "xgeneral",
+  "xgeneralv3",
+  "xpro-128k",
+  "xgeneralv3.5",
+  "x4.0Ultra",
 ];
 
 let seq = 1000; // 内置的模型序号生成器从1000开始
