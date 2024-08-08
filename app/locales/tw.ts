@@ -129,6 +129,7 @@ const tw = {
   Settings: {
     Title: "設定",
     SubTitle: "設定選項",
+    ShowPassword: "顯示密碼",
 
     Danger: {
       Reset: {
