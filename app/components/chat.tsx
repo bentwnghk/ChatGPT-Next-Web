@@ -1523,6 +1523,11 @@ function _Chat() {
                         </>
                       )}
                     </div>
+                    {!isUser && (
+                      <div className={styles["chat-model-name"]}>
+                        {message.model}
+                      </div>
+                    )}
 
                     {showActions && (
                       <div className={styles["chat-message-actions"]}>
