@@ -122,7 +122,8 @@ const DEFAULT_ACCESS_STATE = {
   defaultModel: "",
 
   // tts config
-  edgeTTSVoiceName: "zh-CN-YunxiNeural",
+  // edgeTTSVoiceName: "zh-CN-YunxiNeural",
+  edgeTTSVoiceName: "en-US-AvaMultilingualNeural",
 };
 
 export const useAccessStore = createPersistStore(
