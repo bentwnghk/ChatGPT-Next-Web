@@ -27,7 +27,7 @@ const tw = {
     Return: "返回",
     SaasTips: "配置太麻煩，想要立即使用",
     TopTips:
-      "🥳 NextChat AI 首發優惠，立刻解鎖 OpenAI o1, GPT-4o, Claude-3.5 等最新大模型",
+      "🥳 Mr.🆖 AI 首發優惠，立刻解鎖 OpenAI o1, GPT-4o, Claude-3.5 等最新大模型",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 則對話`,
