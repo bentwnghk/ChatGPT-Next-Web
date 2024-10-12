@@ -139,6 +139,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &-narrow {
+    justify-content: center;
+  }
 }
 
 .sidebar-logo {
