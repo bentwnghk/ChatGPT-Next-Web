@@ -322,6 +322,7 @@ const anthropicModels = [
   "xclaude-3-opus-20240229",
   "xclaude-3-haiku-20240307",
   "xclaude-3-5-sonnet-20240620",
+  "xclaude-3-5-sonnet-20241022",
 ];
 
 const baiduModels = [
