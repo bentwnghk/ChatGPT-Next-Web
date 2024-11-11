@@ -86,6 +86,7 @@ import { nanoid } from "nanoid";
 import { useMaskStore } from "../store/mask";
 import { ProviderType } from "../utils/cloud";
 import { TTSConfigList } from "./tts-config";
+import { RealtimeConfigList } from "./realtime-chat/realtime-config";
 
 function EditPromptModal(props: { id: string; onClose: () => void }) {
   const promptStore = usePromptStore();
@@ -1800,7 +1801,18 @@ export function Settings() {
         {shouldShowPromptModal && (
           <UserPromptModal onClose={() => setShowPromptModal(false)} />
         )}
-
+        <List>
+          <RealtimeConfigList
+            realtimeConfig={config.realtimeConfig}
+            updateConfig={(updater) => {
+              const realtimeConfig = { ...config.realtimeConfig };
+              updater(realtimeConfig);
+              config.update(
+                (config) => (config.realtimeConfig = realtimeConfig),
+              );
+            }}
+          />
+        </List>
         <List>
           <TTSConfigList
             ttsConfig={config.ttsConfig}
