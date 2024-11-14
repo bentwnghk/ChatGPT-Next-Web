@@ -298,11 +298,11 @@ const tw = {
 
     Access: {
       SaasStart: {
-        Title: "使用 Mr.🆖 AI",
-        Label: "(性價比最高的方案)",
+        Title: "使用 Mr.🆖 AI Hub ",
+        Label: "獲取您的 API Key",
         SubTitle:
-          "由 Mr.🆖 官方維護，無須設定開箱即用，支援 OpenAI o1、GPT-4o、Claude-3.5 等最新的大型語言模型",
-        ChatNow: "立刻開始對話",
+          "由 Mr.🆖 維護，性價比最高的方案，支援 GPT-4o、Claude-3.5 、Gemini-1.5 等最新的大型語言模型",
+        ChatNow: "開始註冊一個賬號",
       },
 
       AccessCode: {
