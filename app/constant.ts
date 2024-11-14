@@ -564,5 +564,5 @@ export const PLUGINS = [
   { name: "Search Chat", path: Path.SearchChat },
 ];
 
-export const SAAS_CHAT_URL = "https://mr5ai.com/";
+export const SAAS_CHAT_URL = "https://api.mr5ai.com/";
 export const SAAS_CHAT_UTM_URL = "https://api.mr5ai.com/";
