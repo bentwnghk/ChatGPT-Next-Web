@@ -266,6 +266,7 @@ export const KnowledgeCutOffDate: Record<string, string> = {
   "gpt-4o": "2023-10",
   "gpt-4o-2024-05-13": "2023-10",
   "gpt-4o-2024-08-06": "2023-10",
+  "gpt-4o-2024-11-20": "2023-10",
   "chatgpt-4o-latest": "2023-10",
   "gpt-4o-mini": "2023-10",
   "gpt-4o-mini-2024-07-18": "2023-10",
@@ -306,6 +307,7 @@ const openaiModels = [
   "gpt-4o",
   "gpt-4o-2024-05-13",
   "gpt-4o-2024-08-06",
+  "gpt-4o-2024-11-20",
   "chatgpt-4o-latest",
   "gpt-4o-mini",
   "gpt-4o-mini-2024-07-18",
@@ -319,9 +321,12 @@ const openaiModels = [
 
 const googleModels = [
   "xgemini-1.0-pro",
-  "xgemini-pro-vision",
   "xgemini-1.5-pro-latest",
   "xgemini-1.5-flash-latest",
+  "xgemini-exp-1114",
+  "xgemini-exp-1121",
+  "xlearnlm-1.5-pro-experimental",
+  "xgemini-pro-vision",
 ];
 
 const anthropicModels = [
