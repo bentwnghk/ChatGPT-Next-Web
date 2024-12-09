@@ -412,6 +412,59 @@ const tw = {
       Title: "頻率懲罰度 (frequency_penalty)",
       SubTitle: "值越大，越有可能降低重複字詞",
     },
+    TTS: {
+      Enable: {
+        Title: "啟用文本轉語音",
+        SubTitle: "啟用文本生成語音服務",
+      },
+      Autoplay: {
+        Title: "啟用自動朗讀",
+        SubTitle: "自動生成語音並播放，需先開啟文本轉語音開關",
+      },
+      Model: "模型",
+      Engine: "轉換引擎",
+      Voice: {
+        Title: "聲音",
+        SubTitle: "生成語音時使用的聲音",
+      },
+      Speed: {
+        Title: "速度",
+        SubTitle: "生成語音的速度",
+      },
+    },
+    Realtime: {
+      Enable: {
+        Title: "實時聊天",
+        SubTitle: "開啟實時聊天功能",
+      },
+      Provider: {
+        Title: "模型服務商",
+        SubTitle: "切換不同的服務商",
+      },
+      Model: {
+        Title: "模型",
+        SubTitle: "選擇一個模型",
+      },
+      ApiKey: {
+        Title: "API Key",
+        SubTitle: "API Key",
+        Placeholder: "API Key",
+      },
+      Azure: {
+        Endpoint: {
+          Title: "接口地址",
+          SubTitle: "接口地址",
+        },
+        Deployment: {
+          Title: "部署名稱",
+          SubTitle: "部署名稱",
+        },
+      },
+      Temperature: {
+        Title: "隨機性 (temperature)",
+        SubTitle: "值越大，回覆越隨機",
+      },
+    },
   },
   Store: {
     DefaultTopic: "新的對話",
@@ -451,6 +504,61 @@ const tw = {
   FineTuned: {
     Sysmessage: "你是一個助手",
   },
+  SearchChat: {
+    Name: "搜索",
+    Page: {
+      Title: "搜索聊天記錄",
+      Search: "輸入搜索關鍵詞",
+      NoResult: "沒有找到結果",
+      NoData: "沒有數據",
+      Loading: "加載中",
+
+      SubTitle: (count: number) => `搜索到 ${count} 條結果`,
+    },
+    Item: {
+      View: "查看",
+    },
+  },
+  Plugin: {
+    Name: "插件",
+    Page: {
+      Title: "插件",
+      SubTitle: (count: number) => `${count} 個插件`,
+      Search: "搜索插件",
+      Create: "新建",
+      Find: "您可以在Github上找到優秀的插件：",
+    },
+    Item: {
+      Info: (count: number) => `${count} 方法`,
+      View: "查看",
+      Edit: "編輯",
+      Delete: "刪除",
+      DeleteConfirm: "確認刪除？",
+    },
+    Auth: {
+      None: "不需要授權",
+      Basic: "Basic",
+      Bearer: "Bearer",
+      Custom: "自定義",
+      CustomHeader: "自定義參數名稱",
+      Token: "Token",
+      Proxy: "使用代理",
+      ProxyDescription: "使用代理解決 CORS 錯誤",
+      Location: "位置",
+      LocationHeader: "Header",
+      LocationQuery: "Query",
+      LocationBody: "Body",
+    },
+    EditModal: {
+      Title: (readonly: boolean) => `編輯插件 ${readonly ? "（唯讀）" : ""}`,
+      Download: "下載",
+      Auth: "授權方式",
+      Content: "OpenAPI Schema",
+      Load: "從網頁加載",
+      Method: "方法",
+      Error: "格式錯誤",
+    },
+  },
   Mask: {
     Name: "工具",
     Page: {
@@ -474,8 +582,8 @@ const tw = {
       Clone: "以此預設值建立副本",
     },
     Config: {
-      Avatar: "角色頭像",
-      Name: "角色名稱",
+      Avatar: "工具頭像",
+      Name: "工具名稱",
       Sync: {
         Title: "使用全域設定",
         SubTitle: "目前對話是否使用全域模型設定",
@@ -485,26 +593,19 @@ const tw = {
         Title: "隱藏預設對話",
         SubTitle: "隱藏後預設對話不會出現在聊天介面",
       },
+      Artifacts: {
+        Title: "啟用Artifacts",
+        SubTitle: "啟用之後可以直接渲染HTML頁面",
+      },
+      CodeFold: {
+        Title: "啟用代碼折疊",
+        SubTitle: "啟用之後可以自動折疊/展開過長的代碼塊",
+      },
       Share: {
         Title: "分享此工具",
         SubTitle: "生成此工具的直達鏈接",
         Action: "複製鏈接",
       },
-    },
-  },
-  SearchChat: {
-    Name: "搜尋",
-    Page: {
-      Title: "搜尋聊天記錄",
-      Search: "輸入搜尋關鍵詞",
-      NoResult: "沒有找到結果",
-      NoData: "沒有資料",
-      Loading: "載入中",
-
-      SubTitle: (count: number) => `找到 ${count} 條結果`,
-    },
-    Item: {
-      View: "檢視",
     },
   },
   NewChat: {
@@ -539,6 +640,61 @@ const tw = {
     Messages: "訊息",
     Topic: "主題",
     Time: "時間",
+  },
+  SdPanel: {
+    Prompt: "畫面提示",
+    NegativePrompt: "否定提示",
+    PleaseInput: (name: string) => `請輸入${name}`,
+    AspectRatio: "橫縱比",
+    ImageStyle: "圖像風格",
+    OutFormat: "輸出格式",
+    AIModel: "AI模型",
+    ModelVersion: "模型版本",
+    Submit: "提交生成",
+    ParamIsRequired: (name: string) => `${name}不能為空`,
+    Styles: {
+      D3Model: "3D模型",
+      AnalogFilm: "模擬電影",
+      Anime: "動漫",
+      Cinematic: "電影風格",
+      ComicBook: "漫畫書",
+      DigitalArt: "數字藝術",
+      Enhance: "增強",
+      FantasyArt: "幻想藝術",
+      Isometric: "等角",
+      LineArt: "線描",
+      LowPoly: "低多邊形",
+      ModelingCompound: "建模材料",
+      NeonPunk: "霓虹朋克",
+      Origami: "折紙",
+      Photographic: "攝影",
+      PixelArt: "像素藝術",
+      TileTexture: "貼圖",
+    },
+  },
+  Sd: {
+    SubTitle: (count: number) => `共 ${count} 條繪畫`,
+    Actions: {
+      Params: "查看參數",
+      Copy: "複製提示詞",
+      Delete: "刪除",
+      Retry: "重試",
+      ReturnHome: "返回首頁",
+      History: "查看歷史",
+    },
+    EmptyRecord: "暫無繪畫記錄",
+    Status: {
+      Name: "狀態",
+      Success: "成功",
+      Error: "失敗",
+      Wait: "等待中",
+      Running: "運行中",
+    },
+    Danger: {
+      Delete: "確認刪除？",
+    },
+    GenerateParams: "生成參數",
+    Detail: "詳情",
   },
 };
 
