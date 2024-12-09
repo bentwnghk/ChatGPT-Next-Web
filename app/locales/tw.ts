@@ -494,10 +494,6 @@ const tw = {
     Clear: "上下文已清除",
     Revert: "恢復上下文",
   },
-  Plugin: {
-    Name: "插件",
-    Artifacts: "Artifacts",
-  },
   Discovery: {
     Name: "發現",
   },
