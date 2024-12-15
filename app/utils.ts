@@ -259,9 +259,13 @@ export function isVisionModel(model: string) {
     "vision",
     "gpt-4o",
     "claude-3",
+    "claude-3-5",
     "gemini-1.5",
     "gemini-exp",
+    "gemini-2.0",
     "learnlm",
+    "pixtral",
+    "4v",
     "qwen-vl",
     "qwen2-vl",
   ];
