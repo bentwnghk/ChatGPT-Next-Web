@@ -322,12 +322,21 @@ const openaiModels = [
 const googleModels = [
   "xgemini-1.0-pro", // Deprecated on 2/15/2025
   "xgemini-1.5-pro-latest",
+  "xgemini-1.5-pro",
+  "xgemini-1.5-pro-002",
+  "xgemini-1.5-pro-exp-0827",
   "xgemini-1.5-flash-latest",
   "xgemini-1.5-flash-8b-latest",
+  "xgemini-1.5-flash",
+  "xgemini-1.5-flash-8b",
+  "xgemini-1.5-flash-002",
+  "xgemini-1.5-flash-exp-0827",
+  "xlearnlm-1.5-pro-experimental",
   "xgemini-exp-1114",
   "xgemini-exp-1121",
-  "xlearnlm-1.5-pro-experimental",
+  "xgemini-exp-1206",
   "xgemini-2.0-flash-exp",
+  "xgemini-2.0-flash-thinking-exp-1219",
 ];
 
 const anthropicModels = [
