@@ -501,18 +501,18 @@ const tw = {
     Sysmessage: "你是一個助手",
   },
   SearchChat: {
-    Name: "搜索",
+    Name: "搜尋聊天記錄",
     Page: {
-      Title: "搜索聊天記錄",
-      Search: "輸入搜索關鍵詞",
+      Title: "搜尋聊天記錄",
+      Search: "輸入搜尋關鍵詞",
       NoResult: "沒有找到結果",
-      NoData: "沒有數據",
-      Loading: "加載中",
+      NoData: "沒有資料",
+      Loading: "載入中",
 
-      SubTitle: (count: number) => `搜索到 ${count} 條結果`,
+      SubTitle: (count: number) => `找到 ${count} 條結果`,
     },
     Item: {
-      View: "查看",
+      View: "檢視",
     },
   },
   Plugin: {
@@ -520,13 +520,13 @@ const tw = {
     Page: {
       Title: "插件",
       SubTitle: (count: number) => `${count} 個插件`,
-      Search: "搜索插件",
+      Search: "搜尋插件",
       Create: "新建",
       Find: "您可以在Github上找到優秀的插件：",
     },
     Item: {
       Info: (count: number) => `${count} 方法`,
-      View: "查看",
+      View: "檢視",
       Edit: "編輯",
       Delete: "刪除",
       DeleteConfirm: "確認刪除？",
