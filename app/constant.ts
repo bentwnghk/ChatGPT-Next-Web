@@ -410,8 +410,14 @@ export const KnowledgeCutOffDate: Record<string, string> = {
   "gpt-4o-mini": "2023-10",
   "gpt-4o-mini-2024-07-18": "2023-10",
   "gpt-4-vision-preview": "2023-04",
+  "o1-mini-2024-09-12": "2023-10",
   "o1-mini": "2023-10",
+  "o1-preview-2024-09-12": "2023-10",
   "o1-preview": "2023-10",
+  "o1-2024-12-17": "2023-10",
+  "o1": "2023-10",
+  "o3-mini-2025-01-31": "2023-10",
+  "o3-mini": "2023-10",
   // After improvements,
   // it's now easier to add "KnowledgeCutOffDate" instead of stupid hardcoding it, as was done previously.
   "gemini-pro": "2023-12",
@@ -499,7 +505,9 @@ const googleModels = [
   "xgemini-exp-1121",
   "xgemini-exp-1206",
   "xgemini-2.0-flash-exp",
+  "xgemini-2.0-flash-thinking-exp",
   "xgemini-2.0-flash-thinking-exp-1219",
+  "xgemini-2.0-flash-thinking-exp-01-21",
 ];
 
 const anthropicModels = [
@@ -575,20 +583,20 @@ const deepseekModels = ["deepseek-chat", "deepseek-coder", "deepseek-reasoner"];
 const xAIModes = ["grok-beta"];
 
 const chatglmModels = [
-  "glm-4-plus",
-  "glm-4-0520",
-  "glm-4",
-  "glm-4-air",
-  "glm-4-airx",
-  "glm-4-long",
-  "glm-4-flashx",
-  "glm-4-flash",
-  "glm-4v-plus",
-  "glm-4v",
-  "glm-4v-flash", // free
-  "cogview-3-plus",
-  "cogview-3",
-  "cogview-3-flash", // free
+  "xglm-4-plus",
+  "xglm-4-0520",
+  "xglm-4",
+  "xglm-4-air",
+  "xglm-4-airx",
+  "xglm-4-long",
+  "xglm-4-flashx",
+  "xglm-4-flash",
+  "xglm-4v-plus",
+  "xglm-4v",
+  "xglm-4v-flash", // free
+  "xcogview-3-plus",
+  "xcogview-3",
+  "xcogview-3-flash", // free
   // 目前无法适配轮询任务
   //   "cogvideox",
   //   "cogvideox-flash", // free
