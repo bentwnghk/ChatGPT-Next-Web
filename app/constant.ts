@@ -596,14 +596,14 @@ const iflytekModels = [
 const deepseekModels = ["deepseek-chat", "deepseek-coder", "deepseek-reasoner"];
 
 const xAIModes = [
-  "grok-beta",
-  "grok-2",
-  "grok-2-1212",
-  "grok-2-latest",
-  "grok-vision-beta",
-  "grok-2-vision-1212",
-  "grok-2-vision",
-  "grok-2-vision-latest",
+  "xgrok-beta",
+  "xgrok-2",
+  "xgrok-2-1212",
+  "xgrok-2-latest",
+  "xgrok-vision-beta",
+  "xgrok-2-vision-1212",
+  "xgrok-2-vision",
+  "xgrok-2-vision-latest",
 ];
 
 const chatglmModels = [
@@ -627,20 +627,20 @@ const chatglmModels = [
 ];
 
 const siliconflowModels = [
-  "Qwen/Qwen2.5-7B-Instruct",
-  "Qwen/Qwen2.5-72B-Instruct",
-  "deepseek-ai/DeepSeek-R1",
-  "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-  "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
-  "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
-  "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
-  "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-  "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-  "deepseek-ai/DeepSeek-V3",
-  "meta-llama/Llama-3.3-70B-Instruct",
-  "THUDM/glm-4-9b-chat",
-  "Pro/deepseek-ai/DeepSeek-R1",
-  "Pro/deepseek-ai/DeepSeek-V3",
+  "xQwen/Qwen2.5-7B-Instruct",
+  "xQwen/Qwen2.5-72B-Instruct",
+  "xdeepseek-ai/DeepSeek-R1",
+  "xdeepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+  "xdeepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+  "xdeepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+  "xdeepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+  "xdeepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+  "xdeepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+  "xdeepseek-ai/DeepSeek-V3",
+  "xmeta-llama/Llama-3.3-70B-Instruct",
+  "xTHUDM/glm-4-9b-chat",
+  "xPro/deepseek-ai/DeepSeek-R1",
+  "xPro/deepseek-ai/DeepSeek-V3",
 ];
 
 let seq = 1000; // 内置的模型序号生成器从1000开始
