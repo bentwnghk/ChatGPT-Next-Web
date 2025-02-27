@@ -540,6 +540,8 @@ const anthropicModels = [
   "xclaude-3-5-sonnet-20240620",
   "xclaude-3-5-sonnet-20241022",
   "xclaude-3-5-sonnet-latest",
+  "xclaude-3-7-sonnet-20250219",
+  "xclaude-3-7-sonnet-latest",
 ];
 
 const baiduModels = [
