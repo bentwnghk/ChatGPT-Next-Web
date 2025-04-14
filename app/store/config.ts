@@ -41,11 +41,11 @@ const config = getClientConfig();
 export const DEFAULT_CONFIG = {
   lastUpdate: Date.now(), // timestamp, to merge state
 
-  submitKey: SubmitKey.Enter,
+  submitKey: SubmitKey.CtrlEnter,
   avatar: "1f603",
   fontSize: 14,
   fontFamily: "",
-  theme: Theme.Auto as Theme,
+  theme: Theme.Light as Theme,
   tightBorder: !!config?.isApp,
   sendPreviewBubble: true,
   enableAutoGenerateTitle: true,
@@ -66,16 +66,16 @@ export const DEFAULT_CONFIG = {
   modelConfig: {
     model: "gpt-4o-mini" as ModelType,
     providerName: "OpenAI" as ServiceProvider,
-    temperature: 0.6,
+    temperature: 0.8,
     top_p: 1,
-    max_tokens: 4000,
+    max_tokens: 8192,
     presence_penalty: 0,
     frequency_penalty: 0,
     sendMemory: true,
-    historyMessageCount: 4,
-    compressMessageLengthThreshold: 1000,
-    compressModel: "",
-    compressProviderName: "",
+    historyMessageCount: 6,
+    compressMessageLengthThreshold: 2000,
+    compressModel: "gpt-4o-mini",
+    compressProviderName: "OpenAI",
     enableInjectSystemPrompts: true,
     template: config?.template ?? DEFAULT_INPUT_TEMPLATE,
     size: "1024x1024" as ModelSize,
@@ -94,12 +94,12 @@ export const DEFAULT_CONFIG = {
 
   realtimeConfig: {
     enable: false,
-    provider: "OpenAI" as ServiceProvider,
+    provider: "Azure" as ServiceProvider,
     model: "gpt-4o-realtime-preview-2024-10-01",
     apiKey: "",
     azure: {
       endpoint: "",
-      deployment: "",
+      deployment: "gpt-40-realtime-preview",
     },
     temperature: 0.9,
     voice: "alloy" as Voice,
