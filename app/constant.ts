@@ -482,6 +482,8 @@ export const VISION_MODEL_REGEXES = [
   /^dall-e-3$/, // Matches exactly "dall-e-3"
   /glm-4v/,
   /vl/i,
+  /o3/,
+  /o4-mini/,
 ];
 
 export const EXCLUDE_VISION_MODEL_REGEXES = [/claude-3-5-haiku-20241022/];
@@ -521,6 +523,8 @@ const openaiModels = [
   "o1-mini",
   "o1-preview",
   "o3-mini",
+  "o3",
+  "o4-mini",
 ];
 
 const googleModels = [
