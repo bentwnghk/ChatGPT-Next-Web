@@ -27,13 +27,13 @@ const tw = {
     Return: "返回",
     SaasTips: "設定太麻煩，想要立即使用",
     TopTips:
-      "🥳 Mr.🆖 AI 首發優惠，立刻解鎖 OpenAI o1, GPT-4o, Claude-3.5 等最新的大型語言模型",
+      "🥳 Mr.🆖 AI Lite 首發優惠，立刻解鎖 OpenAI o1, GPT-4o, Claude-3.5 等最新的大型語言模型",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 則對話`,
   },
   Chat: {
-    SubTitle: (count: number) => `您已經與 Mr.🆖 AI 進行了 ${count} 則對話`,
+    SubTitle: (count: number) => `您已經與 Mr.🆖 AI Lite 進行了 ${count} 則對話`,
     EditMessage: {
       Title: "編輯訊息記錄",
       Topic: {
@@ -109,7 +109,7 @@ const tw = {
     Download: "下載檔案",
     Share: "分享到 ShareGPT",
     MessageFromYou: "來自您的訊息",
-    MessageFromChatGPT: "來自 Mr.🆖 AI 的訊息",
+    MessageFromChatGPT: "來自 Mr.🆖 AI Lite 的訊息",
     Format: {
       Title: "匯出格式",
       SubTitle: "可以匯出 Markdown 文字檔或者 PNG 圖片",

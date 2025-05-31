@@ -28,7 +28,7 @@ const no: PartialLocaleType = {
     SaasTips:
       "Konfigurasjonen er for komplisert, jeg vil bruke det med en gang",
     TopTips:
-      "🥳 Mr.🆖 AI lanseringstilbud, lås opp OpenAI o1, GPT-4o, Claude-3.5 og de nyeste store modellene nå",
+      "🥳 Mr.🆖 AI Lite lanseringstilbud, lås opp OpenAI o1, GPT-4o, Claude-3.5 og de nyeste store modellene nå",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} samtaler`,
@@ -300,7 +300,7 @@ const no: PartialLocaleType = {
 
     Access: {
       SaasStart: {
-        Title: "Bruk Mr.🆖 AI",
+        Title: "Bruk Mr.🆖 AI Lite",
         Label: "(Den mest kostnadseffektive løsningen)",
         SubTitle:
           "Offisielt vedlikeholdt av Mr.🆖, klar til bruk uten konfigurasjon, støtter de nyeste store modellene som OpenAI o1, GPT-4o og Claude-3.5",

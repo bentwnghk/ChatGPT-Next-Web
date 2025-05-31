@@ -28,7 +28,7 @@ const en: LocaleType = {
     Later: "Later",
     SaasTips: "Too Complex, Use Immediately Now",
     TopTips:
-      "🥳 Mr.🆖 AI launch promotion: Instantly unlock the latest models like OpenAI o1, GPT-4o, Claude-3.5!",
+      "🥳 Mr.🆖 AI Lite launch promotion: Instantly unlock the latest models like OpenAI o1, GPT-4o, Claude-3.5!",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} messages`,
@@ -314,7 +314,7 @@ const en: LocaleType = {
     },
     Access: {
       SaasStart: {
-        Title: "Use Mr.🆖 AI",
+        Title: "Use Mr.🆖 AI Lite",
         Label: " (Most Cost-Effective Option)",
         SubTitle:
           "Maintained by Mr.🆖, zero setup needed, unlock OpenAI o1, GPT-4o," +

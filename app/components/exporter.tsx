@@ -524,9 +524,9 @@ export function ImagePreviewer(props: {
           </div>
 
           <div>
-            <div className={styles["main-title"]}>Mr.🆖 AI</div>
+            <div className={styles["main-title"]}>Mr.🆖 AI Lite</div>
             <div className={styles["sub-title"]}>
-              ai2.mister5.net
+              lite.mr5ai.com
             </div>
             <div className={styles["icons"]}>
               <MaskAvatar avatar={config.avatar} />

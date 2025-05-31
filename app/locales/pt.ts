@@ -27,7 +27,7 @@ const pt: PartialLocaleType = {
     Return: "Voltar",
     SaasTips: "A configuração é muito complicada, quero usá-la imediatamente",
     TopTips:
-      "🥳 Oferta de Lançamento do Mr.🆖 AI, desbloqueie o OpenAI o1, GPT-4o, Claude-3.5 e os mais recentes grandes modelos agora",
+      "🥳 Oferta de Lançamento do Mr.🆖 AI Lite, desbloqueie o OpenAI o1, GPT-4o, Claude-3.5 e os mais recentes grandes modelos agora",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} mensagens`,
@@ -292,7 +292,7 @@ const pt: PartialLocaleType = {
     },
     Access: {
       SaasStart: {
-        Title: "Usar Mr.🆖 AI",
+        Title: "Usar Mr.🆖 AI Lite",
         Label: "(A solução mais econômica)",
         SubTitle:
           "Mantido oficialmente pelo Mr.🆖, pronto para uso sem configuração, suporta os mais recentes grandes modelos como OpenAI o1, GPT-4o e Claude-3.5",
