@@ -528,20 +528,15 @@ const openaiModels = [
 ];
 
 const googleModels = [
-  "xgemini-1.0-pro", // Deprecated on 2/15/2025
   "xgemini-1.5-pro-latest",
   "xgemini-1.5-pro",
   "xgemini-1.5-pro-002",
-  "xgemini-1.5-pro-exp-0827",
   "xgemini-1.5-flash-latest",
   "xgemini-1.5-flash-8b-latest",
   "xgemini-1.5-flash",
   "xgemini-1.5-flash-8b",
   "xgemini-1.5-flash-002",
-  "xgemini-1.5-flash-exp-0827",
   "xlearnlm-1.5-pro-experimental",
-  "xgemini-exp-1114",
-  "xgemini-exp-1121",
   "xgemini-exp-1206",
   "xgemini-2.0-flash",
   "xgemini-2.0-flash-exp",
@@ -549,8 +544,10 @@ const googleModels = [
   "xgemini-2.0-flash-thinking-exp",
   "xgemini-2.0-flash-thinking-exp-1219",
   "xgemini-2.0-flash-thinking-exp-01-21",
+  "xgemini-2.5-flash-preview-05-20",
   "xgemini-2.0-pro-exp",
   "xgemini-2.0-pro-exp-02-05",
+  "xgemini-2.5-pro-preview-06-05",
 ];
 
 const anthropicModels = [
@@ -637,6 +634,18 @@ const xAIModes = [
   "xgrok-2-vision-1212",
   "xgrok-2-vision",
   "xgrok-2-vision-latest",
+  "xgrok-3-mini-fast-beta",
+  "xgrok-3-mini-fast",
+  "xgrok-3-mini-fast-latest",
+  "xgrok-3-mini-beta",
+  "xgrok-3-mini",
+  "xgrok-3-mini-latest",
+  "xgrok-3-fast-beta",
+  "xgrok-3-fast",
+  "xgrok-3-fast-latest",
+  "xgrok-3-beta",
+  "xgrok-3",
+  "xgrok-3-latest",
 ];
 
 const chatglmModels = [
