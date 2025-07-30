@@ -9,7 +9,7 @@
   },
   "package": {
     "productName": "Mr.🆖 AI Lite",
-    "version": "2.15.8"
+    "version": "2.16.1"
   },
   "tauri": {
     "allowlist": {
