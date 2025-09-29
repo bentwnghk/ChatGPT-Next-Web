@@ -679,6 +679,11 @@ const xAIModes = [
   "xgrok-3-beta",
   "xgrok-3",
   "xgrok-3-latest",
+  "xgrok-4",
+  "xgrok-4-0709",
+  "xgrok-4-fast-non-reasoning",
+  "xgrok-4-fast-reasoning",
+  "xgrok-code-fast-1",
 ];
 
 const chatglmModels = [
